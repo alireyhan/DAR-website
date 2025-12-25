@@ -25,6 +25,7 @@ import p17 from "./images/p17.jpg"
 import p18 from "./images/p18.jpg";
 import footer from "./images/footer.png";
 import navlogo from "./images/navlogo.png";
+import ctaImage from "../assets/CTA.png";
 
 // Video
 import video from "./images/video1.mp4";
@@ -644,7 +645,7 @@ const scrollRef = useRef(null);
 
 
 
-<section className="hero-section">
+<section className="hero-section" style={{ backgroundImage: `url(${ctaImage})` }}>
   <div className="hero-content">
     <p className="hero-subheading">Crafting Environments</p>
     <p className="hero-main-text">
