@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import Landingpage from "./components/landingpage";
 import Cataloguepage from "./components/catalogue";
 import Projectpage from "./components/project";
-
+import Appointmentpage from "./components/appointment";
 export default function App() {
   return (
     <Router>
@@ -14,7 +14,9 @@ export default function App() {
         <Route path="/landingpage" element={<Landingpage />} />
         <Route path="/project" element={<Projectpage />} />
         <Route path="/catalogue" element={<Cataloguepage />} />
+            <Route path="/appointment" element={<Appointmentpage />} />
       </Routes>
     </Router>
+    
   );
 }

@@ -3,8 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 import { FaInstagram, FaFacebookF, FaTwitter, FaYoutube, FaWhatsapp } from "react-icons/fa";
-import "./catalogue.css";
-// Images
+import "./appointment.css";
 import p1 from "./images/p1.png";
 import p2 from "./images/p2.png";
 import p3 from "./images/p3.png";
@@ -25,17 +24,15 @@ import p17 from "./images/p17.jpg"
 import p18 from "./images/p18.jpg";
 import footer from "./images/footer.png";
 import navlogo from "./images/navlogo.png";
-
-// Video
 import video from "./images/video1.mp4";
-
+import { FaCalendar, FaClock, FaMapMarkerAlt, FaRegEnvelope } from "react-icons/fa";
 const photoArray = [
   p1, p2, p3, p4, p5, p6, p8, p9, p10, p11, p12, p13
 ];
 
 
 
-export default function Cataloguepage() {
+export default function Appointmentpage() {
   const [language, setLanguage] = useState("English");
   const [open, setOpen] = useState(false);
 
@@ -70,10 +67,10 @@ export default function Cataloguepage() {
 
             <nav>
               <ul>
-                 <li><a href="#">About us</a></li>
+                <li><a href="#">About us</a></li>
               <li><a href="/project">Projects</a></li>
-                <li><a href="#">Catalogue</a></li>
-                <li><a href="/appointment">Appointment</a></li>
+                <li><a href="/catalogue">Catalogue</a></li>
+                <li><a href="#">Appointment</a></li>
               </ul>
             </nav>
 
@@ -157,133 +154,149 @@ export default function Cataloguepage() {
           </div>
         </section>
       </div>
-
       
+      <section className="book-section">
+   
 
+      <p className="book-topline">Book your appointment</p>
+      <h2 className="book-title">
+        Choose a date and time that works best for you. Our team will confirm your
+        appointment and guide you through the next steps.
+      </h2>
 
-        <section className="journey-stats">
-      <div className="stats-top">
-        <span className="tag">The Journey So Far</span>
-        <p className="stats-heading">
-          With years of expertise and innovation, DAR continues <br />
-          to deliver premium, custom furniture experiences that <br />
-          transform spaces and build lasting trust with our clients.
-        </p>
-      </div>
+      <div className="book-card">
+     
+        <h4 className="section-title">Personal Info</h4>
+        <div className="grid-2">
+          <input type="text" placeholder="First name" />
+          <input type="text" placeholder="Last name" />
+          <input type="text" placeholder="Phone number" />
+          <input type="email" placeholder="Email address" />
+        </div>
 
-      <div className="stats-row">
-       <div className="stats-row">
-  <div className="stat up">
-    <h2>250+</h2>
-    <h4>Completed Projects</h4>
-    <p>Successfully delivered projects</p>
-    <img src={p1} alt="" />
-  </div>
+    
+        <h4 className="section-title">Appointment Details</h4>
 
-  <span className="divider"></span>
+        <div className="tabs">
+          <button className="tab">Design Consultation</button>
+          <button className="tab active">Measurements</button>
+          <button className="tab">Project Follow-Up</button>
+          <button className="tab">Other</button>
+        </div>
 
-  <div className="stat down">
-    <h2>200+</h2>
-    <h4>Old</h4>
-    <p>Over a decade of design expertise</p>
-    <img src={p2} alt="" />
-  </div>
+        <div className="grid-2">
+          <div className="input-icon">
+            <FaCalendar /> <input type="date" />
+          </div>
+          <div className="input-icon">
+            <FaClock /> <input type="time" />
+          </div>
 
-  <span className="divider"></span>
+          <div className="input-icon">
+            <FaMapMarkerAlt /> <input type="text" placeholder="Address" />
+          </div>
+          <input type="text" placeholder="ZIP Code" />
 
-  <div className="stat up">
-    <h2>150+</h2>
-    <h4>Current</h4>
-    <p>Projects in progress with precision</p>
-    <img src={p3} alt="" />
-  </div>
+          <textarea
+            placeholder="Share any details about your project or requirements"
+            className="details-area"
+          ></textarea>
+        </div>
 
-  <span className="divider"></span>
-
-  <div className="stat down">
-    <h2>90+</h2>
-    <h4>Awaiting Delivery</h4>
-    <p>Ready to be delivered soon</p>
-    <img src={p4} alt="" />
-  </div>
-</div>
-      </div>
-
-      <div className="cta-row">
-        <button className="btn-view">View DAR Projects ↗</button>
-        <span className="slots">● Slots are available</span>
+        <button className="btn-submit">Book Appointment ↗</button>
       </div>
     </section>
-
-
-
-<section className="dar-catalogue">
-  <p className="catalogue-subtitle">WHAT WE PROUD OF</p>
-  <h2 className="catalogue-title">DAR Catalogue</h2>
-
-  <div className="catalogue-layout">
-    
-   
-    <div className="left-big">
-      <img src={p1} alt="Living Area" />
-      <p className="img-label">Living Area</p>
-    </div>
-
-   
-    <div className="right-small">
-      <div className="small-item">
-        <img src={p2} alt="Master Bedroom" />
-        <p className="img-label">Master Bedroom</p>
+      
+    <section className="meet-team-section">
+      <div className="meet-team-header">
+        <p className="meet-team-eyebrow">MEET OUR TEAM</p>
+        <h2 className="meet-team-title">
+          We are a passionate team of designers <br />
+          dedicated to transforming your vision <br />
+          into beautifully crafted spaces.
+        </h2>
       </div>
 
-      
-    </div>
-  </div>
-</section>
 
 
-<section className="dar-catalogue-block">
-  <div className="block-layout">
-    
-   
-    <div className="left-small">
-      <img src={p3} alt="Kids Bedroom" />
-      <p className="img-label">Kids Bedroom</p>
-    </div>
-
-    
-    <div className="right-big">
-      <img src={p4} alt="Kitchen" />
-      <p className="img-label">Kitchen</p>
-    </div>
-
-  </div>
-</section>
-
-
-<section className="dar-catalogue">
-  <p className="catalogue-subtitle">WHAT WE PROUD OF</p>
-  <h2 className="catalogue-title">DAR Catalogue</h2>
-
-  <div className="catalogue-layout">
-    
-   
-    <div className="left-big">
-      <img src={p1} alt="Living Area" />
-      <p className="img-label">Living Area</p>
-    </div>
-
-   
-    <div className="right-small">
-      <div className="small-item">
-        <img src={p2} alt="Master Bedroom" />
-        <p className="img-label">Master Bedroom</p>
+      <div className="department-tabs">
+        <button className="department-tab active">Management</button>
+        <button className="department-tab">IT Department</button>
+        <button className="department-tab">HR Department</button>
+        <button className="department-tab">Marketing</button>
+        <button className="department-tab">Legal Department</button>
       </div>
 
-      
-    </div>
-  </div>
-</section>
+    </section>
+
+    
+    <div className="team-members-container">
+          {/* Top Row: 4 Members */}
+          <div className="team-grid top-row">
+            <div className="team-card">
+              <img src={p14} alt="Sarah" />
+              <div className="team-overlay">
+                <h3 className="team-name">Sarah</h3>
+                <p className="team-role">Operations Manager</p>
+              </div>
+            </div>
+    
+            <div className="team-card">
+              <img src={p15} alt="James" />
+              <div className="team-overlay">
+                <h3 className="team-name">James</h3>
+                <p className="team-role">Head of Marketing</p>
+              </div>
+            </div>
+    
+            <div className="team-card">
+              <img src={p16} alt="Emily" />
+              <div className="team-overlay">
+                <h3 className="team-name">Emily</h3>
+                <p className="team-role">CFO</p>
+              </div>
+            </div>
+    
+            <div className="team-card">
+              <img src={p18} alt="Michael" />
+              <div className="team-overlay">
+                <h3 className="team-name">Michael</h3>
+                <p className="team-role">Head Designer</p>
+              </div>
+            </div>
+          </div>
+    
+          {/* Bottom Mixed Row: Member + Highlight + Member */}
+          <div className="team-grid bottom-row">
+            <div className="team-card">
+              <img src={p18} alt="James" />
+              <div className="team-overlay">
+                <h3 className="team-name">James</h3>
+                <p className="team-role">Accountant</p>
+              </div>
+            </div>
+    
+            <div className="highlight-card">
+              <div className="highlight-icon">👥</div>
+              <p className="highlight-text">
+                DAR is powered by a team of <strong>50+</strong> professionals across design, operations,
+                customer service, marketing, HR, finance, and production.
+              </p>
+            </div>
+    
+            <div className="team-card">
+              <img src={p14} alt="Sarah" />
+              <div className="team-overlay">
+                <h3 className="team-name">Sarah</h3>
+                <p className="team-role">Legal Head</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+    
+    
+
 
 
 <section className="hero-section">

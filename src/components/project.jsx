@@ -83,7 +83,7 @@ export default function Projectpage() {
                 <li><a href="#">About us</a></li>
                 <li><a href="#">Projects</a></li>
                 <li><a href="/catalogue">Catalogue</a></li>
-                <li><a href="#">Appointment</a></li>
+                <li><a href="/appointment">Appointment</a></li>
               </ul>
             </nav>
 
