@@ -1542,7 +1542,7 @@ h1 {
  
 .hero-section {
   position: relative;
-  background-image: url('../assets/CTA.png'); /* CTA background image */
+  background-image: url('/CTA.png'); /* CTA background image from public folder */
   background-size: cover;
   background-position: center;
   height: 100vh;
