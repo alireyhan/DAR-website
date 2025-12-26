@@ -1,7 +1,9 @@
+
+
 import React, { useState, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import "./landingpage.css";
+import "./about.css";
 import { FaInstagram, FaFacebookF, FaTwitter, FaYoutube, FaWhatsapp } from "react-icons/fa";
 
 // Images
@@ -21,14 +23,17 @@ import p13 from "./images/p13.png";
 import p14 from "./images/p14.jpg";
 import p15 from "./images/p15.jpg";
 import p16 from "./images/p16.jpg";
-import p17 from "./images/p17.jpg"
+import IMG from "./images/IMG.png"
 import p18 from "./images/p18.jpg";
 import footer from "./images/footer.png";
 import navlogo from "./images/navlogo.png";
-
-// Video
+import logo2 from "./images/logo2.png";
+import Container from "./images/Container.png";
 import video from "./images/video1.mp4";
-
+import ball from "./images/ball.png";
+import pin from "./images/pin.png";
+import star from "./images/star.png";
+import couch from "./images/couch.png";
 const photoArray = [
   p1, p2, p3, p4, p5, p6, p8, p9, p10, p11, p12, p13
 ];
@@ -82,7 +87,7 @@ const careerCards = [
   },
 ];
 
-export default function Landingpage() {
+export default function Aboutpage() {
   const [language, setLanguage] = useState("English");
   const [open, setOpen] = useState(false);
 
@@ -109,6 +114,9 @@ const scrollRef = useRef(null);
     }
   };
 
+
+
+
   return (
     <>
       {/* ===============================
@@ -131,7 +139,7 @@ const scrollRef = useRef(null);
 
             <nav>
               <ul>
-                <li><a href="about">About us</a></li>
+                <li><a href="#">About us</a></li>
                 <li><a href="#">Projects</a></li>
                 <li><a href="#">Catalogue</a></li>
                 <li><a href="#">Appointment</a></li>
@@ -219,26 +227,120 @@ const scrollRef = useRef(null);
         </section>
       </div>
 
-      {/* DAR SECTION */}
-      
 
-      <div className="space-section">
-        <div className="space-actions">
-          <button className="action-btn"><span className="icon-circle">👤</span>Book DAR Crew</button>
-          <button className="action-btn"><span className="icon-circle">📏</span>Book Measurements</button>
-          <button className="action-btn"><span className="icon-circle">📦</span>Track Your Order</button>
+ <section className="fh-wrap">
+      {/* Left image */}
+      <div className="fh-card fh-image">
+        <img src={p4} alt="Left" />
+      </div>
+
+      {/* Middle stats card */}
+      <div className="fh-card fh-stats">
+        <div className="fh-statsTop">
+          <p className="fh-small">
+            DAR was created to make furniture personal. We believe every home
+            deserves pieces made just for it.
+          </p>
+
+          <div className="fh-big">94%</div>
         </div>
-        <div className="space-banner">
-          <div className="space-text">
-            <h2>Design Your Space Your Way</h2>
-            <p>Bring your ideas to life, create custom furniture <br /> tailored to your room.</p>
-            <button className="space-cta">Click to Go to DAR Platform <span>↗</span></button>
+
+        <div className="fh-statsBottom">
+          <p className="fh-small fh-small--light">
+            As Kuwait’s first smart furniture design experience, we help you
+            design what truly fits your space and style.
+          </p>
+
+          <div className="fh-big fh-big--light">200+</div>
+        </div>
+      </div>
+
+      {/* Right image */}
+      <div className="fh-card fh-image">
+        <img src={p1} alt="Right" />
+      </div>
+    </section>
+
+
+
+<section class="dar">
+  <div class="dar-inner">
+    <div class="dar-circle">
+      <img class="dar-logo" src={logo2} alt="DAR Logo" />
+    </div>
+
+    <div class="dar-content">
+      <div class="dar-brand">DAR</div>
+
+      <h1 class="dar-title">
+        Smart furniture design in Kuwait,<br />
+        shaped by you.
+      </h1>
+
+      <p class="dar-desc">
+        DAR is Kuwait’s first smart furniture design experience, created to redefine how people bring their ideas to life.
+        We empower you to shape every detail, size, style, and finish. So each piece is not just furniture, but a reflection
+        of your taste and a perfect fit for your space.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<section class="ourstory">
+  <div class="ourstory__wrap">
+
+    
+    <div class="ourstory__left">
+      <div class="ourstory__top">
+        <div class="ourstory__kicker">OUR STORY</div>
+
+        <h2 class="ourstory__title">The idea behind DAR</h2>
+
+        <p class="ourstory__desc">
+          DAR was founded with a vision to bridge design and technology. We saw the challenges people face when shopping for furniture—limited
+          choices, unclear sizing, mismatched finishes, and decided to build a smarter way.
+        </p>
+      </div>
+
+      <div class="ourstory__bottom">
+        <div class="ourstory__line"></div>
+
+        <div class="ourstory__stats">
+          <div class="ourstory__stat">
+            <div class="ourstory__num">240+</div>
+            <div class="ourstory__label">Designs</div>
           </div>
-          <div className="space-logo">
-            <img src={logo} alt="DAR" />
+
+          <div class="ourstory__stat">
+            <div class="ourstory__num">100%</div>
+            <div class="ourstory__label">Precision</div>
+          </div>
+
+          <div class="ourstory__stat">
+            <div class="ourstory__num">2020</div>
+            <div class="ourstory__label">Since</div>
           </div>
         </div>
       </div>
+    </div>
+
+              
+    <div className="ourstory__right">
+  <div className="ourstory__media">
+    <video
+      className="ourstory__video"
+      src={video}
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="auto"
+    />
+  </div>
+</div>
+  </div>
+</section>
 
       {/* JOURNEY */}
       <section className="journey">
@@ -279,243 +381,120 @@ const scrollRef = useRef(null);
         </div>
       </section>
 
-      {/* DEMO */}
-      <section className="demo-section">
-        <h2>Design furniture online in minutes</h2>
-        <video className="demo-video" controls>
-          <source src={video} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </section>
 
-      {/* SHOWCASE */}
-      <div className="showcase-container">
-        <div className="showcase-header">
-          <h1>DAR Project Showcase</h1>
-          <div className="scroll-buttons">
-            <button onClick={() => scrollGallery(-300)}>←</button>
-            <button onClick={() => scrollGallery(300)}>→</button>
+
+{/*pic and black section*/}
+
+  <section className="impact">
+      
+      <div className="impact-hero">
+        <img className="impact-img" src={Container} alt="Impact" />
+      </div>
+
+      {/* BOTTOM DARK AREA */}
+      <div className="impact-bottom">
+        <div className="impact-inner">
+          <div className="impact-left">
+            <p className="impact-kicker">OUR IMPACT</p>
           </div>
-        </div>
 
-        <div className="gallery-wrapper">
-          <div className="scroll-gallery" ref={galleryRef}>
-            {photoArray.map((src, index) => (
-              <div className="project-card" key={index}>
-                <img src={src} alt={`Project ${index + 1}`} />
+          <div className="impact-right">
+            <p className="impact-text">
+              Since our launch, DAR has redefined how people bring furniture into their homes by turning imagination into
+              reality. We’ve guided designs from vision to creation, crafted pieces that reflect individuality, and earned
+              the trust of those who value precision and style. These milestones are more than numbers; they represent
+              homes transformed, ideas realized, and the confidence our community places in us.
+            </p>
+
+            <div className="impact-bracket"></div>
+
+            <div className="impact-stats">
+              <div className="impact-stat">
+                <h3 className="impact-num">1st</h3>
+                <p className="impact-label">In Kuwait</p>
               </div>
-            ))}
-          </div>
-        </div>
 
-        <div className="book-wrapper">
-          <button className="book-button">Book DAR Crew →</button>
-        </div>
-      </div>
+              <div className="impact-divider"></div>
 
-      {/* WHY CHOOSE DAR */}
-      <section className="why">
-        <p className="eyebrow">WHY CHOOSE DAR</p>
-
-        <h2 className="title">
-          We craft experiences that transform <br />
-          your living space into a reflection of <br />
-          your style.
-        </h2>
-
-        <div className="grid">
-          <div className="card">
-            <div className="icon">💰</div>
-            <h3>Transparent Pricing</h3>
-            <p>
-              Instantly view costs as you design—no hidden fees. Every choice you
-              make updates pricing in real-time so you stay in full control of
-              your budget.
-            </p>
-          </div>
-
-          <div className="card center">
-            <div className="icon">⚡</div>
-            <h3>Faster Process</h3>
-            <p>
-              Skip the back-and-forth with contractors. Our smart platform reduces
-              design and approval time from weeks to just a few clicks.
-            </p>
-          </div>
-
-          <div className="card">
-            <div className="icon">📊</div>
-            <h3>Track Projects Online</h3>
-            <p>
-              Track your projects, approvals, and updates seamlessly online.
-              Whether on desktop, tablet, or mobile, your designs go wherever you
-              go.
-            </p>
-          </div>
-
-          <div className="card">
-            <div className="icon">🛠️</div>
-            <h3>Design It Your Way</h3>
-            <p>
-              From dimensions to finishes, create furniture that matches your
-              exact style and needs. With DAR, you’re not limited to templates.
-            </p>
-          </div>  
-
-          <div className="card">
-            <div className="icon">🚚</div>
-            <h3>Trusted Delivery</h3>
-            <p>
-              From production to installation, DAR ensures your furniture is
-              delivered and set up with precision, giving you peace of mind.
-            </p>
-          </div>
-              <div className="card">
-            <div className="icon">🚚</div>
-            <h3>Trusted Delivery</h3>
-            <p>
-              From production to installation, DAR ensures your furniture is
-              delivered and set up with precision, giving you peace of mind.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-
-{/* ===============================
-    DAR CATALOGUE SECTION
-============================== */}
-<section className="catalogue-section">
-  <div className="catalogue-header">
-    <p className="catalogue-eyebrow">WHAT WE PROUD OF</p>
-    <h2 className="catalogue-title">DAR Catalogue</h2>
-    
-    <div className="catalogue-nav-arrows">
-      <button className="arrow-btn left-arrow">←</button>
-      <button className="arrow-btn right-arrow active">→</button>
-    </div>
-  </div>
-
-  <div className="catalogue-grid">
-    {/* Card 1 - Sweden Melody */}
-    <div className="catalogue-card">
-      <img 
-        src={p10} // Replace with your actual image if different
-        alt="Sweden Melody interior" 
-      />
-      <div className="card-content">
-        <h3 className="card-title">Sweden melody</h3>
-        <p className="card-location">Paris, France</p>
-        <p className="card-year">2019</p>
-      </div>
-    </div>
-
-    {/* Card 2 - Modern Mix */}
-    <div className="catalogue-card">
-      <img 
-        src={p11} // Replace with your actual image if different
-        alt="Modern Mix interior" 
-      />
-      <div className="card-content">
-        <h3 className="card-title">Modern mix</h3>
-        <p className="card-location">Madrid, Spain</p>
-        <p className="card-year">2021</p>
-      </div>
-    </div>
-
-    {/* Card 3 - Airy Cave */}
-    <div className="catalogue-card">
-      <img 
-        src={p12} // Replace with your actual image if different
-        alt="Airy Cave interior" 
-      />
-      <div className="card-content">
-        <h3 className="card-title">Airy cave</h3>
-        <p className="card-location">Amsterdam, Netherlands</p>
-        <p className="card-year">2023</p>
-      </div>
-    </div>
-  </div>
-
-  <div className="catalogue-cta">
-    <button className="btn-catalogue">
-      View DAR Catalogue →
-    </button>
-  </div>
-</section>
-
-
-
-<section className="tech-section">
-  <p className="tech-eyebrow">POWERED BY TECHNOLOGY</p>
-
-  <h1 className="tech-heading">
-    Kuwait’s first 3D furniture design<br />
-    technology that brings your furniture<br />
-    from design to life.
-  </h1>
-
-  <div className="tech-wrapper">
-    {/* LEFT CONTENT */}
-    <div className="tech-left">
-      <h2 className="tech-title">
-        3D FURNITURE DESIGN
-        <span>INSTANT UPDATES</span>
-        <span>SEAMLESS PROCESS</span>
-      </h2>
-
-      <p className="tech-desc">
-        Easily visualize your ideas in an interactive 3D environment.
-        Change dimensions, finishes, and layouts with a few clicks,
-        no technical skills required.
-      </p>
-
-      <p className="tech-highlight">
-        With DAR, technology transforms the traditional furniture journey
-        into a smart, interactive, and stress-free process.
-      </p>
-
-      <div className="tech-bg-text">3D FURNITURE</div>
-    </div>
-
-    {/* RIGHT IMAGE */}
-    <div className="tech-right">
-      <img
-        src={p3}
-        alt="3D Furniture Room"
-      />
-    </div>
-  </div>
-</section>
-
-
-
-{/* ===============================
-    HOW IT WORKS SECTION - EXACT MATCH
-============================== */}
-
-
-<section className="how-it-works">
-      <div className="containers ">
-        <p className="section-subtitle">HOW IT WORKS</p>
-        <h2 className="section-title">
-          From idea to installation, DAR makes the journey <br /> effortless and transparent.
-        </h2>
-
-        <div className="steps-grid">
-          {steps.map((step) => (
-            <div className="step-card" key={step.number}>
-              <div className="step-header">
-                <span className="step-number">{step.number}</span>
-                <span className="step-title">{step.title}</span>
+              <div className="impact-stat">
+                <h3 className="impact-num">250+</h3>
+                <p className="impact-label">Projects Completed</p>
               </div>
-              <p className="step-description">{step.description}</p>
+
+              <div className="impact-divider"></div>
+
+              <div className="impact-stat">
+                <h3 className="impact-num">40+</h3>
+                <p className="impact-label">Team Members</p>
+              </div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
+
+
+
+
+
+
+
+      
+<section className="sf">
+      <div className="sf-wrap">
+        {/* LEFT */}
+        <div className="sf-col">
+          <div className="sf-box">
+            <div className="sf-icon"><img src={pin}/></div>
+            <h3 className="sf-title">Personal by Design</h3>
+            <p className="sf-text">
+              Every piece begins with you. Your taste, your space, your lifestyle.
+              DAR gives you the freedom to create furniture that feels truly yours.
+            </p>
+          </div>
+
+
+          <div className="sf-box">
+           <div className="sf-icon"><img src={star}/></div>
+            <h3 className="sf-title">Crafted with Care</h3>
+            <p className="sf-text">
+              Behind every design is skilled craftsmanship and attention to detail,
+              ensuring that your furniture is not only beautiful but built to last.
+            </p>
+          </div>
+        </div>
+
+        {/* CENTER IMAGE */}
+        <div className="sf-center">
+          {/* replace src with your image */}
+          <img className="sf-img" src={IMG} alt="Your" />
+        </div>
+
+        {/* RIGHT */}
+        <div className="sf-col">
+          <div className="sf-box">
+            <div className="sf-icon"><img src={ball}/></div>
+            <h3 className="sf-title">Clarity Always</h3>
+            <p className="sf-text">
+              From design to delivery, we keep the process simple and transparent,
+              with clear choices, timelines, and expectations at every step.
+            </p>
+          </div>
+
+
+          <div className="sf-box">
+            <div className="sf-icon"><img src={couch}/></div>
+            <h3 className="sf-title">Built for Living</h3>
+            <p className="sf-text">
+              We design with real life in mind—pieces that fit your space perfectly,
+              elevate your home, and stay with you for years to come.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
 
 
     <section className="meet-team-section">
