@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 import navlogo from "./images/navlogo.png";
-import Login from './login';
+import Login from '../components/login';
 export default function Navbar() {
     const [language, setLanguage] = useState("English");
     const [open, setOpen] = useState(false);
