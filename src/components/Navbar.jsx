@@ -13,8 +13,7 @@ export default function Navbar() {
             <header className="glass-header">
                 <div className="header-container">
                     <div className="logo">
-                        {/* DAR<span className="logo-bracket">|</span>
-              <span className="logo-symbol">✦</span> */}
+                    
 
                         <img
                             className="navlogo" src={navlogo}
@@ -68,7 +67,7 @@ export default function Navbar() {
                         <span className="separator">|</span>
 
                         <div  className="auth-link">
-                         <a href="/login" className='auth-a'>Login / Sign Up</a>
+                         <Link to="/login" className='auth-a'>Login / Sign Up</Link>
                         </div>
 
                         <Link to="#" className="btn-platform">
