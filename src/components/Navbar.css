@@ -1,0 +1,161 @@
+
+.glass-header {
+    padding: 20px 40px;
+    margin: 50px 60px 0;
+    border-radius: 15px;
+    position: relative;
+    z-index: 10;
+}
+
+.glass-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 40, 35, 0.45);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    z-index: -1;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* NAV */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+/* ===============================
+   HEADER RIGHT SECTION
+================================ */
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+/* ===============================
+   LANGUAGE DROPDOWN
+================================ */
+
+.lang-section {
+    position: relative;
+}
+
+.lang-display {
+    cursor: pointer;
+    color: #e0e0e0;
+    font-weight: 500;
+    user-select: none;
+}
+
+.lang-dropdown {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    min-width: 140px;
+
+    background: rgba(0, 40, 35, 0.7);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.lang-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.lang-option:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.flag {
+    font-size: 18px;
+}
+
+/* ===============================
+   SEPARATOR & AUTH LINK
+================================ */
+
+.separator {
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 300;
+}
+
+.auth-link {
+    color: #e0e0e0;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.auth-link:hover {
+    color: #ffffff;
+}
+
+.auth-a {
+    color: #e0e0e0;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* ===============================
+   PLATFORM BUTTON
+================================ */
+
+.btn-platform {
+    background: #ccff33;
+    /* bright lime-yellow */
+    color: #000;
+
+    padding: 12px 24px;
+    border-radius: 8px;
+
+    font-weight: 600;
+    font-size: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-platform:hover {
+    background: #e0ff66;
+}
+
+.btn-platform .arrow {
+    font-size: 18px;
+}

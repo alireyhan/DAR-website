@@ -25,7 +25,7 @@ import p17 from "./images/p17.jpg"
 import p18 from "./images/p18.jpg";
 import footer from "./images/footer.png";
 import navlogo from "./images/navlogo.png";
-
+import Navbar from "./Navbar";
 // Video
 import video from "./images/video1.mp4";
 
@@ -56,74 +56,10 @@ export default function Cataloguepage() {
      
       <div className="top-gradient-section">
      
-        <header className="glass-header">
-          <div className="header-container">
-            <div className="logo">
-           
-
- <img 
-      className="navlogo"  src={navlogo} 
-        alt="dar logo" 
-      />
-
-            </div>
-
-            <nav>
-              <ul>
-                 <li><a href="/about">About us</a></li>
-              <li><a href="/project">Projects</a></li>
-                <li><a href="#">Catalogue</a></li>
-                <li><a href="/appointment">Appointment</a></li>
-              </ul>
-            </nav>
-
-            <div className="header-right">
-              <div className="lang-section">
-                <div
-                  className="lang-display"
-                  onClick={() => setOpen(!open)}
-                >
-                  {language === "English" ? "EN" : "AR"} ▼
-                </div>
-
-                {open && (
-                  <div className="lang-dropdown">
-                    <div
-                      className="lang-option"
-                      onClick={() => {
-                        setLanguage("English");
-                        setOpen(false);
-                      }}
-                    >
-                      English
-                    </div>
-                    <div
-                      className="lang-option"
-                      onClick={() => {
-                        setLanguage("Arabic");
-                        setOpen(false);
-                      }}
-                    >
-                      Arabic
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              <span className="separator">|</span>
-
-              <a href="#" className="auth-link">
-                Login / Sign Up
-              </a>
-
-              <a href="#" className="btn-platform">
-                Go to DAR Platform <span className="arrow">↗</span>
-              </a>
-            </div>
-          </div>
-        </header>
-
       
+        <Navbar />
+
+        
         <section className="hero">
           <div className="trust-badge">
             <FontAwesomeIcon icon={faStar} className="star-icon"/>

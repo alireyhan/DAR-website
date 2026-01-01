@@ -29,7 +29,7 @@ import { FaCalendar, FaClock, FaMapMarkerAlt, FaRegEnvelope } from "react-icons/
 const photoArray = [
   p1, p2, p3, p4, p5, p6, p8, p9, p10, p11, p12, p13
 ];
-
+import Navbar from "./Navbar";
 
 
 export default function Appointmentpage() {
@@ -53,72 +53,7 @@ export default function Appointmentpage() {
      
       <div className="top-gradient-section">
      
-        <header className="glass-header">
-          <div className="header-container">
-            <div className="logo">
-           
-
- <img 
-      className="navlogo"  src={navlogo} 
-        alt="dar logo" 
-      />
-
-            </div>
-
-            <nav>
-              <ul>
-                <li><a href="/about">About us</a></li>
-              <li><a href="/project">Projects</a></li>
-                <li><a href="/catalogue">Catalogue</a></li>
-                <li><a href="#">Appointment</a></li>
-              </ul>
-            </nav>
-
-            <div className="header-right">
-              <div className="lang-section">
-                <div
-                  className="lang-display"
-                  onClick={() => setOpen(!open)}
-                >
-                  {language === "English" ? "EN" : "AR"} ▼
-                </div>
-
-                {open && (
-                  <div className="lang-dropdown">
-                    <div
-                      className="lang-option"
-                      onClick={() => {
-                        setLanguage("English");
-                        setOpen(false);
-                      }}
-                    >
-                      English
-                    </div>
-                    <div
-                      className="lang-option"
-                      onClick={() => {
-                        setLanguage("Arabic");
-                        setOpen(false);
-                      }}
-                    >
-                      Arabic
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              <span className="separator">|</span>
-
-              <a href="#" className="auth-link">
-                Login / Sign Up
-              </a>
-
-              <a href="#" className="btn-platform">
-                Go to DAR Platform <span className="arrow">↗</span>
-              </a>
-            </div>
-          </div>
-        </header>
+        <Navbar />
 
       
         <section className="hero">

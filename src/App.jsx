@@ -5,12 +5,16 @@ import Cataloguepage from "./components/catalogue";
 import Projectpage from "./components/project";
 import Appointmentpage from "./components/appointment";
 import About from "./components/about";
+import Login from "./components/login";
+
 export default function App() {
   return (
     <Router>
       <Routes>
        
-        <Route path="/" element={<Navigate to="/landingpage" replace />} />
+          <Route path="/" element={<Navigate to="/landingpage" replace />} />
+        <Route path="/login" element={<Login />} />
+
         <Route path="/about" element={<About />} />
         <Route path="/landingpage" element={<Landingpage />} />
         <Route path="/project" element={<Projectpage />} />
@@ -18,6 +22,7 @@ export default function App() {
             <Route path="/appointment" element={<Appointmentpage />} />
       </Routes>
     </Router>
+    
     
   );
 }
