@@ -733,8 +733,10 @@ nav ul li a:hover {
 
 .tabs {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 22px;
+  width: 100%;
 }
 
 .tab {
@@ -787,6 +789,25 @@ nav ul li a:hover {
 @media (max-width: 850px) {
   .book-card {
     width: 94%;
+    padding: 30px 20px;
+    /* Reduce padding on mobile */
+  }
+
+  .tabs {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .tab {
+    padding: 12px 14px;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    min-height: 45px;
   }
 
   .grid-2 {
