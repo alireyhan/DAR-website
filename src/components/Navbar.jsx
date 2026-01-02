@@ -11,6 +11,7 @@ import { useTranslation } from 'react-i18next';
 export default function Navbar() {
     const { t, i18n } = useTranslation();
     const [open, setOpen] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const { user } = useSelector((state) => state.user);
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -18,11 +19,16 @@ export default function Navbar() {
     const handleLogout = () => {
         dispatch(logout());
         navigate('/login');
+        setMobileMenuOpen(false);
     };
 
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
         setOpen(false);
+    };
+
+    const toggleMobileMenu = () => {
+        setMobileMenuOpen(!mobileMenuOpen);
     };
 
     const isRTL = i18n.language === "ar";
@@ -39,14 +45,37 @@ export default function Navbar() {
                         />
                     </div>
 
-                    <nav>
+                    <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
+                        {mobileMenuOpen ? '✕' : '☰'}
+                    </button>
+
+                    <nav className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
                         <ul>
-                            <li><Link to="/about">{t('nav.about')}</Link></li>
-                            <li><Link to="/project">{t('nav.projects')}</Link></li>
-                            <li><Link to="/catalogue">{t('nav.catalogue')}</Link></li>
-                            <li><Link to="/appointment">{t('nav.appointment')}</Link></li>
-                            {user && <li><Link to="/dashboard" style={{ color: '#bfff00', fontWeight: 'bold' }}>{t('nav.dashboard')}</Link></li>}
+                            <li><Link to="/about" onClick={() => setMobileMenuOpen(false)}>{t('nav.about')}</Link></li>
+                            <li><Link to="/project" onClick={() => setMobileMenuOpen(false)}>{t('nav.projects')}</Link></li>
+                            <li><Link to="/catalogue" onClick={() => setMobileMenuOpen(false)}>{t('nav.catalogue')}</Link></li>
+                            <li><Link to="/appointment" onClick={() => setMobileMenuOpen(false)}>{t('nav.appointment')}</Link></li>
+                            {user && <li><Link to="/dashboard" onClick={() => setMobileMenuOpen(false)} style={{ color: '#bfff00', fontWeight: 'bold' }}>{t('nav.dashboard')}</Link></li>}
                         </ul>
+
+                        {/* Mobile Actions */}
+                        <div className="mobile-actions">
+                            <div className="lang-section">
+                                <span className="lang-display" onClick={() => changeLanguage(isRTL ? "en" : "ar")}>
+                                    <span className="flag">🌐</span> {isRTL ? "English" : "العربية"}
+                                </span>
+                            </div>
+
+                            {user ? (
+                                <a href="#" className="auth-link" onClick={handleLogout}>{t('nav.logout')}</a>
+                            ) : (
+                                <Link to="/login" className="auth-link" onClick={() => setMobileMenuOpen(false)}>{t('nav.login')}</Link>
+                            )}
+
+                            <a href="https://platform.dar-kuwait.com/" target="_blank" rel="noopener noreferrer" className="btn-platform">
+                                {t('nav.platform')} <span className="arrow">{isRTL ? "↖" : "↗"}</span>
+                            </a>
+                        </div>
                     </nav>
 
                     <div className="header-right">

@@ -792,3 +792,73 @@ nav ul li a:hover {
 .book-btn:hover {
   background: #093b33;
 }
+
+/* ===============================
+   RESPONSIVE (Max-width: 900px)
+================================ */
+@media (max-width: 900px) {
+  .glass-header {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .hero {
+    padding: 80px 20px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-main-text {
+    font-size: 40px;
+  }
+
+  .stats-row {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .stat.up,
+  .stat.down {
+    margin-top: 0;
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    margin: 20px 0;
+  }
+
+  .divider::after {
+    display: none;
+  }
+
+  .cta-row {
+    flex-direction: column;
+  }
+
+  .footer-top {
+    flex-direction: column;
+  }
+
+  .footer-middle {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .newsletter-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+}
