@@ -6,23 +6,26 @@ import Projectpage from "./components/project";
 import Appointmentpage from "./components/appointment";
 import About from "./components/about";
 import Login from "./components/login";
+import Dashboard from "./components/Dashboard";
+import Navbar from "./components/Navbar";
 
 export default function App() {
   return (
     <Router>
       <Routes>
-       
-          <Route path="/" element={<Navigate to="/landingpage" replace />} />
+
+        <Route path="/" element={<Navigate to="/landingpage" replace />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
 
         <Route path="/about" element={<About />} />
         <Route path="/landingpage" element={<Landingpage />} />
         <Route path="/project" element={<Projectpage />} />
         <Route path="/catalogue" element={<Cataloguepage />} />
-            <Route path="/appointment" element={<Appointmentpage />} />
+        <Route path="/appointment" element={<Appointmentpage />} />
       </Routes>
     </Router>
-    
-    
+
+
   );
 }

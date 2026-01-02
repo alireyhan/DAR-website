@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { registerUser, loginUser } from '../redux/userSlice';
 import './login.css';
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 export default function Login() {
   const [isLogin, setIsLogin] = useState(true);
   const [userName, setUserName] = useState('');
   const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { loading, error } = useSelector((state) => state.user);
 
   const handleSubmit = async (e) => {
@@ -21,16 +26,18 @@ export default function Login() {
         const result = await dispatch(loginUser({ email, password }));
         if (loginUser.fulfilled.match(result)) {
           alert('Logged in successfully!');
+          navigate('/dashboard');
         } else {
           alert(result.payload?.message || 'Login failed. Check your credentials.');
         }
       } else {
         // Register
-        const result = await dispatch(registerUser({ userName, email, password }));
+        const result = await dispatch(registerUser({ userName, email, phone, password }));
         if (registerUser.fulfilled.match(result)) {
           alert('User registered successfully!');
           setUserName('');
           setEmail('');
+          setPhone('');
           setPassword('');
         } else {
           alert(result.payload?.message || 'Registration failed. User may already exist.');
@@ -70,6 +77,17 @@ export default function Login() {
             />
           )}
 
+          {!isLogin && (
+            <input
+              type="tel"
+              placeholder="Phone Number"
+              className="input"
+              required
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+            />
+          )}
+
           <input
             type="email"
             placeholder="Email Address"
@@ -79,14 +97,23 @@ export default function Login() {
             onChange={(e) => setEmail(e.target.value)}
           />
 
-          <input
-            type="password"
-            placeholder="Password"
-            className="input"
-            required
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+          <div className="password-wrapper">
+            <input
+              type={showPassword ? "text" : "password"}
+              placeholder="Password"
+              className="input"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button
+              type="button"
+              className="toggle-password"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+            </button>
+          </div>
 
           {isLogin && (
             <div className="options">

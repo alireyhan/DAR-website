@@ -19,10 +19,10 @@ body {
 }
 
 .background {
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(90deg, transparent, transparent 40px, rgb(0 0 0 / 15%) 40px, rgb(0 0 0 / 15%) 80px);
-    opacity: 0.5;
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(90deg, transparent, transparent 40px, rgb(0 0 0 / 15%) 40px, rgb(0 0 0 / 15%) 80px);
+  opacity: 0.5;
 }
 
 .card {
@@ -84,6 +84,29 @@ body {
 
 .input:focus {
   border-color: #004d40;
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper .input {
+  width: 100%;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
 }
 
 .options {

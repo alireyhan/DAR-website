@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import "./landingpage.css";
@@ -51,15 +52,7 @@ const careerCards = [
     title: "Design And Interactions",
     description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
   },
-  
-  {
-    title: "Design And Interactions",
-    description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
-  },
-   {
-    title: "Design And Interactions",
-    description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
-  },
+
   {
     title: "Design And Interactions",
     description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
@@ -68,7 +61,15 @@ const careerCards = [
     title: "Design And Interactions",
     description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
   },
-   {
+  {
+    title: "Design And Interactions",
+    description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
+  },
+  {
+    title: "Design And Interactions",
+    description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
+  },
+  {
     title: "Design And Interactions",
     description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
   },
@@ -82,9 +83,20 @@ const careerCards = [
   },
 ];
 
+import { useTranslation } from "react-i18next";
+
 export default function Landingpage() {
-  const [language, setLanguage] = useState("English");
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleBook = () => {
+    navigate("/appointment#measurement-section");
+  };
+
+  const handlePlatform = () => {
+    window.open("https://platform.dar-kuwait.com/", "_blank");
+  };
 
   const galleryRef = useRef(null);
 
@@ -98,7 +110,7 @@ export default function Landingpage() {
   };
 
 
-const scrollRef = useRef(null);
+  const scrollRef = useRef(null);
 
   const scroll = (direction) => {
     if (scrollRef.current) {
@@ -116,36 +128,34 @@ const scrollRef = useRef(null);
       =============================== */}
       <div className="top-gradient-section">
         {/* HEADER */}
-       
+        <Navbar />
 
 
 
-       <Navbar />
+
+
 
         {/* HERO */}
         <section className="hero">
           <div className="trust-badge">
-            <FontAwesomeIcon icon={faStar} className="star-icon"/>
-            1200+ trusted customers
+            <FontAwesomeIcon icon={faStar} className="star-icon" />
+            {t('hero.trustBadge')}
           </div>
 
-          <h1>
-            Design It Yourself And Control <br />
-            The Price
+          <h1 style={{ whiteSpace: 'pre-line' }}>
+            {t('hero.title')}
           </h1>
 
           <p className="description">
-            Experience Kuwait's first interactive 3D configurator.
-            Customize finishes, set room dimensions,
-            and see real-time pricing before you book.
+            {t('hero.description')}
           </p>
 
           <div className="buttons">
-            <button className="btn-outline">
-              Book Measurements ↗
+            <button className="btn-outline" onClick={handleBook}>
+              {t('hero.bookMeasurements')} ↗
             </button>
-            <button className="btn-primary">
-              Go to DAR Platform ↗
+            <button className="btn-primary" onClick={handlePlatform}>
+              {t('hero.goToPlatform')} ↗
             </button>
           </div>
 
@@ -158,19 +168,19 @@ const scrollRef = useRef(null);
       </div>
 
       {/* DAR SECTION */}
-      
+
 
       <div className="space-section">
         <div className="space-actions">
-          <button className="action-btn"><span className="icon-circle">👤</span>Book DAR Crew</button>
-          <button className="action-btn"><span className="icon-circle">📏</span>Book Measurements</button>
+          <button className="action-btn" onClick={handleBook}><span className="icon-circle">👤</span>Book DAR Crew</button>
+          <button className="action-btn" onClick={handleBook}><span className="icon-circle">📏</span>Book Measurements</button>
           <button className="action-btn"><span className="icon-circle">📦</span>Track Your Order</button>
         </div>
         <div className="space-banner">
           <div className="space-text">
             <h2>Design Your Space Your Way</h2>
             <p>Bring your ideas to life, create custom furniture <br /> tailored to your room.</p>
-            <button className="space-cta">Click to Go to DAR Platform <span>↗</span></button>
+            <button className="space-cta" onClick={handlePlatform}>Click to Go to DAR Platform <span>↗</span></button>
           </div>
           <div className="space-logo">
             <img src={logo} alt="DAR" />
@@ -189,27 +199,27 @@ const scrollRef = useRef(null);
         </div>
 
         <div className="journey-content">
-       <div className="timeline">
+          <div className="timeline">
 
-  <div className="timeline-item">
-    <div className="dot"></div>
-    <h3>2020 - Innovation Born</h3>
-    <p>Remote interior solutions during COVID.</p>
-  </div>
+            <div className="timeline-item">
+              <div className="dot"></div>
+              <h3>2020 - Innovation Born</h3>
+              <p>Remote interior solutions during COVID.</p>
+            </div>
 
-  <div className="timeline-item">
-    <div className="dot"></div>
-    <h3>2021 - Team Growth</h3>
-    <p>Expanded designers & engineers.</p>
-  </div>
+            <div className="timeline-item">
+              <div className="dot"></div>
+              <h3>2021 - Team Growth</h3>
+              <p>Expanded designers & engineers.</p>
+            </div>
 
-  <div className="timeline-item">
-    <div className="dot"></div>
-    <h3>2022 - Omaksan Partnership</h3>
-    <p>Enhanced technology & delivery.</p>
-  </div>
+            <div className="timeline-item">
+              <div className="dot"></div>
+              <h3>2022 - Omaksan Partnership</h3>
+              <p>Enhanced technology & delivery.</p>
+            </div>
 
-</div>
+          </div>
 
           <div className="journey-image">
             <img src={p5} alt="Journey" />
@@ -247,7 +257,7 @@ const scrollRef = useRef(null);
         </div>
 
         <div className="book-wrapper">
-          <button className="book-button">Book DAR Crew →</button>
+          <button className="book-button" onClick={handleBook}>Book DAR Crew →</button>
         </div>
       </div>
 
@@ -298,7 +308,7 @@ const scrollRef = useRef(null);
               From dimensions to finishes, create furniture that matches your
               exact style and needs. With DAR, you’re not limited to templates.
             </p>
-          </div>  
+          </div>
 
           <div className="card">
             <div className="icon">🚚</div>
@@ -308,7 +318,7 @@ const scrollRef = useRef(null);
               delivered and set up with precision, giving you peace of mind.
             </p>
           </div>
-              <div className="card">
+          <div className="card">
             <div className="icon">🚚</div>
             <h3>Trusted Delivery</h3>
             <p>
@@ -321,362 +331,362 @@ const scrollRef = useRef(null);
       </section>
 
 
-{/* ===============================
+      {/* ===============================
     DAR CATALOGUE SECTION
 ============================== */}
-<section className="catalogue-section">
-  <div className="catalogue-header">
-    <p className="catalogue-eyebrow">WHAT WE PROUD OF</p>
-    <h2 className="catalogue-title">DAR Catalogue</h2>
-    
-    <div className="catalogue-nav-arrows">
-      <button className="arrow-btn left-arrow">←</button>
-      <button className="arrow-btn right-arrow active">→</button>
-    </div>
-  </div>
+      <section className="catalogue-section">
+        <div className="catalogue-header">
+          <p className="catalogue-eyebrow">WHAT WE PROUD OF</p>
+          <h2 className="catalogue-title">DAR Catalogue</h2>
 
-  <div className="catalogue-grid">
-    {/* Card 1 - Sweden Melody */}
-    <div className="catalogue-card">
-      <img 
-        src={p10} // Replace with your actual image if different
-        alt="Sweden Melody interior" 
-      />
-      <div className="card-content">
-        <h3 className="card-title">Sweden melody</h3>
-        <p className="card-location">Paris, France</p>
-        <p className="card-year">2019</p>
-      </div>
-    </div>
+          <div className="catalogue-nav-arrows">
+            <button className="arrow-btn left-arrow">←</button>
+            <button className="arrow-btn right-arrow active">→</button>
+          </div>
+        </div>
 
-    {/* Card 2 - Modern Mix */}
-    <div className="catalogue-card">
-      <img 
-        src={p11} // Replace with your actual image if different
-        alt="Modern Mix interior" 
-      />
-      <div className="card-content">
-        <h3 className="card-title">Modern mix</h3>
-        <p className="card-location">Madrid, Spain</p>
-        <p className="card-year">2021</p>
-      </div>
-    </div>
+        <div className="catalogue-grid">
+          {/* Card 1 - Sweden Melody */}
+          <div className="catalogue-card">
+            <img
+              src={p10} // Replace with your actual image if different
+              alt="Sweden Melody interior"
+            />
+            <div className="card-content">
+              <h3 className="card-title">Sweden melody</h3>
+              <p className="card-location">Paris, France</p>
+              <p className="card-year">2019</p>
+            </div>
+          </div>
 
-    {/* Card 3 - Airy Cave */}
-    <div className="catalogue-card">
-      <img 
-        src={p12} // Replace with your actual image if different
-        alt="Airy Cave interior" 
-      />
-      <div className="card-content">
-        <h3 className="card-title">Airy cave</h3>
-        <p className="card-location">Amsterdam, Netherlands</p>
-        <p className="card-year">2023</p>
-      </div>
-    </div>
-  </div>
+          {/* Card 2 - Modern Mix */}
+          <div className="catalogue-card">
+            <img
+              src={p11} // Replace with your actual image if different
+              alt="Modern Mix interior"
+            />
+            <div className="card-content">
+              <h3 className="card-title">Modern mix</h3>
+              <p className="card-location">Madrid, Spain</p>
+              <p className="card-year">2021</p>
+            </div>
+          </div>
 
-  <div className="catalogue-cta">
-    <button className="btn-catalogue">
-      View DAR Catalogue →
-    </button>
-  </div>
-</section>
+          {/* Card 3 - Airy Cave */}
+          <div className="catalogue-card">
+            <img
+              src={p12} // Replace with your actual image if different
+              alt="Airy Cave interior"
+            />
+            <div className="card-content">
+              <h3 className="card-title">Airy cave</h3>
+              <p className="card-location">Amsterdam, Netherlands</p>
+              <p className="card-year">2023</p>
+            </div>
+          </div>
+        </div>
 
-
-
-<section className="tech-section">
-  <p className="tech-eyebrow">POWERED BY TECHNOLOGY</p>
-
-  <h1 className="tech-heading">
-    Kuwait’s first 3D furniture design<br />
-    technology that brings your furniture<br />
-    from design to life.
-  </h1>
-
-  <div className="tech-wrapper">
-    {/* LEFT CONTENT */}
-    <div className="tech-left">
-      <h2 className="tech-title">
-        3D FURNITURE DESIGN
-        <span>INSTANT UPDATES</span>
-        <span>SEAMLESS PROCESS</span>
-      </h2>
-
-      <p className="tech-desc">
-        Easily visualize your ideas in an interactive 3D environment.
-        Change dimensions, finishes, and layouts with a few clicks,
-        no technical skills required.
-      </p>
-
-      <p className="tech-highlight">
-        With DAR, technology transforms the traditional furniture journey
-        into a smart, interactive, and stress-free process.
-      </p>
-
-      <div className="tech-bg-text">3D FURNITURE</div>
-    </div>
-
-    {/* RIGHT IMAGE */}
-    <div className="tech-right">
-      <img
-        src={p3}
-        alt="3D Furniture Room"
-      />
-    </div>
-  </div>
-</section>
+        <div className="catalogue-cta">
+          <button className="btn-catalogue">
+            View DAR Catalogue →
+          </button>
+        </div>
+      </section>
 
 
 
-{/* ===============================
+      <section className="tech-section">
+        <p className="tech-eyebrow">POWERED BY TECHNOLOGY</p>
+
+        <h1 className="tech-heading">
+          Kuwait’s first 3D furniture design<br />
+          technology that brings your furniture<br />
+          from design to life.
+        </h1>
+
+        <div className="tech-wrapper">
+          {/* LEFT CONTENT */}
+          <div className="tech-left">
+            <h2 className="tech-title">
+              3D FURNITURE DESIGN
+              <span>INSTANT UPDATES</span>
+              <span>SEAMLESS PROCESS</span>
+            </h2>
+
+            <p className="tech-desc">
+              Easily visualize your ideas in an interactive 3D environment.
+              Change dimensions, finishes, and layouts with a few clicks,
+              no technical skills required.
+            </p>
+
+            <p className="tech-highlight">
+              With DAR, technology transforms the traditional furniture journey
+              into a smart, interactive, and stress-free process.
+            </p>
+
+            <div className="tech-bg-text">3D FURNITURE</div>
+          </div>
+
+          {/* RIGHT IMAGE */}
+          <div className="tech-right">
+            <img
+              src={p3}
+              alt="3D Furniture Room"
+            />
+          </div>
+        </div>
+      </section>
+
+
+
+      {/* ===============================
     HOW IT WORKS SECTION - EXACT MATCH
 ============================== */}
 
 
-<section className="how-it-works">
-      <div className="containers ">
-        <p className="section-subtitle">HOW IT WORKS</p>
-        <h2 className="section-title">
-          From idea to installation, DAR makes the journey <br /> effortless and transparent.
-        </h2>
+      <section className="how-it-works">
+        <div className="containers ">
+          <p className="section-subtitle">HOW IT WORKS</p>
+          <h2 className="section-title">
+            From idea to installation, DAR makes the journey <br /> effortless and transparent.
+          </h2>
 
-        <div className="steps-grid">
-          {steps.map((step) => (
-            <div className="step-card" key={step.number}>
-              <div className="step-header">
-                <span className="step-number">{step.number}</span>
-                <span className="step-title">{step.title}</span>
+          <div className="steps-grid">
+            {steps.map((step) => (
+              <div className="step-card" key={step.number}>
+                <div className="step-header">
+                  <span className="step-number">{step.number}</span>
+                  <span className="step-title">{step.title}</span>
+                </div>
+                <p className="step-description">{step.description}</p>
               </div>
-              <p className="step-description">{step.description}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      <section className="meet-team-section">
+        <div className="meet-team-header">
+          <p className="meet-team-eyebrow">MEET OUR TEAM</p>
+          <h2 className="meet-team-title">
+            We are a passionate team of designers <br />
+            dedicated to transforming your vision <br />
+            into beautifully crafted spaces.
+          </h2>
+        </div>
+
+        <div className="department-tabs">
+          <button className="department-tab active">Management</button>
+          <button className="department-tab">IT Department</button>
+          <button className="department-tab">HR Department</button>
+          <button className="department-tab">Marketing</button>
+          <button className="department-tab">Legal Department</button>
+        </div>
+
+      </section>
+
+
+
+      <div className="team-members-container">
+        {/* Top Row: 4 Members */}
+        <div className="team-grid top-row">
+          <div className="team-card">
+            <img src={p14} alt="Sarah" />
+            <div className="team-overlay">
+              <h3 className="team-name">Sarah</h3>
+              <p className="team-role">Operations Manager</p>
+            </div>
+          </div>
+
+          <div className="team-card">
+            <img src={p15} alt="James" />
+            <div className="team-overlay">
+              <h3 className="team-name">James</h3>
+              <p className="team-role">Head of Marketing</p>
+            </div>
+          </div>
+
+          <div className="team-card">
+            <img src={p16} alt="Emily" />
+            <div className="team-overlay">
+              <h3 className="team-name">Emily</h3>
+              <p className="team-role">CFO</p>
+            </div>
+          </div>
+
+          <div className="team-card">
+            <img src={p18} alt="Michael" />
+            <div className="team-overlay">
+              <h3 className="team-name">Michael</h3>
+              <p className="team-role">Head Designer</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Mixed Row: Member + Highlight + Member */}
+        <div className="team-grid bottom-row">
+          <div className="team-card">
+            <img src={p18} alt="James" />
+            <div className="team-overlay">
+              <h3 className="team-name">James</h3>
+              <p className="team-role">Accountant</p>
+            </div>
+          </div>
+
+          <div className="highlight-card">
+            <div className="highlight-icon">👥</div>
+            <p className="highlight-text">
+              DAR is powered by a team of <strong>50+</strong> professionals across design, operations,
+              customer service, marketing, HR, finance, and production.
+            </p>
+          </div>
+
+          <div className="team-card">
+            <img src={p14} alt="Sarah" />
+            <div className="team-overlay">
+              <h3 className="team-name">Sarah</h3>
+              <p className="team-role">Legal Head</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <section className="testimonial-section">
+        <div className="testimonial-container">
+          <div className="testimonial-left">
+            <p className="testimonial-header">OUR CLIENTS SAY</p>
+            <p className="testimonial-description">
+              The warm words of our clients let us achieve more
+            </p>
+            <div className="client-info">
+              <img src={p14} alt="Client" className="client-image" />
+              <div className="client-details">
+                <p className="client-name">Morgan Dufresne</p>
+                <p className="client-title">Company Owner</p>
+              </div>
+            </div>
+          </div>
+          <div className="testimonial-right">
+            <div className="testimonial-quote">
+              <span className="quote-mark">"</span>
+              <p className="testimonial-text">
+                From concept to reality, DAR turned my vision into a stunning, livable
+                space. I couldn’t be happier with this!
+              </p>
+            </div>
+            <p className="testimonial-feedback">
+              Morgan wanted a modern, functional office. We delivered a bright, stylish
+              space with smart design solutions, perfectly tailored to his company
+              style.
+            </p>
+            <div className="testimonial-arrows">
+              <button className="arrow-left">←</button>
+              <button className="arrow-right">→</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section className="hero-section">
+        <div className="hero-content">
+          <p className="hero-subheading">Crafting Environments</p>
+          <p className="hero-main-text">
+            It is so <span className="highlight">Easy</span> to <span className="highlight">Change</span> the <span className="highlight">mood</span>
+          </p>
+          <button className="btn-book-measurements" onClick={handleBook}>
+            Book Measurements <span className="arrow">→</span>
+          </button>
+        </div>
+      </section>
+
+
+
+      <section className="careers-section">
+        <div className="careers-left">
+          <span className="subtitle">OUR CAREERS</span>
+          <h2>Ready to Join Our Journey</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur. Tortor quis elementum cum nunc
+            libero. Elit purus ipsum mauris ullamcorper. Lacus.
+          </p>
+          <div className="arrow-buttons">
+            <button onClick={() => scroll("left")}>←</button>
+            <button onClick={() => scroll("right")}>→</button>
+          </div>
+        </div>
+
+        <div className="careers-right" ref={scrollRef}>
+          {careerCards.map((card, idx) => (
+            <div className="career-card" key={idx}>
+              <h3>{card.title}</h3>
+              <p>{card.description}</p>
+              <button className="apply-btn">Apply Now →</button>
             </div>
           ))}
         </div>
-      </div>
-    </section>
+      </section>
 
 
-    <section className="meet-team-section">
-      <div className="meet-team-header">
-        <p className="meet-team-eyebrow">MEET OUR TEAM</p>
-        <h2 className="meet-team-title">
-          We are a passionate team of designers <br />
-          dedicated to transforming your vision <br />
-          into beautifully crafted spaces.
-        </h2>
-      </div>
-
-      <div className="department-tabs">
-        <button className="department-tab active">Management</button>
-        <button className="department-tab">IT Department</button>
-        <button className="department-tab">HR Department</button>
-        <button className="department-tab">Marketing</button>
-        <button className="department-tab">Legal Department</button>
-      </div>
-
-    </section>
-  
 
 
-<div className="team-members-container">
-      {/* Top Row: 4 Members */}
-      <div className="team-grid top-row">
-        <div className="team-card">
-          <img src={p14} alt="Sarah" />
-          <div className="team-overlay">
-            <h3 className="team-name">Sarah</h3>
-            <p className="team-role">Operations Manager</p>
+      <footer className="footer">
+        <div className="footer-top">
+          <div className="footer-left">
+            <img src={footer} alt="DAR Logo" className="footer-logo" />
+            <p>support@dar.com</p>
+            <p>+965 1234 6584</p>
+            <p>+92 1234 5678</p>
           </div>
-        </div>
 
-        <div className="team-card">
-          <img src={p15} alt="James" />
-          <div className="team-overlay">
-            <h3 className="team-name">James</h3>
-            <p className="team-role">Head of Marketing</p>
-          </div>
-        </div>
-
-        <div className="team-card">
-          <img src={p16} alt="Emily" />
-          <div className="team-overlay">
-            <h3 className="team-name">Emily</h3>
-            <p className="team-role">CFO</p>
-          </div>
-        </div>
-
-        <div className="team-card">
-          <img src={p18} alt="Michael" />
-          <div className="team-overlay">
-            <h3 className="team-name">Michael</h3>
-            <p className="team-role">Head Designer</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Mixed Row: Member + Highlight + Member */}
-      <div className="team-grid bottom-row">
-        <div className="team-card">
-          <img src={p18} alt="James" />
-          <div className="team-overlay">
-            <h3 className="team-name">James</h3>
-            <p className="team-role">Accountant</p>
-          </div>
-        </div>
-
-        <div className="highlight-card">
-          <div className="highlight-icon">👥</div>
-          <p className="highlight-text">
-            DAR is powered by a team of <strong>50+</strong> professionals across design, operations,
-            customer service, marketing, HR, finance, and production.
-          </p>
-        </div>
-
-        <div className="team-card">
-          <img src={p14} alt="Sarah" />
-          <div className="team-overlay">
-            <h3 className="team-name">Sarah</h3>
-            <p className="team-role">Legal Head</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-<section className="testimonial-section">
-  <div className="testimonial-container">
-    <div className="testimonial-left">
-      <p className="testimonial-header">OUR CLIENTS SAY</p>
-      <p className="testimonial-description">
-        The warm words of our clients let us achieve more
-      </p>
-      <div className="client-info">
-        <img src={p14} alt="Client" className="client-image" />
-        <div className="client-details">
-          <p className="client-name">Morgan Dufresne</p>
-          <p className="client-title">Company Owner</p>
-        </div>
-      </div>
-    </div>
-    <div className="testimonial-right">
-      <div className="testimonial-quote">
-        <span className="quote-mark">"</span>
-        <p className="testimonial-text">
-          From concept to reality, DAR turned my vision into a stunning, livable
-          space. I couldn’t be happier with this!
-        </p>
-      </div>
-      <p className="testimonial-feedback">
-        Morgan wanted a modern, functional office. We delivered a bright, stylish
-        space with smart design solutions, perfectly tailored to his company
-        style.
-      </p>
-      <div className="testimonial-arrows">
-        <button className="arrow-left">←</button>
-        <button className="arrow-right">→</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<section className="hero-section">
-  <div className="hero-content">
-    <p className="hero-subheading">Crafting Environments</p>
-    <p className="hero-main-text">
-      It is so <span className="highlight">Easy</span> to <span className="highlight">Change</span> the <span className="highlight">mood</span>
-    </p>
-    <button className="btn-book-measurements">
-      Book Measurements <span className="arrow">→</span>
-    </button>
-  </div>
-</section>
-
-
-
-<section className="careers-section">
-      <div className="careers-left">
-        <span className="subtitle">OUR CAREERS</span>
-        <h2>Ready to Join Our Journey</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur. Tortor quis elementum cum nunc
-          libero. Elit purus ipsum mauris ullamcorper. Lacus.
-        </p>
-        <div className="arrow-buttons">
-          <button onClick={() => scroll("left")}>←</button>
-          <button onClick={() => scroll("right")}>→</button>
-        </div>
-      </div>
-
-      <div className="careers-right" ref={scrollRef}>
-        {careerCards.map((card, idx) => (
-          <div className="career-card" key={idx}>
-            <h3>{card.title}</h3>
-            <p>{card.description}</p>
-            <button className="apply-btn">Apply Now →</button>
-          </div>
-        ))}
-      </div>
-    </section> 
-
-
-
-
-<footer className="footer">
-      <div className="footer-top">
-        <div className="footer-left">
-          <img src={footer} alt="DAR Logo" className="footer-logo"/>
-          <p>support@dar.com</p>
-          <p>+965 1234 6584</p>
-          <p>+92 1234 5678</p>
-        </div>
-
-        <div className="footer-middle">
-          <div className="footer-links">
-            <h4>Pages</h4>
-            <ul>
-              <li>Home</li>
-              <li>About us</li>
-              <li>Catalogue</li>
-              <li>Projects</li>
-              <li>Appointments</li>
-              <li>Contact</li>
-            </ul>
-          </div>
-          <div className="footer-links">
-            <h4>Legal</h4>
-            <ul>
-              <li>Terms</li>
-              <li>Privacy</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="footer-right">
-          <div className="newsletter-card">
-            <img src={p1} alt="Newsletter"/>
-            <div className="newsletter-text">
-              <h4>Subscribe to Our Newsletter</h4>
-              <p>Lorem ipsum dolor sit amet consectetur. Duis scelerisque cursus nisl amet in. Habitant nullam nam bibendum consequat.</p>
+          <div className="footer-middle">
+            <div className="footer-links">
+              <h4>Pages</h4>
+              <ul>
+                <li>Home</li>
+                <li>About us</li>
+                <li>Catalogue</li>
+                <li>Projects</li>
+                <li>Appointments</li>
+                <li>Contact</li>
+              </ul>
             </div>
-            <span className="arrow">→</span>
+            <div className="footer-links">
+              <h4>Legal</h4>
+              <ul>
+                <li>Terms</li>
+                <li>Privacy</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="footer-right">
+            <div className="newsletter-card">
+              <img src={p1} alt="Newsletter" />
+              <div className="newsletter-text">
+                <h4>Subscribe to Our Newsletter</h4>
+                <p>Lorem ipsum dolor sit amet consectetur. Duis scelerisque cursus nisl amet in. Habitant nullam nam bibendum consequat.</p>
+              </div>
+              <span className="arrow">→</span>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="footer-bottom">
-     <div className="social-icons">
-  <FaInstagram />
-  <FaFacebookF />
-  <FaTwitter /> 
-  <FaYoutube />
-  <FaWhatsapp />
-</div>
-        <p>Copyright © 2025 Dar. All rights reserved.</p>
-      </div>
-    </footer>
+        <div className="footer-bottom">
+          <div className="social-icons">
+            <FaInstagram />
+            <FaFacebookF />
+            <FaTwitter />
+            <FaYoutube />
+            <FaWhatsapp />
+          </div>
+          <p>Copyright © 2025 Dar. All rights reserved.</p>
+        </div>
+      </footer>
 
 
     </>
