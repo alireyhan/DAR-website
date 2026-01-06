@@ -6,9 +6,10 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { Link, useNavigate } from 'react-router-dom'
 import { useTranslation } from "react-i18next";
 import "./about.css";
-import { FaInstagram, FaFacebookF, FaTwitter, FaYoutube, FaWhatsapp, FaTiktok } from "react-icons/fa";
-import { FaUsers } from "react-icons/fa";
+import './what.css'
+import { FaWhatsapp, FaUsers } from "react-icons/fa";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 // Images
 import p1 from "./images/p1.png";
@@ -609,73 +610,7 @@ export default function Aboutpage() {
 
 
 
-      <footer className="footer">
-        <div className="footer-top">
-          <div className="footer-left">
-            <img src={footer} alt="DAR Logo" className="footer-logo" />
-            <p>support@dar.com</p>
-            <h4>Customer Care</h4>
-            <p className="prominent">Labor Services:58881032</p>
-            <p className="prominent">Executive Engineer:58881024</p>
-            <p className="prominent">Accountant:58881023</p>
-            <p className="prominent">Interior Designer:58881027</p>
-            <p className="prominent">Architectural Engineer:58881029</p>
-            <p className="prominent">Legal Consultant:58881034</p>
-          </div>
-
-          <div className="footer-middle">
-            <div className="footer-links">
-              <h4>Pages</h4>
-              <ul>
-                <li>Home</li>
-                <li>About us</li>
-                <li>Catalogue</li>
-                <li>Projects</li>
-                <li>Appointments</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-            <div className="footer-links">
-              <h4>Legal</h4>
-              <ul>
-                <li>Terms</li>
-                <li>Privacy</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="footer-right">
-            <div className="newsletter-card">
-              <img src={p1} alt="Newsletter" />
-              <div className="newsletter-text">
-                <h4>Subscribe to Our Newsletter</h4>
-                <p>Lorem ipsum dolor sit amet consectetur. Duis scelerisque cursus nisl amet in. Habitant nullam nam bibendum consequat.</p>
-              </div>
-              <span className="arrow">→</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="footer-bottom">
-          <div className="social-icons">
-            <a href="https://www.instagram.com/dar.interiors.kw?igsh=bjR0cGYyMXU5d2Zw&utm_source=qr"><FaInstagram /></a>
-            <a href="https://www.facebook.com/DAR.INTERIORS.KW"><FaFacebookF /></a>
-
-            <a href="https://www.tiktok.com/@darinteriors.kw?_r=1&_t=ZS-92kJZ8amJNs"><FaTiktok /></a>
-
-            <a
-              href={`https://wa.me/96555559585?text=${encodeURIComponent(message)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaWhatsapp />
-            </a>
-
-
-          </div>
-          <p>Copyright © 2025 Dar. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
 
 
     </>

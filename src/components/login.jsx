@@ -3,9 +3,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { registerUser, loginUser } from '../redux/userSlice';
 import './login.css';
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import './what.css'
+import { FaEye, FaEyeSlash, FaWhatsapp } from "react-icons/fa";
 
 export default function Login() {
+  const message = "Hello, I want to get more information.";
   const [isLogin, setIsLogin] = useState(true);
   const [userName, setUserName] = useState('');
   const [email, setEmail] = useState('');
@@ -51,16 +53,16 @@ export default function Login() {
 
   return (
     <div className="container">
-         <a
-       href={`https://wa.me/96555559585?text=${encodeURIComponent(message)}`}
-           
-            target="_blank"
-            rel="noopener noreferrer"
-            className="whatsapp-float"
-            aria-label="Chat on WhatsApp"
-          >
-            <FaWhatsapp />
-          </a>
+      <a
+        href={`https://wa.me/96555559585?text=${encodeURIComponent(message)}`}
+
+        target="_blank"
+        rel="noopener noreferrer"
+        className="whatsapp-float"
+        aria-label="Chat on WhatsApp"
+      >
+        <FaWhatsapp />
+      </a>
       <div className="background"></div>
 
       <div className="card">

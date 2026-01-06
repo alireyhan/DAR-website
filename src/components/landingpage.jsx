@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import "./landingpage.css";
-import { FaInstagram, FaFacebookF, FaTwitter, FaYoutube, FaWhatsapp, FaUsers } from "react-icons/fa";
+import { FaWhatsapp, FaUsers } from "react-icons/fa";
+import Footer from "./Footer";
 import './what.css'
 
 // Images
@@ -638,59 +639,7 @@ export default function Landingpage() {
 
 
 
-      <footer className="footer">
-        <div className="footer-top">
-          <div className="footer-left">
-            <img src={footer} alt="DAR Logo" className="footer-logo" />
-            <p>support@dar.com</p>
-            <p>+965 1234 6584</p>
-            <p>+92 1234 5678</p>
-          </div>
-
-          <div className="footer-middle">
-            <div className="footer-links">
-              <h4>Pages</h4>
-              <ul>
-                <li>Home</li>
-                <li>About us</li>
-                <li>Catalogue</li>
-                <li>Projects</li>
-                <li>Appointments</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-            <div className="footer-links">
-              <h4>Legal</h4>
-              <ul>
-                <li>Terms</li>
-                <li>Privacy</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="footer-right">
-            <div className="newsletter-card">
-              <img src={p1} alt="Newsletter" />
-              <div className="newsletter-text">
-                <h4>Subscribe to Our Newsletter</h4>
-                <p>Lorem ipsum dolor sit amet consectetur. Duis scelerisque cursus nisl amet in. Habitant nullam nam bibendum consequat.</p>
-              </div>
-              <span className="arrow">→</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="footer-bottom">
-          <div className="social-icons">
-            <FaInstagram />
-            <FaFacebookF />
-            <FaTwitter />
-            <FaYoutube />
-            <FaWhatsapp />
-          </div>
-          <p>Copyright © 2025 Dar. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
 
 
     </>

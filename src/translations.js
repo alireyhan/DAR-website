@@ -44,7 +44,36 @@ export const resources = {
             },
             "footer": {
                 "subscribe": "Subscribe to Our Newsletter",
-                "rights": "Copyright © 2025 Dar. All rights reserved."
+                "rights": "Copyright © 2025 Dar. All rights reserved.",
+                "supportEmail": "support@dar.com",
+                "laborServices": "Labor Services",
+                "customerCare": "Customer Care",
+                "mobileValue": "58881032",
+                "pages": "Pages",
+                "home": "Home",
+                "aboutUs": "About us",
+                "catalogue": "Catalogue",
+                "projects": "Projects",
+                "appointments": "Appointments",
+                "contact": "Contact",
+                "legal": "Legal",
+                "terms": "Terms",
+                "privacy": "Privacy",
+                "newsletterDesc": "Stay updated with our latest designs and exclusive offers.",
+                "roles": {
+                    "executiveEngineer": "Executive Engineer",
+                    "accountant": "Accountant",
+                    "interiorDesigner": "Interior Designer",
+                    "architecturalEngineer": "Architectural Engineer",
+                    "legalConsultant": "Legal Consultant"
+                },
+                "rolePhones": {
+                    "executiveEngineer": "58881024",
+                    "accountant": "58881023",
+                    "interiorDesigner": "58881027",
+                    "architecturalEngineer": "58881029",
+                    "legalConsultant": "58881034"
+                }
             }
         }
     },
@@ -93,7 +122,36 @@ export const resources = {
             },
             "footer": {
                 "subscribe": "اشترك في نشرتنا الإخبارية",
-                "rights": "حقوق النشر © 2025 دار. جميع الحقوق محفوظة."
+                "rights": "حقوق النشر © 2025 دار. جميع الحقوق محفوظة.",
+                "supportEmail": "support@dar.com",
+                "laborServices": "خدمات العمالة",
+                "customerCare": "خدمة العملاء",
+                "mobileValue": "58881032",
+                "pages": "الصفحات",
+                "home": "الرئيسية",
+                "aboutUs": "من نحن",
+                "catalogue": "الكتالوج",
+                "projects": "المشاريع",
+                "appointments": "المواعيد",
+                "contact": "اتصل بنا",
+                "legal": "قانوني",
+                "terms": "الشروط",
+                "privacy": "الخصوصية",
+                "newsletterDesc": "ابق على اطلاع بأحدث تصاميمنا وعروضنا الحصرية.",
+                "roles": {
+                    "executiveEngineer": "مهندس تنفيذي",
+                    "accountant": "محاسب",
+                    "interiorDesigner": "مصمم ديكور داخلي",
+                    "architecturalEngineer": "مهندس معماري",
+                    "legalConsultant": "مستشار قانوني"
+                },
+                "rolePhones": {
+                    "executiveEngineer": "58881024",
+                    "accountant": "58881023",
+                    "interiorDesigner": "58881027",
+                    "architecturalEngineer": "58881029",
+                    "legalConsultant": "58881034"
+                }
             }
         }
     }

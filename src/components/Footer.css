@@ -1,0 +1,144 @@
+.footer {
+    background-color: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding: 60px 40px 20px 40px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-left .footer-logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.footer-left p {
+    margin: 6px 0;
+    font-size: 0.9em;
+}
+
+.footer-middle {
+    flex: 1;
+    display: flex;
+    gap: 60px;
+    min-width: 200px;
+}
+
+.footer-links h4 {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.footer-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.newsletter-card {
+    display: flex;
+    gap: 16px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 16px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.newsletter-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.newsletter-text h4 {
+    margin: 0 0 8px 0;
+    font-size: 1em;
+}
+
+.newsletter-text p {
+    font-size: 0.85em;
+    color: #ccc;
+}
+
+.newsletter-card .arrow {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    color: #d6ff3f;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 1.2em;
+}
+
+.social-icons a {
+    color: #d6ff3f;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.neon-text {
+    color: #d6ff3f;
+    font-weight: 600;
+}
+
+.footer-bottom p {
+    font-size: 0.85em;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+    .footer-top {
+        flex-direction: column;
+    }
+
+    .footer-middle {
+        gap: 40px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
