@@ -1,14 +1,8 @@
-.glass-header {
-    width: 80%;
-    padding: 20px 40px;
-    margin: 50px 60px 0;
-    border-radius: 15px;
-    position: sticky;
-    top: 20px;
-    z-index: 1000;
-    transition: all 0.3s ease;
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 .glass-header::before {
     content: '';
     position: absolute;
@@ -194,9 +188,9 @@ nav ul li a:hover {
 
     .header-container {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
-        width: 100%;
+        width: 90%;
         position: relative;
     }
 
@@ -214,7 +208,7 @@ nav ul li a:hover {
         display: block;
         z-index: 1600;
         padding: 5px;
-        margin-right: 25px;
+        margin-right: -47px;
         /* Significant margin to move it away from the edge */
         background: transparent;
         border: none;
@@ -300,10 +294,34 @@ nav ul li a:hover {
         /* Specific breathing room for CTA */
     }
 }
-
+@media (max-width: 1016px) {
+    .center{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+}
+}
 /* Hide mobile actions on desktop */
 @media (min-width: 1025px) {
     .mobile-actions {
         display: none;
     }
+      .center{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+}
+.glass-header::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+.glass-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 }
