@@ -5,6 +5,8 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 import { FaInstagram, FaFacebookF, FaTwitter, FaYoutube, FaWhatsapp } from "react-icons/fa";
 import "./appointment.css";
+import './what.css'
+
 import p1 from "./images/p1.png";
 import p2 from "./images/p2.png";
 import p3 from "./images/p3.png";
@@ -39,6 +41,7 @@ import { API_BASE_URL } from "../apiConfig";
 import { useTranslation } from "react-i18next";
 
 export default function Appointmentpage() {
+   const message1 = "Hello, I want to get more information.";
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
 
@@ -123,7 +126,16 @@ export default function Appointmentpage() {
 
   return (
     <>
-
+   <a
+ href={`https://wa.me/96555559585?text=${encodeURIComponent(message1)}`}
+     
+      target="_blank"
+      rel="noopener noreferrer"
+      className="whatsapp-float"
+      aria-label="Chat on WhatsApp"
+    >
+      <FaWhatsapp />
+    </a>
       <div className="top-gradient-section">
         <Navbar />
 

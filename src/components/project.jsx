@@ -71,11 +71,20 @@ export default function Projectpage() {
   //       behavior: "smooth",
   //     });
   //   };
-
+ const message = "Hello, I want to get more information.";
 
   return (
     <>
-
+    <a
+     href={`https://wa.me/96555559585?text=${encodeURIComponent(message)}`}
+         
+          target="_blank"
+          rel="noopener noreferrer"
+          className="whatsapp-float"
+          aria-label="Chat on WhatsApp"
+        >
+          <FaWhatsapp />
+        </a>
       <div className="top-gradient-section">
         <Navbar />
 

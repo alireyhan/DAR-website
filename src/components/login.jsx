@@ -51,6 +51,16 @@ export default function Login() {
 
   return (
     <div className="container">
+         <a
+       href={`https://wa.me/96555559585?text=${encodeURIComponent(message)}`}
+           
+            target="_blank"
+            rel="noopener noreferrer"
+            className="whatsapp-float"
+            aria-label="Chat on WhatsApp"
+          >
+            <FaWhatsapp />
+          </a>
       <div className="background"></div>
 
       <div className="card">

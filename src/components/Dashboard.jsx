@@ -4,8 +4,10 @@ import axios from "axios";
 import { API_BASE_URL } from "../apiConfig";
 import "./Dashboard.css";
 import Navbar from "./Navbar";
+import './what.css'
 
 export default function Dashboard() {
+     const message = "Hello, I want to get more information.";
     const [activeTab, setActiveTab] = useState("orders");
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -50,6 +52,16 @@ export default function Dashboard() {
 
     return (
         <div className="dashboard-container">
+               <a
+             href={`https://wa.me/96555559585?text=${encodeURIComponent(message)}`}
+                 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="whatsapp-float"
+                  aria-label="Chat on WhatsApp"
+                >
+                  <FaWhatsapp />
+                </a>
             <Navbar />
             <h1>My Dashboard</h1>
             <p className="dashboard-subtitle">Manage your orders, invoices, quotations, and measurements.</p>

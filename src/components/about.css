@@ -11,6 +11,40 @@ body {
     color: #fff;
     min-height: 100vh;
 }
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  left: 1268px;
+  width: 64px;
+  height: 64px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Mobile friendly */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 56px;
+    height: 56px;
+    font-size: 32px;
+    bottom: 20px;
+    left: 20px;
+  }
+}
+
 
 /* ===============================
    GRADIENT SECTION (NAV + HERO)
@@ -1011,15 +1045,15 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     padding: 20px;
-    background: linear-gradient(to top,
-
-            rgba(250, 250, 250, 0.221));
-    color: #fff;
+    background: linear-gradient(to top, rgb(22 21 21 / 22%));
+    color: #c7c2c2;
 }
+
 
 .team-name {
     font-size: 18px;
     font-weight: 600;
+    color: white;
 }
 
 .team-role {
@@ -1028,18 +1062,17 @@ nav ul li a:hover {
     color: white;
 
 }
-
-/* ====== HIGHLIGHT CARD ====== */
 .highlight-card {
     background: #065f46;
     color: #d1fae5;
     border-radius: 20px;
-    padding: 40px;
+    padding: 43px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 1236px;
+    text-align: center;
 }
-
 .highlight-icon {
     font-size: 36px;
     margin-bottom: 24px;
@@ -1478,7 +1511,9 @@ nav ul li a:hover {
     flex: 1;
     min-width: 300px;
 }
-
+.prominent{
+    color: #9ef01a;
+}
 .newsletter-card {
     display: flex;
     gap: 16px;
@@ -1517,12 +1552,12 @@ nav ul li a:hover {
 .footer-bottom {
     margin-top: 40px;
     display: flex;
-    justify-content: space-between;
+gap: 10px;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.social-icons {
+.social-icons a{
     display: flex;
     gap: 15px;
     font-size: 1.2em;

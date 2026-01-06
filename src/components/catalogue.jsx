@@ -6,6 +6,8 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FaInstagram, FaFacebookF, FaTwitter, FaYoutube, FaWhatsapp } from "react-icons/fa";
 import "./catalogue.css";
 // Images
+import './what.css'
+
 import p1 from "./images/p1.png";
 import p2 from "./images/p2.png";
 import p3 from "./images/p3.png";
@@ -39,6 +41,7 @@ const photoArray = [
 import { useTranslation } from "react-i18next";
 
 export default function Cataloguepage() {
+   const message = "Hello, I want to get more information.";
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
@@ -65,8 +68,18 @@ export default function Cataloguepage() {
 
   return (
     <>
-
+   <a
+ href={`https://wa.me/96555559585?text=${encodeURIComponent(message)}`}
+     
+      target="_blank"
+      rel="noopener noreferrer"
+      className="whatsapp-float"
+      aria-label="Chat on WhatsApp"
+    >
+      <FaWhatsapp />
+    </a>
       <div className="top-gradient-section">
+        
         <Navbar />
 
 

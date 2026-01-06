@@ -6,7 +6,8 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { Link, useNavigate } from 'react-router-dom'
 import { useTranslation } from "react-i18next";
 import "./about.css";
-import { FaInstagram, FaFacebookF, FaTwitter, FaYoutube, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaTwitter, FaYoutube, FaWhatsapp,FaTiktok } from "react-icons/fa";
+import { FaUsers } from "react-icons/fa";
 import Navbar from "./Navbar";
 
 // Images
@@ -37,6 +38,10 @@ import ball from "./images/ball.png";
 import pin from "./images/pin.png";
 import star from "./images/star.png";
 import couch from "./images/couch.png";
+import head from "./images/head.jpeg";
+import Accountant from "./images/Account.jpeg";
+import design from "./images/headesigner.jpeg";
+import marketing from "./images/market.jpeg";
 const photoArray = [
   p1, p2, p3, p4, p5, p6, p8, p9, p10, p11, p12, p13
 ];
@@ -91,6 +96,7 @@ const careerCards = [
 ];
 
 export default function Aboutpage() {
+  const message = "Hello, I want to get more information.";
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
@@ -131,7 +137,17 @@ export default function Aboutpage() {
 
   return (
     <>
-
+     
+    <a
+ href={`https://wa.me/96555559585?text=${encodeURIComponent(message)}`}
+     
+      target="_blank"
+      rel="noopener noreferrer"
+      className="whatsapp-float"
+      aria-label="Chat on WhatsApp"
+    >
+      <FaWhatsapp />
+    </a>
       <div className="top-gradient-section">
         {/* HEADER */}
         <Navbar />
@@ -464,63 +480,50 @@ export default function Aboutpage() {
         {/* Top Row: 4 Members */}
         <div className="team-grid top-row">
           <div className="team-card">
-            <img src={p14} alt="Sarah" />
+            <img src={head} alt="Head" />
             <div className="team-overlay">
-              <h3 className="team-name">Sarah</h3>
-              <p className="team-role">Operations Manager</p>
+              <h3 className="team-name">Head Management</h3>
+              <p className="team-role"></p>
             </div>
           </div>
 
           <div className="team-card">
-            <img src={p15} alt="James" />
+            <img src={Accountant} alt="James" />
             <div className="team-overlay">
-              <h3 className="team-name">James</h3>
-              <p className="team-role">Head of Marketing</p>
+              <h3 className="team-name">Accountans</h3>
+              <p className="team-role"></p>
             </div>
           </div>
 
           <div className="team-card">
-            <img src={p16} alt="Emily" />
+            <img src={design} alt="Emily" />
             <div className="team-overlay">
-              <h3 className="team-name">Emily</h3>
-              <p className="team-role">CFO</p>
+              <h3 className="team-name">Head designer</h3>
+              <p className="team-role"></p>
             </div>
           </div>
 
           <div className="team-card">
-            <img src={p18} alt="Michael" />
+            <img src={marketing} alt="Michael" />
             <div className="team-overlay">
-              <h3 className="team-name">Michael</h3>
-              <p className="team-role">Head Designer</p>
+              <h3 className="team-name">PR/MARKETING</h3>
+              <p className="team-role"></p>
             </div>
           </div>
         </div>
 
         {/* Bottom Mixed Row: Member + Highlight + Member */}
         <div className="team-grid bottom-row">
-          <div className="team-card">
-            <img src={p18} alt="James" />
-            <div className="team-overlay">
-              <h3 className="team-name">James</h3>
-              <p className="team-role">Accountant</p>
-            </div>
-          </div>
-
+     
           <div className="highlight-card">
-            <div className="highlight-icon">👥</div>
+            <div className="highlight-icon"><FaUsers /></div>
             <p className="highlight-text">
               DAR is powered by a team of <strong>50+</strong> professionals across design, operations,
               customer service, marketing, HR, finance, and production.
             </p>
           </div>
 
-          <div className="team-card">
-            <img src={p14} alt="Sarah" />
-            <div className="team-overlay">
-              <h3 className="team-name">Sarah</h3>
-              <p className="team-role">Legal Head</p>
-            </div>
-          </div>
+         
         </div>
       </div>
 
@@ -611,8 +614,13 @@ export default function Aboutpage() {
           <div className="footer-left">
             <img src={footer} alt="DAR Logo" className="footer-logo" />
             <p>support@dar.com</p>
-            <p>+965 1234 6584</p>
-            <p>+92 1234 5678</p>
+            <h4>Customer Care</h4>
+            <p className="prominent">Labor Services:58881032</p>
+            <p className="prominent">Executive Engineer:58881024</p>
+            <p className="prominent">Accountant:58881023</p>
+            <p className="prominent">Interior Designer:58881027</p>
+            <p className="prominent">Architectural Engineer:58881029</p>
+            <p className="prominent">Legal Consultant:58881034</p>
           </div>
 
           <div className="footer-middle">
@@ -650,11 +658,20 @@ export default function Aboutpage() {
 
         <div className="footer-bottom">
           <div className="social-icons">
-            <FaInstagram />
-            <FaFacebookF />
-            <FaTwitter />
-            <FaYoutube />
-            <FaWhatsapp />
+         <a href="https://www.instagram.com/dar.interiors.kw?igsh=bjR0cGYyMXU5d2Zw&utm_source=qr"><FaInstagram /></a> 
+          <a href="https://www.facebook.com/DAR.INTERIORS.KW"><FaFacebookF /></a>
+            
+           <a href="https://www.tiktok.com/@darinteriors.kw?_r=1&_t=ZS-92kJZ8amJNs"><FaTiktok/></a>
+           
+               <a
+ href={`https://wa.me/96555559585?text=${encodeURIComponent(message)}`}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+          <FaWhatsapp />
+    </a>
+        
+            
           </div>
           <p>Copyright © 2025 Dar. All rights reserved.</p>
         </div>
