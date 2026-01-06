@@ -36,6 +36,7 @@ export default function Navbar() {
 
     return (
         <>
+        <div className='center'>
             <header className="glass-header" style={{ direction: isRTL ? 'rtl' : 'ltr' }}>
                 <div className="header-container">
                     <div className="logo">
@@ -143,6 +144,10 @@ export default function Navbar() {
                     </div>
                 </div>
             </header>
+            </div>
         </>
     )
 }
+
+
+
