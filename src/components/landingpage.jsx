@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import "./landingpage.css";
-import { FaInstagram, FaFacebookF, FaTwitter, FaYoutube, FaWhatsapp,FaUsers } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaTwitter, FaYoutube, FaWhatsapp, FaUsers } from "react-icons/fa";
 import './what.css'
 
 // Images
@@ -91,7 +91,7 @@ const careerCards = [
 import { useTranslation } from "react-i18next";
 
 export default function Landingpage() {
-   const message = "Hello, I want to get more information.";
+  const message = "Hello, I want to get more information.";
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
@@ -129,16 +129,16 @@ export default function Landingpage() {
 
   return (
     <>
-       <a
-     href={`https://wa.me/96555559585?text=${encodeURIComponent(message)}`}
-         
-          target="_blank"
-          rel="noopener noreferrer"
-          className="whatsapp-float"
-          aria-label="Chat on WhatsApp"
-        >
-          <FaWhatsapp />
-        </a>
+      <a
+        href={`https://wa.me/96555559585?text=${encodeURIComponent(message)}`}
+
+        target="_blank"
+        rel="noopener noreferrer"
+        className="whatsapp-float"
+        aria-label="Chat on WhatsApp"
+      >
+        <FaWhatsapp />
+      </a>
       {/* ===============================
           GRADIENT SECTION (NAV + HERO)
       =============================== */}
@@ -504,58 +504,58 @@ export default function Landingpage() {
 
 
 
-  
-        <div className="team-members-container">
-          {/* Top Row: 4 Members */}
-          <div className="team-grid top-row">
-            <div className="team-card">
-              <img src={head} alt="Head" />
-              <div className="team-overlay">
-                <h3 className="team-name">Head Management</h3>
-                <p className="team-role"></p>
-              </div>
-            </div>
-  
-            <div className="team-card">
-              <img src={Accountant} alt="James" />
-              <div className="team-overlay">
-                <h3 className="team-name">Accountans</h3>
-                <p className="team-role"></p>
-              </div>
-            </div>
-  
-            <div className="team-card">
-              <img src={design} alt="Emily" />
-              <div className="team-overlay">
-                <h3 className="team-name">Head designer</h3>
-                <p className="team-role"></p>
-              </div>
-            </div>
-  
-            <div className="team-card">
-              <img src={marketing} alt="Michael" />
-              <div className="team-overlay">
-                <h3 className="team-name">PR/MARKETING</h3>
-                <p className="team-role"></p>
-              </div>
+
+      <div className="team-members-container">
+        {/* Top Row: 4 Members */}
+        <div className="team-grid top-row">
+          <div className="team-card">
+            <img src={head} alt="Head" />
+            <div className="team-overlay">
+              <h3 className="team-name">Head Management</h3>
+              <p className="team-role"></p>
             </div>
           </div>
-  
-          {/* Bottom Mixed Row: Member + Highlight + Member */}
-          <div className="team-grid bottom-row">
-       
-            <div className="highlight-card">
-              <div className="highlight-icon"><FaUsers /></div>
-              <p className="highlight-text">
-                DAR is powered by a team of <strong>50+</strong> professionals across design, operations,
-                customer service, marketing, HR, finance, and production.
-              </p>
+
+          <div className="team-card">
+            <img src={Accountant} alt="James" />
+            <div className="team-overlay">
+              <h3 className="team-name">Accountant</h3>
+              <p className="team-role"></p>
             </div>
-  
-           
+          </div>
+
+          <div className="team-card">
+            <img src={design} alt="Emily" />
+            <div className="team-overlay">
+              <h3 className="team-name">Head designer</h3>
+              <p className="team-role"></p>
+            </div>
+          </div>
+
+          <div className="team-card">
+            <img src={marketing} alt="Michael" />
+            <div className="team-overlay">
+              <h3 className="team-name">PR/MARKETING</h3>
+              <p className="team-role"></p>
+            </div>
           </div>
         </div>
-  
+
+        {/* Bottom Mixed Row: Member + Highlight + Member */}
+        <div className="team-grid bottom-row">
+
+          <div className="highlight-card">
+            <div className="highlight-icon"><FaUsers /></div>
+            <p className="highlight-text">
+              DAR is powered by a team of <strong>50+</strong> professionals across design, operations,
+              customer service, marketing, HR, finance, and production.
+            </p>
+          </div>
+
+
+        </div>
+      </div>
+
 
 
       <section className="testimonial-section">

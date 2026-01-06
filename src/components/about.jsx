@@ -6,7 +6,7 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { Link, useNavigate } from 'react-router-dom'
 import { useTranslation } from "react-i18next";
 import "./about.css";
-import { FaInstagram, FaFacebookF, FaTwitter, FaYoutube, FaWhatsapp,FaTiktok } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaTwitter, FaYoutube, FaWhatsapp, FaTiktok } from "react-icons/fa";
 import { FaUsers } from "react-icons/fa";
 import Navbar from "./Navbar";
 
@@ -137,17 +137,17 @@ export default function Aboutpage() {
 
   return (
     <>
-     
-    <a
- href={`https://wa.me/96555559585?text=${encodeURIComponent(message)}`}
-     
-      target="_blank"
-      rel="noopener noreferrer"
-      className="whatsapp-float"
-      aria-label="Chat on WhatsApp"
-    >
-      <FaWhatsapp />
-    </a>
+
+      <a
+        href={`https://wa.me/96555559585?text=${encodeURIComponent(message)}`}
+
+        target="_blank"
+        rel="noopener noreferrer"
+        className="whatsapp-float"
+        aria-label="Chat on WhatsApp"
+      >
+        <FaWhatsapp />
+      </a>
       <div className="top-gradient-section">
         {/* HEADER */}
         <Navbar />
@@ -490,7 +490,7 @@ export default function Aboutpage() {
           <div className="team-card">
             <img src={Accountant} alt="James" />
             <div className="team-overlay">
-              <h3 className="team-name">Accountans</h3>
+              <h3 className="team-name">Accountant</h3>
               <p className="team-role"></p>
             </div>
           </div>
@@ -514,7 +514,7 @@ export default function Aboutpage() {
 
         {/* Bottom Mixed Row: Member + Highlight + Member */}
         <div className="team-grid bottom-row">
-     
+
           <div className="highlight-card">
             <div className="highlight-icon"><FaUsers /></div>
             <p className="highlight-text">
@@ -523,7 +523,7 @@ export default function Aboutpage() {
             </p>
           </div>
 
-         
+
         </div>
       </div>
 
@@ -658,20 +658,20 @@ export default function Aboutpage() {
 
         <div className="footer-bottom">
           <div className="social-icons">
-         <a href="https://www.instagram.com/dar.interiors.kw?igsh=bjR0cGYyMXU5d2Zw&utm_source=qr"><FaInstagram /></a> 
-          <a href="https://www.facebook.com/DAR.INTERIORS.KW"><FaFacebookF /></a>
-            
-           <a href="https://www.tiktok.com/@darinteriors.kw?_r=1&_t=ZS-92kJZ8amJNs"><FaTiktok/></a>
-           
-               <a
- href={`https://wa.me/96555559585?text=${encodeURIComponent(message)}`}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-          <FaWhatsapp />
-    </a>
-        
-            
+            <a href="https://www.instagram.com/dar.interiors.kw?igsh=bjR0cGYyMXU5d2Zw&utm_source=qr"><FaInstagram /></a>
+            <a href="https://www.facebook.com/DAR.INTERIORS.KW"><FaFacebookF /></a>
+
+            <a href="https://www.tiktok.com/@darinteriors.kw?_r=1&_t=ZS-92kJZ8amJNs"><FaTiktok /></a>
+
+            <a
+              href={`https://wa.me/96555559585?text=${encodeURIComponent(message)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaWhatsapp />
+            </a>
+
+
           </div>
           <p>Copyright © 2025 Dar. All rights reserved.</p>
         </div>
