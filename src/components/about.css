@@ -1205,7 +1205,7 @@ nav ul li a:hover {
 
 .hero-section {
     position: relative;
-    background-image: url('C:\Users\Person\Desktop\dar\src\components\images\p5.png ');
+    background-image: url('./images/p5.png');
     background-size: cover;
     background-position: center;
     min-height: 80vh;
