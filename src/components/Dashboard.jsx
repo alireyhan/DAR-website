@@ -1,13 +1,24 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { API_BASE_URL } from "../apiConfig";
 import "./Dashboard.css";
 import Navbar from "./Navbar";
 import { FaWhatsapp } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 import './what.css'
 
 export default function Dashboard() {
+    const { t } = useTranslation();
+    const translateLabels = (text) => {
+        if (!text || typeof text !== 'string') return text;
+        return text
+            .replace(/Customer:/g, t('dashboard.labels.customer') + ':')
+            .replace(/Phone:/g, t('dashboard.labels.phone') + ':')
+            .replace(/Email:/g, t('dashboard.labels.email') + ':')
+            .replace(/Address:/g, t('dashboard.labels.address') + ':');
+    };
     const message = "Hello, I want to get more information.";
     const [activeTab, setActiveTab] = useState("orders");
     const [data, setData] = useState([]);
@@ -44,7 +55,7 @@ export default function Dashboard() {
             setData(Array.isArray(fetchedData) ? fetchedData : []);
         } catch (err) {
             console.error(`Error fetching ${type}:`, err);
-            setError(`Failed to load ${type}.`);
+            setError(t('dashboard.alerts.fail', { type: t(`dashboard.tabs.${type}`) }));
         } finally {
             setLoading(false);
         }
@@ -64,44 +75,44 @@ export default function Dashboard() {
                 <FaWhatsapp />
             </a>
             <Navbar />
-            <h1>My Dashboard</h1>
-            <p className="dashboard-subtitle">Manage your orders, invoices, quotations, and measurements.</p>
+            <h1>{t('dashboard.title')}</h1>
+            <p className="dashboard-subtitle">{t('dashboard.subtitle')}</p>
 
             <div className="dashboard-tabs">
                 <button
                     className={activeTab === "orders" ? "active" : ""}
                     onClick={() => setActiveTab("orders")}
                 >
-                    My Orders
+                    {t('dashboard.tabs.orders')}
                 </button>
                 <button
                     className={activeTab === "invoices" ? "active" : ""}
                     onClick={() => setActiveTab("invoices")}
                 >
-                    My Invoices
+                    {t('dashboard.tabs.invoices')}
                 </button>
                 <button
                     className={activeTab === "quotations" ? "active" : ""}
                     onClick={() => setActiveTab("quotations")}
                 >
-                    My Quotations
+                    {t('dashboard.tabs.quotations')}
                 </button>
                 <button
                     className={activeTab === "measurements" ? "active" : ""}
                     onClick={() => setActiveTab("measurements")}
                 >
-                    My Measurements
+                    {t('dashboard.tabs.measurements')}
                 </button>
             </div>
 
             <div className="dashboard-content">
-                {loading && <p className="loading-spinner">Loading...</p>}
+                {loading && <p className="loading-spinner">{t('dashboard.loading')}</p>}
                 {!loading && error && <p className="error">{error}</p>}
 
                 {!loading && !error && (
                     <div className="data-list">
                         {data.length === 0 ? (
-                            <p>No {activeTab} found.</p>
+                            <p>{t('dashboard.emptyState', { type: t(`dashboard.tabs.${activeTab}`) })}</p>
                         ) : activeTab === "quotations" ? (
                             <div className="quotations-grid">
                                 {data.map((item) => (
@@ -109,7 +120,7 @@ export default function Dashboard() {
                                         <div className="q-header">
                                             <span className="q-id">#{item._id?.slice(-6) || item.id}</span>
                                             <span className={`status-badge status-${(item.status || 'pending').toLowerCase()}`}>
-                                                {item.status || "PENDING"}
+                                                {t(`dashboard.status.${(item.status || 'pending').toLowerCase()}`)}
                                             </span>
                                         </div>
                                         <div className="q-date">
@@ -130,10 +141,10 @@ export default function Dashboard() {
 
                                         <div className="q-footer">
                                             <div className="q-total">
-                                                <span>Total:</span>
+                                                <span>{t('dashboard.card.total')}:</span>
                                                 <span className="amount">{item.totalAmount || item.amount || 0} KWD</span>
                                             </div>
-                                            {item.comments && <p className="q-comments">"{item.comments}"</p>}
+                                            {item.comments && <p className="q-comments">"{translateLabels(item.comments)}"</p>}
                                         </div>
                                     </div>
                                 ))}
@@ -143,7 +154,7 @@ export default function Dashboard() {
                                 {data.map((item) => (
                                     <div key={item._id} className="quotation-card">
                                         <div className="q-header">
-                                            <span className="q-id">{item.name || 'Measurement'}</span>
+                                            <span className="q-id">{translateLabels(item.name) || t('dashboard.card.measurement')}</span>
                                             <span className="status-badge status-processing">
                                                 {item.type || 'Design'}
                                             </span>
@@ -172,10 +183,10 @@ export default function Dashboard() {
                                         <div className="q-footer">
                                             <div className="q-total">
                                                 <span className="amount" style={{ fontSize: '0.9rem', color: '#888' }}>
-                                                    Created: {new Date(item.createdAt).toLocaleDateString()}
+                                                    {t('dashboard.card.created')}: {new Date(item.createdAt).toLocaleDateString()}
                                                 </span>
                                             </div>
-                                            {item.comments && <p className="q-comments">"{item.comments}"</p>}
+                                            {item.comments && <p className="q-comments">"{translateLabels(item.comments)}"</p>}
                                         </div>
                                     </div>
                                 ))}
@@ -184,10 +195,10 @@ export default function Dashboard() {
                             <table className="data-table">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
-                                        <th>Date</th>
-                                        <th>Amount/Total</th>
-                                        <th>Status</th>
+                                        <th>{t('dashboard.table.id')}</th>
+                                        <th>{t('dashboard.table.date')}</th>
+                                        <th>{t('dashboard.table.amount')}</th>
+                                        <th>{t('dashboard.table.status')}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -198,7 +209,7 @@ export default function Dashboard() {
                                             <td>{item.totalAmount || item.amount || item.total} KWD</td>
                                             <td>
                                                 <span className={`status-badge status-${(item.status || 'pending').toLowerCase()}`}>
-                                                    {item.status || "Pending"}
+                                                    {t(`dashboard.status.${(item.status || 'pending').toLowerCase()}`)}
                                                 </span>
                                             </td>
                                         </tr>

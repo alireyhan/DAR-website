@@ -90,18 +90,15 @@ export default function Cataloguepage() {
         <section className="hero">
           <div className="trust-badge">
             <FontAwesomeIcon icon={faStar} className="star-icon" />
-            1200+ trusted customers
+            {t('appointmentPage.trustBadge')}
           </div>
 
           <h1>
-            Design It Yourself And Control <br />
-            The Price
+            {t('appointmentPage.heroTitle')}
           </h1>
 
           <p className="description">
-            Experience Kuwait's first interactive 3D configurator.
-            Customize finishes, set room dimensions,
-            and see real-time pricing before you book.
+            {t('appointmentPage.heroDesc')}
           </p>
 
           <div className="buttons">
@@ -126,11 +123,9 @@ export default function Cataloguepage() {
 
       <section className="journey-stats">
         <div className="stats-top">
-          <span className="tag">The Journey So Far</span>
+          <span className="tag">{t('journey.tag')}</span>
           <p className="stats-heading">
-            With years of expertise and innovation, DAR continues <br />
-            to deliver premium, custom furniture experiences that <br />
-            transform spaces and build lasting trust with our clients.
+            {t('journey.heading')}
           </p>
         </div>
 
@@ -138,8 +133,8 @@ export default function Cataloguepage() {
           <div className="stats-row">
             <div className="stat up">
               <h2>250+</h2>
-              <h4>Completed Projects</h4>
-              <p>Successfully delivered projects</p>
+              <h4>{t('journey.completed')}</h4>
+              <p>{t('journey.completedDesc')}</p>
               <img src={p1} alt="" />
             </div>
 
@@ -147,8 +142,8 @@ export default function Cataloguepage() {
 
             <div className="stat down">
               <h2>200+</h2>
-              <h4>Old</h4>
-              <p>Over a decade of design expertise</p>
+              <h4>{t('journey.old')}</h4>
+              <p>{t('journey.oldDesc')}</p>
               <img src={p2} alt="" />
             </div>
 
@@ -156,8 +151,8 @@ export default function Cataloguepage() {
 
             <div className="stat up">
               <h2>150+</h2>
-              <h4>Current</h4>
-              <p>Projects in progress with precision</p>
+              <h4>{t('journey.current')}</h4>
+              <p>{t('journey.currentDesc')}</p>
               <img src={p3} alt="" />
             </div>
 
@@ -165,38 +160,38 @@ export default function Cataloguepage() {
 
             <div className="stat down">
               <h2>90+</h2>
-              <h4>Awaiting Delivery</h4>
-              <p>Ready to be delivered soon</p>
+              <h4>{t('journey.awaiting')}</h4>
+              <p>{t('journey.awaitingDesc')}</p>
               <img src={p4} alt="" />
             </div>
           </div>
         </div>
 
         <div className="cta-row">
-          <button className="btn-view">View DAR Projects ↗</button>
-          <span className="slots">● Slots are available</span>
+          <button className="btn-view" onClick={() => navigate("/project")}>{t('journey.viewProjects')} ↗</button>
+          <span className="slots">● {t('journey.slots')}</span>
         </div>
       </section>
 
 
 
       <section className="dar-catalogue">
-        <p className="catalogue-subtitle">WHAT WE PROUD OF</p>
-        <h2 className="catalogue-title">DAR Catalogue</h2>
+        <p className="catalogue-subtitle">{t('journey.subtitle')}</p>
+        <h2 className="catalogue-title">{t('common.catalogue')}</h2>
 
         <div className="catalogue-layout">
 
 
           <div className="left-big">
-            <img src={p1} alt="Living Area" />
-            <p className="img-label">Living Area</p>
+            <img src={p1} alt={t('cataloguePage.rooms.living')} />
+            <p className="img-label">{t('cataloguePage.rooms.living')}</p>
           </div>
 
 
           <div className="right-small">
             <div className="small-item">
-              <img src={p2} alt="Master Bedroom" />
-              <p className="img-label">Master Bedroom</p>
+              <img src={p2} alt={t('cataloguePage.rooms.master')} />
+              <p className="img-label">{t('cataloguePage.rooms.master')}</p>
             </div>
 
 
@@ -211,13 +206,13 @@ export default function Cataloguepage() {
 
           <div className="left-small">
             <img src={p3} alt="Kids Bedroom" />
-            <p className="img-label">Kids Bedroom</p>
+            <p className="img-label">{t('cataloguePage.rooms.kids')}</p>
           </div>
 
 
           <div className="right-big">
             <img src={p4} alt="Kitchen" />
-            <p className="img-label">Kitchen</p>
+            <p className="img-label">{t('cataloguePage.rooms.kitchen')}</p>
           </div>
 
         </div>
@@ -225,22 +220,22 @@ export default function Cataloguepage() {
 
 
       <section className="dar-catalogue">
-        <p className="catalogue-subtitle">WHAT WE PROUD OF</p>
-        <h2 className="catalogue-title">DAR Catalogue</h2>
+        <p className="catalogue-subtitle">{t('journey.subtitle')}</p>
+        <h2 className="catalogue-title">{t('common.catalogue')}</h2>
 
         <div className="catalogue-layout">
 
 
           <div className="left-big">
-            <img src={p1} alt="Living Area" />
-            <p className="img-label">Living Area</p>
+            <img src={p1} alt={t('cataloguePage.rooms.living')} />
+            <p className="img-label">{t('cataloguePage.rooms.living')}</p>
           </div>
 
 
           <div className="right-small">
             <div className="small-item">
-              <img src={p2} alt="Master Bedroom" />
-              <p className="img-label">Master Bedroom</p>
+              <img src={p2} alt={t('cataloguePage.rooms.master')} />
+              <p className="img-label">{t('cataloguePage.rooms.master')}</p>
             </div>
 
 
@@ -252,12 +247,12 @@ export default function Cataloguepage() {
       <section className="hero-section">
         <img src={p5} alt="" className="hero-img" />
         <div className="hero-content">
-          <p className="hero-subheading">Crafting Environments</p>
+          <p className="hero-subheading">{t('hero.crafting')}</p>
           <p className="hero-main-text">
-            It is so <span className="highlight">Easy</span> to <span className="highlight">Change</span> the <span className="highlight">mood</span>
+            {t('hero.easyChange')}
           </p>
-          <button className="btn-book-measurements">
-            Book Measurements <span className="arrow">→</span>
+          <button className="btn-book-measurements" onClick={handleBook}>
+            {t('hero.bookMeasurements')} <span className="arrow">→</span>
           </button>
         </div>
       </section>

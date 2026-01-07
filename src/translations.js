@@ -1,6 +1,9 @@
 export const resources = {
     en: {
         translation: {
+            "common": {
+                "catalogue": "DAR Catalogue"
+            },
             "nav": {
                 "about": "About us",
                 "projects": "Projects",
@@ -22,6 +25,7 @@ export const resources = {
             },
             "journey": {
                 "tag": "The Journey So Far",
+                "subtitle": "WHAT WE PROUD OF",
                 "heading": "With years of expertise and innovation, DAR continues to deliver premium, custom furniture experiences that transform spaces and build lasting trust with our clients.",
                 "completed": "Completed Projects",
                 "completedDesc": "Successfully delivered projects",
@@ -74,11 +78,247 @@ export const resources = {
                     "architecturalEngineer": "58881029",
                     "legalConsultant": "58881034"
                 }
+            },
+            "aboutPage": {
+                "mission1": "DAR was created to make furniture personal. We believe every home deserves pieces made just for it.",
+                "mission2": "As Kuwait’s first smart furniture design experience, we help you design what truly fits your space and style.",
+                "storyKicker": "OUR STORY",
+                "storyTitle": "The idea behind DAR",
+                "storyDesc": "DAR was founded with a vision to bridge design and technology. We saw the challenges people face when shopping for furniture—limited choices, unclear sizing, mismatched finishes, and decided to build a smarter way.",
+                "storyStats": {
+                    "designs": "Designs",
+                    "precision": "Precision",
+                    "since": "Since"
+                },
+                "journeyTag": "OUR JOURNEY",
+                "journeyTitle": "Whether it’s your home, office, or commercial project, we bring your vision to life.",
+                "journeyItems": {
+                    "2020": { "title": "2020 - Innovation Born", "desc": "Remote interior solutions during COVID." },
+                    "2021": { "title": "2021 - Team Growth", "desc": "Expanded designers & engineers." },
+                    "2022": { "title": "2022 - Omaksan Partnership", "desc": "Enhanced technology & delivery." }
+                },
+                "impactKicker": "OUR IMPACT",
+                "impactText": "Since our launch, DAR has redefined how people bring furniture into their homes by turning imagination into reality. We’ve guided designs from vision to creation, crafted pieces that reflect individuality, and earned the trust of those who value precision and style. These milestones are more than numbers; they represent homes transformed, ideas realized, and the confidence our community places in us.",
+                "impactStats": {
+                    "first": "1st",
+                    "inKuwait": "In Kuwait",
+                    "projectsCompleted": "Projects Completed",
+                    "teamMembers": "Team Members"
+                },
+                "features": {
+                    "personalTitle": "Personal by Design",
+                    "personalDesc": "Every piece begins with you. Your taste, your space, your lifestyle. DAR gives you the freedom to create furniture that feels truly yours.",
+                    "craftedTitle": "Crafted with Care",
+                    "craftedDesc": "Behind every design is skilled craftsmanship and attention to detail, ensuring that your furniture is not only beautiful but built to last.",
+                    "clarityTitle": "Clarity Always",
+                    "clarityDesc": "From design to delivery, we keep the process simple and transparent, with clear choices, timelines, and expectations at every step.",
+                    "livingTitle": "Built for Living",
+                    "livingDesc": "We design with real life in mind—pieces that fit your space perfectly, elevate your home, and stay with you for years to come."
+                },
+                "teamEyebrow": "MEET OUR TEAM",
+                "teamTitle": "We are a passionate team of designers dedicated to transforming your vision into beautifully crafted spaces.",
+                "departments": {
+                    "management": "Management",
+                    "it": "IT Department",
+                    "hr": "HR Department",
+                    "marketing": "Marketing",
+                    "legal": "Legal Department"
+                },
+                "teamRoles": {
+                    "head": "Head Management",
+                    "accountant": "Accountant",
+                    "designer": "Head designer",
+                    "pr": "PR/MARKETING"
+                },
+                "teamHighlight": "DAR is powered by a team of 50+ professionals across design, operations, customer service, marketing, HR, finance, and production.",
+                "testimonials": {
+                    "header": "OUR CLIENTS SAY",
+                    "description": "The warm words of our clients let us achieve more",
+                    "clientName": "Morgan Dufresne",
+                    "clientRole": "Company Owner",
+                    "quote": "From concept to reality, DAR turned my vision into a stunning, livable space. I couldn’t be happier with this!",
+                    "feedback": "Morgan wanted a modern, functional office. We delivered a bright, stylish space with smart design solutions, perfectly tailored to his company style."
+                },
+                "careersSub": "OUR CAREERS",
+                "careersTitle": "Ready to Join Our Journey",
+                "careersDesc": "Join a team that values innovation, creativity, and craftsmanship.",
+                "applyNow": "Apply Now",
+                "bookingSteps": {
+                    "step1": { "title": "Booking Phase", "desc": "Schedule a visit or start designing online to begin your furniture journey of your own design and style." },
+                    "step2": { "title": "Measurement Phase", "desc": "Our team measures your space to ensure your desired furniture is a perfect fit." },
+                    "step3": { "title": "Design Phase", "desc": "Use the DAR platform to design in 3D, customize materials, and see live pricing." },
+                    "step4": { "title": "Approval Phase", "desc": "Review the design, confirm details, and get instant cost transparency. No hidden fees or costs." },
+                    "step5": { "title": "Production Phase", "desc": "Your design is crafted with high-quality materials and are crafted by expert workmanship." },
+                    "step6": { "title": "Delivery & Installation", "desc": "DAR delivers and installs your furniture, for you at your doorstep, ready to use hassle free." }
+                }
+            },
+            "landingPage": {
+                "bookCrew": "Book DAR Crew",
+                "bookMeasurements": "Book Measurements",
+                "trackOrder": "Track Your Order",
+                "designWayTitle": "Design Your Space Your Way",
+                "designWayDesc": "Bring your ideas to life, create custom furniture tailored to your room.",
+                "goToPlatform": "Click to Go to DAR Platform",
+                "demoTitle": "Design furniture online in minutes",
+                "whyChoose": {
+                    "eyebrow": "WHY CHOOSE DAR",
+                    "title": "We craft experiences that transform your living space into a reflection of your style.",
+                    "transparentTitle": "Transparent Pricing",
+                    "transparentDesc": "Instantly view costs as you design—no hidden fees. Every choice you make updates pricing in real-time so you stay in full control of your budget.",
+                    "fasterTitle": "Faster Process",
+                    "fasterDesc": "Skip the back-and-forth with contractors. Our smart platform reduces design and approval time from weeks to just a few clicks.",
+                    "trackTitle": "Track Projects Online",
+                    "trackDesc": "Track your projects, approvals, and updates seamlessly online. Whether on desktop, tablet, or mobile, your designs go wherever you go.",
+                    "designWayTitle": "Design It Your Way",
+                    "designWayDesc": "From dimensions to finishes, create furniture that matches your exact style and needs. With DAR, you’re not limited to templates.",
+                    "trustedTitle": "Trusted Delivery",
+                    "trustedDesc": "From production to installation, DAR ensures your furniture is delivered and set up with precision, giving you peace of mind."
+                },
+                "tech": {
+                    "eyebrow": "POWERED BY TECHNOLOGY",
+                    "heading": "Kuwait’s first 3D furniture design technology that brings your furniture from design to life.",
+                    "title": "3D FURNITURE DESIGN",
+                    "updates": "INSTANT UPDATES",
+                    "process": "SEAMLESS PROCESS",
+                    "desc": "Easily visualize your ideas in an interactive 3D environment. Change dimensions, finishes, and layouts with a few clicks, no technical skills required.",
+                    "highlight": "With DAR, technology transforms the traditional furniture journey into a smart, interactive, and stress-free process.",
+                    "bgText": "3D FURNITURE"
+                },
+                "showcaseTitle": "DAR Project Showcase"
+            },
+            "appointmentPage": {
+                "trustBadge": "1200+ trusted customers",
+                "heroTitle": "Design It Yourself And Control The Price",
+                "heroDesc": "Experience Kuwait's first interactive 3D configurator. Customize finishes, set room dimensions, and see real-time pricing before you book.",
+                "bookTopline": "Book your appointment",
+                "bookTitle": "Choose a date and time that works best for you. Our team will confirm your appointment and guide you through the next steps.",
+                "personalInfo": "Personal Info",
+                "firstName": "First name",
+                "lastName": "Last name",
+                "phone": "Phone number",
+                "email": "Email address",
+                "details": "Appointment Details",
+                "address": "Address",
+                "zipCode": "ZIP Code",
+                "placeholderDetails": "Share any details about your project or requirements",
+                "tabs": {
+                    "design": "Design Consultation",
+                    "measurements": "Measurements",
+                    "followUp": "Project Follow-Up",
+                    "other": "Other"
+                },
+                "bookBtn": "Book Appointment",
+                "booking": "Booking...",
+                "success": "Measurement appointment booked successfully!",
+                "fail": "Failed to book appointment. Please try again.",
+                "loginRequired": "Please login to book an appointment.",
+                "roles": {
+                    "ops": "Operations Manager",
+                    "marketing": "Head of Marketing",
+                    "cfo": "CFO",
+                    "designer": "Head Designer",
+                    "accountant": "Accountant",
+                    "legal": "Legal Head"
+                }
+            },
+            "projectPage": {
+                "proudOf": "WHAT WE PROUD OF",
+                "showcaseTitle": "DAR Projects Showcase",
+                "bookCrew": "Book DAR Crew",
+                "projects": {
+                    "sweden": { "title": "Sweden melody", "location": "Paris, France" },
+                    "modern": { "title": "Modern mix", "location": "Madrid, Spain" },
+                    "airy": { "title": "Airy cave", "location": "Amsterdam, Netherlands" },
+                    "echoes": { "title": "Echoes of the fjords", "location": "Oslo, Norway" },
+                    "ambient": { "title": "Ambient beats", "location": "Lisbon, Portugal" },
+                    "rhythmic": { "title": "Rhythmic tides", "location": "Copenhagen, Denmark" },
+                    "ocean": { "title": "Ocean Vibes", "location": "Dubai, UAE" },
+                    "desert": { "title": "Desert Harmony", "location": "Riyadh, Saudi Arabia" },
+                    "zen": { "title": "Zen Garden Home", "location": "Tokyo, Japan" }
+                }
+            },
+            "cataloguePage": {
+                "viewCatalogue": "View DAR Catalogue",
+                "rooms": {
+                    "living": "Living Area",
+                    "master": "Master Bedroom",
+                    "kids": "Kids Bedroom",
+                    "kitchen": "Kitchen"
+                }
+            },
+            "auth": {
+                "welcomeBack": "Welcome Back",
+                "joinDarji": "Join DARJI",
+                "loginSubtitle": "Log in to continue designing your space with full control.",
+                "signupSubtitle": "Sign up to experience Kuwait’s first interactive 3D configurator.",
+                "fullName": "Full Name",
+                "phone": "Phone Number",
+                "email": "Email Address",
+                "password": "Password",
+                "rememberMe": "Remember me",
+                "forgotPassword": "Forgot password?",
+                "login": "Login",
+                "createAccount": "Create Account",
+                "or": "or",
+                "noAccount": "Don't have an account? ",
+                "haveAccount": "Already have an account? ",
+                "signUpLink": "Sign Up",
+                "loginLink": "Log In",
+                "trustedCustomers": "1200+ trusted customers",
+                "processing": "Processing...",
+                "alerts": {
+                    "loginSuccess": "Logged in successfully!",
+                    "loginFailed": "Login failed. Check your credentials.",
+                    "registerSuccess": "User registered successfully!",
+                    "registerFailed": "Registration failed. User may already exist.",
+                    "somethingWrong": "Something went wrong. Please try again."
+                }
+            },
+            "dashboard": {
+                "title": "My Dashboard",
+                "subtitle": "Manage your orders, invoices, quotations, and measurements.",
+                "tabs": {
+                    "orders": "My Orders",
+                    "invoices": "My Invoices",
+                    "quotations": "My Quotations",
+                    "measurements": "My Measurements"
+                },
+                "loading": "Loading...",
+                "emptyState": "No {{type}} found.",
+                "table": {
+                    "id": "ID",
+                    "date": "Date",
+                    "amount": "Amount/Total",
+                    "status": "Status"
+                },
+                "card": {
+                    "items": "Items",
+                    "lineItems": "Line Items",
+                    "dimensions": "Dimensions",
+                    "total": "Total",
+                    "created": "Created",
+                    "measurement": "Measurement",
+                    "design": "Design"
+                },
+                "status": {
+                    "pending": "Pending",
+                    "processing": "Processing",
+                    "new": "New"
+                },
+                "labels": {
+                    "customer": "Customer",
+                    "phone": "Phone",
+                    "email": "Email",
+                    "address": "Address"
+                }
             }
         }
     },
     ar: {
         translation: {
+            "common": {
+                "catalogue": "كتالوج دار"
+            },
             "nav": {
                 "about": "معلومات عنا",
                 "projects": "المشاريع",
@@ -100,6 +340,7 @@ export const resources = {
             },
             "journey": {
                 "tag": "الرحلة حتى الآن",
+                "subtitle": "ما نفتخر به",
                 "heading": "مع سنوات من الخبرة والابتكار، تستمر دار في تقديم تجارب أثاث مخصصة ومميزة تحول المساحات وتبني ثقة دائمة مع عملائنا.",
                 "completed": "مشاريع مكتملة",
                 "completedDesc": "مشاريع تم تسليمها بنجاح",
@@ -141,7 +382,7 @@ export const resources = {
                 "roles": {
                     "executiveEngineer": "مهندس تنفيذي",
                     "accountant": "محاسب",
-                    "interiorDesigner": "مصمم ديكور داخلي",
+                    "interiorDesigner": "مصمم داخلي",
                     "architecturalEngineer": "مهندس معماري",
                     "legalConsultant": "مستشار قانوني"
                 },
@@ -151,6 +392,239 @@ export const resources = {
                     "interiorDesigner": "58881027",
                     "architecturalEngineer": "58881029",
                     "legalConsultant": "58881034"
+                }
+            },
+            "aboutPage": {
+                "mission1": "تم إنشاء دار لجعل الأثاث شخصيًا. نحن نؤمن بأن كل منزل يستحق قطعًا مصنوعة خصيصًا له.",
+                "mission2": "باعتبارنا أول تجربة تصميم أثاث ذكي في الكويت، نساعدك على تصميم ما يناسب مساحتك وأسلوبك حقًا.",
+                "storyKicker": "قصتنا",
+                "storyTitle": "الفكرة وراء دار",
+                "storyDesc": "تأسست دار برؤية للربط بين التصميم والتكنولوجيا. لقد رأينا التحديات التي يواجهها الناس عند تسوق الأثاث - خيارات محدودة، أحجام غير واضحة، تشطيبات غير متطابقة، وقررنا بناء طريقة أذكى.",
+                "storyStats": {
+                    "designs": "تصاميم",
+                    "precision": "دقة",
+                    "since": "منذ"
+                },
+                "journeyTag": "رحلتنا",
+                "journeyTitle": "سواء كان منزلك أو مكتبك أو مشروعك التجاري، فإننا نحول رؤيتك إلى واقع.",
+                "journeyItems": {
+                    "2020": { "title": "2020 - ولادة الابتكار", "desc": "حلول داخلية عن بعد خلال كوفيد." },
+                    "2021": { "title": "2021 - نمو الفريق", "desc": "توسيع فريق المصممين والمهندسين." },
+                    "2022": { "title": "2022 - شراكة أوماكسان", "desc": "تعزيز التكنولوجيا والتسليم." }
+                },
+                "impactKicker": "تأثيرنا",
+                "impactText": "منذ انطلاقنا، أعادت دار تعريف كيفية جلب الناس للأثاث إلى منازلهم من خلال تحويل الخيال إلى حقيقة. لقد أرشدنا التصاميم من الرؤية إلى الإبداع، وصنعنا قطعًا تعكس الفردية، واكتسبنا ثقة أولئك الذين يقدرون الدقة والأسلوب. هذه المعالم هي أكثر من مجرد أرقام؛ إنها تمثل منازل تحولت، وأفكارًا تحققت، والثقة التي يضعها مجتمعنا فينا.",
+                "impactStats": {
+                    "first": "الأول",
+                    "inKuwait": "في الكويت",
+                    "projectsCompleted": "مشاريع مكتملة",
+                    "teamMembers": "عضو فريق"
+                },
+                "features": {
+                    "personalTitle": "شخصي حسب التصميم",
+                    "personalDesc": "كل قطعة تبدأ بك. ذوقك، مساحتك، نمط حياتك. تمنحك دار الحرية لإنشاء أثاث تشعر أنه ملكك حقًا.",
+                    "craftedTitle": "صُنع بعناية",
+                    "craftedDesc": "خلف كل تصميم حرفية ماهرة واهتمام بالتفاصيل، مما يضمن أن أثاثك ليس جميلاً فحسب بل صُنع ليدوم.",
+                    "clarityTitle": "وضوح دائم",
+                    "clarityDesc": "من التصميم إلى التسليم، نحافظ على بساطة وشفافية العملية، مع خيارات وجداول زمنية وتوقعات واضحة في كل خطوة.",
+                    "livingTitle": "بُني للحياة",
+                    "livingDesc": "نحن نصمم مع وضع الحياة الواقعية في الاعتبار - قطع تناسب مساحتك تمامًا، وترتقي بمنزلك، وتبقى معك لسنوات قادمة."
+                },
+                "teamEyebrow": "تعرف على فريقنا",
+                "teamTitle": "نحن فريق شغوف من المصممين مكرسون لتحويل رؤيتك إلى مساحات مصممة بجمال.",
+                "departments": {
+                    "management": "الإدارة",
+                    "it": "قسم تكنولوجيا المعلومات",
+                    "hr": "قسم الموارد البشرية",
+                    "marketing": "التسويق",
+                    "legal": "الدائرة القانونية"
+                },
+                "teamRoles": {
+                    "head": "الإدارة العليا",
+                    "accountant": "محاسب",
+                    "designer": "رئيس المصممين",
+                    "pr": "العلاقات العامة والتسويق"
+                },
+                "teamHighlight": "تتم إدارة دار من قبل فريق يضم أكثر من 50 محترفًا في مجالات التصميم والعمليات وخدمة العملاء والتسويق والموارد البشرية والتمويل والإنتاج.",
+                "testimonials": {
+                    "header": "ماذا يقول عملاؤنا",
+                    "description": "كلمات عملائنا الدافئة تجعلنا نحقق المزيد",
+                    "clientName": "مورغان دوفرين",
+                    "clientRole": "صاحب شركة",
+                    "quote": "من المفهوم إلى الواقع، حولت دار رؤيتي إلى مساحة مذهلة صالحة للعيش. لا يمكنني أن أكون أكثر سعادة من هذا!",
+                    "feedback": "أراد مورغان مكتبًا حديثًا وعمليًا. لقد قدمنا مساحة مشرقة وأنيقة مع حلول تصميم ذكية، مصممة خصيصًا لأسلوب شركته."
+                },
+                "careersSub": "وظائفنا",
+                "careersTitle": "جاهز للانضمام إلى رحلتنا",
+                "careersDesc": "انضم إلى فريق يقدر الابتكار والإبداع والحرفية.",
+                "applyNow": "قدم الآن",
+                "bookingSteps": {
+                    "step1": { "title": "مرحلة الحجز", "desc": "حدد موعداً للزيارة أو ابدأ التصميم عبر الإنترنت لبدء رحلة الأثاث بتصميمك وأسلوبك الخاص." },
+                    "step2": { "title": "مرحلة القياس", "desc": "يقوم فريقنا بقياس مساحتك لضمان ملاءمة الأثاث المطلوب تماماً." },
+                    "step3": { "title": "مرحلة التصميم", "desc": "استخدم منصة دار للتصميم ثلاثي الأبعاد، وتخصيص المواد، ومشاهدة الأسعار المباشرة." },
+                    "step4": { "title": "مرحلة الاعتماد", "desc": "راجع التصميم، وأكد التفاصيل، واحصل على شفافية فورية في التكاليف. لا توجد رسوم أو تكاليف خفية." },
+                    "step5": { "title": "مرحلة الإنتاج", "desc": "يتم تنفيذ تصميمك بمواد عالية الجودة وبأيدي خبراء محترفين." },
+                    "step6": { "title": "التسليم والتركيب", "desc": "تقوم دار بتوصيل وتركيب أثاثك عند عتبة دارك، جاهزاً للاستخدام دون أي متاعب." }
+                }
+            },
+            "landingPage": {
+                "bookCrew": "احجز طاقم دار",
+                "bookMeasurements": "احجز القياسات",
+                "trackOrder": "تتبع طلبك",
+                "designWayTitle": "صمم مساحتك بطريقتك",
+                "designWayDesc": "اجعل أفكارك تنبض بالحياة، وأنشئ أثاثًا مخصصًا يناسب غرفتك.",
+                "goToPlatform": "انقر للذهاب إلى منصة دار",
+                "demoTitle": "صمم الأثاث عبر الإنترنت في دقائق",
+                "whyChoose": {
+                    "eyebrow": "لماذا تختار دار",
+                    "title": "نحن نصنع تجارب تحول مساحة معيشتك إلى انعكاس لأسلوبك.",
+                    "transparentTitle": "تسعير شفاف",
+                    "transparentDesc": "عرض التكاليف فوراً أثناء التصميم - لا توجد رسوم خفية. كل خيار تتخذه يحدث السعر في الوقت الفعلي لتظل متحكماً بالكامل في ميزانيتك.",
+                    "fasterTitle": "عملية أسرع",
+                    "fasterDesc": "تجاوز الذهاب والإياب مع المقاولين. تقلل منصتنا الذكية وقت التصميم والاعتماد من أسابيع إلى بضع نقرات فقط.",
+                    "trackTitle": "تتبع المشاريع عبر الإنترنت",
+                    "trackDesc": "تتبع مشاريعك واعتماداتك وتحديثاتك بسلاسة عبر الإنترنت. سواء كان ذلك على الكمبيوتر أو الجهاز اللوحي أو الهاتف، فإن تصاميمك ترافقك أينما ذهبت.",
+                    "designWayTitle": "صممها بطريقتك",
+                    "designWayDesc": "من الأبعاد إلى التشطيبات، أنشئ أثاثاً يطابق أسلوبك واحتياجاتك الدقيقة. مع دار، لست مقيداً بالقوالب.",
+                    "trustedTitle": "تسليم موثوق",
+                    "trustedDesc": "من الإنتاج إلى التركيب، تضمن دار تسليم أثاثك وإعداده بدقة، مما يمنحك راحة البال."
+                },
+                "tech": {
+                    "eyebrow": "مدعوم بالتكنولوجيا",
+                    "heading": "أول تقنية لتصميم الأثاث ثلاثي الأبعاد في الكويت تنقل أثاثك من التصميم إلى الواقع.",
+                    "title": "تصميم الأثاث ثلاثي الأبعاد",
+                    "updates": "تحديثات فورية",
+                    "process": "عملية سلسة",
+                    "desc": "تصوّر أفكارك بسهولة في بيئة ثلاثية الأبعاد تفاعلية. غير الأبعاد والتشطيبات والتخطيطات ببضع نقرات، دون الحاجة لمهارات تقنية.",
+                    "highlight": "مع دار، تحول التكنولوجيا رحلة الأثاث التقليدية إلى عملية ذكية وتفاعلية وخالية من الإجهاد.",
+                    "bgText": "أثاث ثلاثي الأبعاد"
+                },
+                "showcaseTitle": "معرض مشاريع دار"
+            },
+            "appointmentPage": {
+                "trustBadge": "أكثر من 1200 عميل يثقون بنا",
+                "heroTitle": "صممها بنفسك وتحكم في السعر",
+                "heroDesc": "اختبر أول مصمم غرف ثلاثي الأبعاد تفاعلي في الكويت. خصص التشطيبات، وحدد أبعاد الغرفة، وشاهد الأسعار في الوقت الفعلي قبل الحجز.",
+                "bookTopline": "احجز موعدك",
+                "bookTitle": "اختر التاريخ والوقت الذي يناسبك بشكل أفضل. سيؤكد فريقنا موعدك ويرشدك عبر الخطوات التالية.",
+                "personalInfo": "المعلومات الشخصية",
+                "firstName": "الاسم الأول",
+                "lastName": "اسم العائلة",
+                "phone": "رقم الهاتف",
+                "email": "البريد الإلكتروني",
+                "details": "تفاصيل الموعد",
+                "address": "العنوان",
+                "zipCode": "الرمز البريدي",
+                "placeholderDetails": "شارك أي تفاصيل حول مشروعك أو متطلباتك",
+                "tabs": {
+                    "design": "استشارة تصميم",
+                    "measurements": "قياسات",
+                    "followUp": "متابعة المشروع",
+                    "other": "أخرى"
+                },
+                "bookBtn": "حجز الموعد",
+                "booking": "جاري الحجز...",
+                "success": "تم حجز موعد القياس بنجاح!",
+                "fail": "فشل حجز الموعد. يرجى المحاولة مرة أخرى.",
+                "loginRequired": "يرجى تسجيل الدخول لحجز موعد.",
+                "roles": {
+                    "ops": "مدير العمليات",
+                    "marketing": "رئيس قسم التسويق",
+                    "cfo": "المدير المالي",
+                    "designer": "رئيس المصممين",
+                    "accountant": "محاسب",
+                    "legal": "رئيس الشؤون القانونية"
+                }
+            },
+            "projectPage": {
+                "proudOf": "ما نفتخر به",
+                "showcaseTitle": "معرض مشاريع دار",
+                "bookCrew": "احجز طاقم دار",
+                "projects": {
+                    "sweden": { "title": "سيمفونية السويد", "location": "باريس، فرنسا" },
+                    "modern": { "title": "مزيج عصري", "location": "مدريد، إسبانيا" },
+                    "airy": { "title": "الكهف المهوى", "location": "أمستردام، هولندا" },
+                    "echoes": { "title": "أصداء المضائق", "location": "أوسلو، النرويج" },
+                    "ambient": { "title": "نبضات محيطة", "location": "لشبونة، البرتغال" },
+                    "rhythmic": { "title": "المد والجزر الإيقاعي", "location": "كوبنهاجن، الدنمارك" },
+                    "ocean": { "title": "أجواء المحيط", "location": "دبي، الإمارات العربية المتحدة" },
+                    "desert": { "title": "تناغم الصحراء", "location": "الرياض، المملكة العربية السعودية" },
+                    "zen": { "title": "منزل حديقة الزن", "location": "طوكيو، اليابان" }
+                }
+            },
+            "cataloguePage": {
+                "viewCatalogue": "عرض كتالوج دار",
+                "rooms": {
+                    "living": "منطقة المعيشة",
+                    "master": "غرفة النوم الرئيسية",
+                    "kids": "غرفة نوم الأطفال",
+                    "kitchen": "مطبخ"
+                }
+            },
+            "auth": {
+                "welcomeBack": "أهلاً بك مجدداً",
+                "joinDarji": "انضم إلى دارجي",
+                "loginSubtitle": "سجل دخولك لمتابعة تصميم مساحتك بالكامل.",
+                "signupSubtitle": "اشترك لتجربة أول مصمم ثلاثي الأبعاد تفاعلي في الكويت.",
+                "fullName": "الاسم الكامل",
+                "phone": "رقم الهاتف",
+                "email": "البريد الإلكتروني",
+                "password": "كلمة المرور",
+                "rememberMe": "تذكرني",
+                "forgotPassword": "نسيت كلمة المرور؟",
+                "login": "تسجيل الدخول",
+                "createAccount": "إنشاء حساب",
+                "or": "أو",
+                "noAccount": "ليس لديك حساب؟ ",
+                "haveAccount": "لديك حساب بالفعل؟ ",
+                "signUpLink": "اشترك الآن",
+                "loginLink": "تسجيل الدخول",
+                "trustedCustomers": "+1200 عميل موثوق",
+                "processing": "جاري المعالجة...",
+                "alerts": {
+                    "loginSuccess": "تم تسجيل الدخول بنجاح!",
+                    "loginFailed": "فشل تسجيل الدخول. تحقق من بياناتك.",
+                    "registerSuccess": "تم تسجيل المستخدم بنجاح!",
+                    "registerFailed": "فشل التسجيل. قد يكون المستخدم موجوداً بالفعل.",
+                    "somethingWrong": "حدث خطأ ما. يرجى المحاولة مرة أخرى."
+                }
+            },
+            "dashboard": {
+                "title": "لوحة التحكم",
+                "subtitle": "إدارة طلباتك، فواتيرك، عروض الأسعار، والمقاسات.",
+                "tabs": {
+                    "orders": "طلباتي",
+                    "invoices": "فواتيري",
+                    "quotations": "عروض الأسعار",
+                    "measurements": "مقاساتي"
+                },
+                "loading": "جاري التحميل...",
+                "emptyState": "لا يوجد {{type}}.",
+                "table": {
+                    "id": "المعرف",
+                    "date": "التاريخ",
+                    "amount": "المبلغ/الإجمالي",
+                    "status": "الحالة"
+                },
+                "card": {
+                    "items": "العناصر",
+                    "lineItems": "عناصر الطلب",
+                    "dimensions": "الأبعاد",
+                    "total": "الإجمالي",
+                    "created": "تم الإنشاء",
+                    "measurement": "قياس",
+                    "design": "تصميم"
+                },
+                "status": {
+                    "pending": "قيد الانتظار",
+                    "processing": "جاري المعالجة",
+                    "new": "جديد"
+                },
+                "labels": {
+                    "customer": "العميل",
+                    "phone": "الهاتف",
+                    "email": "البريد الإلكتروني",
+                    "address": "العنوان"
                 }
             }
         }

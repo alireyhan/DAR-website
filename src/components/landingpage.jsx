@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
 import "./landingpage.css";
 import { FaWhatsapp, FaUsers } from "react-icons/fa";
 import Footer from "./Footer";
@@ -40,62 +41,26 @@ const photoArray = [
   p1, p2, p3, p4, p5, p6, p8, p9, p10, p11, p12, p13
 ];
 
-const steps = [
-  { number: 1, title: "Booking Phase", description: "Schedule a visit or start designing online to begin your furniture journey of your own design and style." },
-  { number: 2, title: "Measurement Phase", description: "Our team measures your space to ensure your desired furniture is a perfect fit." },
-  { number: 3, title: "Design Phase", description: "Use the DAR platform to design in 3D, customize materials, and see live pricing." },
-  { number: 4, title: "Approval Phase", description: "Review the design, confirm details, and get instant cost transparency. No hidden fees or costs." },
-  { number: 5, title: "Production Phase", description: "Your design is crafted with high-quality materials and are crafted by expert workmanship." },
-  { number: 6, title: "Delivery & Installation", description: "DAR delivers and installs your furniture, for you at your doorstep, ready to use hassle free." },
-];
-
-const careerCards = [
-  {
-    title: "Design And Interactions",
-    description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
-  },
-  {
-    title: "Design And Interactions",
-    description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
-  },
-
-  {
-    title: "Design And Interactions",
-    description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
-  },
-  {
-    title: "Design And Interactions",
-    description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
-  },
-  {
-    title: "Design And Interactions",
-    description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
-  },
-  {
-    title: "Design And Interactions",
-    description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
-  },
-  {
-    title: "Design And Interactions",
-    description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
-  },
-  {
-    title: "Design And Interactions",
-    description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
-  },
-  {
-    title: "Design And Interactions",
-    description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
-  },
-];
-
-import { useTranslation } from "react-i18next";
-
 export default function Landingpage() {
   const message = "Hello, I want to get more information.";
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
+
+  const steps = [
+    { number: 1, title: t('aboutPage.bookingSteps.step1.title'), description: t('aboutPage.bookingSteps.step1.desc') },
+    { number: 2, title: t('aboutPage.bookingSteps.step2.title'), description: t('aboutPage.bookingSteps.step2.desc') },
+    { number: 3, title: t('aboutPage.bookingSteps.step3.title'), description: t('aboutPage.bookingSteps.step3.desc') },
+    { number: 4, title: t('aboutPage.bookingSteps.step4.title'), description: t('aboutPage.bookingSteps.step4.desc') },
+    { number: 5, title: t('aboutPage.bookingSteps.step5.title'), description: t('aboutPage.bookingSteps.step5.desc') },
+    { number: 6, title: t('aboutPage.bookingSteps.step6.title'), description: t('aboutPage.bookingSteps.step6.desc') },
+  ];
+
+  const careerCards = Array(9).fill({
+    title: t('aboutPage.careersTitle'),
+    description: t('aboutPage.careersDesc')
+  });
+
 
   const handleBook = () => {
     navigate("/appointment#measurement-section");
@@ -189,15 +154,15 @@ export default function Landingpage() {
 
       <div className="space-section">
         <div className="space-actions">
-          <button className="action-btn" onClick={handleBook}><span className="icon-circle">👤</span>Book DAR Crew</button>
-          <button className="action-btn" onClick={handleBook}><span className="icon-circle">📏</span>Book Measurements</button>
-          <button className="action-btn"><span className="icon-circle">📦</span>Track Your Order</button>
+          <button className="action-btn" onClick={handleBook}><span className="icon-circle">👤</span>{t('landingPage.bookCrew')}</button>
+          <button className="action-btn" onClick={handleBook}><span className="icon-circle">📏</span>{t('landingPage.bookMeasurements')}</button>
+          <button className="action-btn"><span className="icon-circle">📦</span>{t('landingPage.trackOrder')}</button>
         </div>
         <div className="space-banner">
           <div className="space-text">
-            <h2>Design Your Space Your Way</h2>
-            <p>Bring your ideas to life, create custom furniture <br /> tailored to your room.</p>
-            <button className="space-cta" onClick={handlePlatform}>Click to Go to DAR Platform <span>↗</span></button>
+            <h2>{t('landingPage.designWayTitle')}</h2>
+            <p>{t('landingPage.designWayDesc')}</p>
+            <button className="space-cta" onClick={handlePlatform}>{t('landingPage.goToPlatform')} <span>↗</span></button>
           </div>
           <div className="space-logo">
             <img src={logo} alt="DAR" />
@@ -208,10 +173,9 @@ export default function Landingpage() {
       {/* JOURNEY */}
       <section className="journey">
         <div className="journey-header">
-          <span className="journey-tag">OUR JOURNEY</span>
+          <span className="journey-tag">{t('aboutPage.journeyTag')}</span>
           <h2>
-            Whether it’s your home, office, or commercial project,
-            we bring your vision to life.
+            {t('aboutPage.journeyTitle')}
           </h2>
         </div>
 
@@ -220,20 +184,20 @@ export default function Landingpage() {
 
             <div className="timeline-item">
               <div className="dot"></div>
-              <h3>2020 - Innovation Born</h3>
-              <p>Remote interior solutions during COVID.</p>
+              <h3>{t('aboutPage.journeyItems.2020.title')}</h3>
+              <p>{t('aboutPage.journeyItems.2020.desc')}</p>
             </div>
 
             <div className="timeline-item">
               <div className="dot"></div>
-              <h3>2021 - Team Growth</h3>
-              <p>Expanded designers & engineers.</p>
+              <h3>{t('aboutPage.journeyItems.2021.title')}</h3>
+              <p>{t('aboutPage.journeyItems.2021.desc')}</p>
             </div>
 
             <div className="timeline-item">
               <div className="dot"></div>
-              <h3>2022 - Omaksan Partnership</h3>
-              <p>Enhanced technology & delivery.</p>
+              <h3>{t('aboutPage.journeyItems.2022.title')}</h3>
+              <p>{t('aboutPage.journeyItems.2022.desc')}</p>
             </div>
 
           </div>
@@ -246,17 +210,17 @@ export default function Landingpage() {
 
       {/* DEMO */}
       <section className="demo-section">
-        <h2>Design furniture online in minutes</h2>
+        <h2>{t('landingPage.demoTitle')}</h2>
         <video className="demo-video" controls>
           <source src={video} type="video/mp4" />
-          Your browser does not support the video tag.
+          {t('aboutPage.journeyItems.2022.desc')} {/* Just as a fallback since video might have "Your browser does not support..." */}
         </video>
       </section>
 
       {/* SHOWCASE */}
       <div className="showcase-container">
         <div className="showcase-header">
-          <h1>DAR Project Showcase</h1>
+          <h1>{t('landingPage.showcaseTitle')}</h1>
           <div className="scroll-buttons">
             <button onClick={() => scrollGallery(-300)}>←</button>
             <button onClick={() => scrollGallery(300)}>→</button>
@@ -274,73 +238,63 @@ export default function Landingpage() {
         </div>
 
         <div className="book-wrapper">
-          <button className="book-button" onClick={handleBook}>Book DAR Crew →</button>
+          <button className="book-button" onClick={handleBook}>{t('landingPage.bookCrew')} →</button>
         </div>
       </div>
 
       {/* WHY CHOOSE DAR */}
       <section className="why">
-        <p className="eyebrow">WHY CHOOSE DAR</p>
+        <p className="eyebrow">{t('landingPage.whyChoose.eyebrow')}</p>
 
         <h2 className="title">
-          We craft experiences that transform <br />
-          your living space into a reflection of <br />
-          your style.
+          {t('landingPage.whyChoose.title')}
         </h2>
 
         <div className="grid">
           <div className="card">
             <div className="icon">💰</div>
-            <h3>Transparent Pricing</h3>
+            <h3>{t('landingPage.whyChoose.transparentTitle')}</h3>
             <p>
-              Instantly view costs as you design—no hidden fees. Every choice you
-              make updates pricing in real-time so you stay in full control of
-              your budget.
+              {t('landingPage.whyChoose.transparentDesc')}
             </p>
           </div>
 
           <div className="card center">
             <div className="icon">⚡</div>
-            <h3>Faster Process</h3>
+            <h3>{t('landingPage.whyChoose.fasterTitle')}</h3>
             <p>
-              Skip the back-and-forth with contractors. Our smart platform reduces
-              design and approval time from weeks to just a few clicks.
+              {t('landingPage.whyChoose.fasterDesc')}
             </p>
           </div>
 
           <div className="card">
             <div className="icon">📊</div>
-            <h3>Track Projects Online</h3>
+            <h3>{t('landingPage.whyChoose.trackTitle')}</h3>
             <p>
-              Track your projects, approvals, and updates seamlessly online.
-              Whether on desktop, tablet, or mobile, your designs go wherever you
-              go.
+              {t('landingPage.whyChoose.trackDesc')}
             </p>
           </div>
 
           <div className="card">
             <div className="icon">🛠️</div>
-            <h3>Design It Your Way</h3>
+            <h3>{t('landingPage.whyChoose.designWayTitle')}</h3>
             <p>
-              From dimensions to finishes, create furniture that matches your
-              exact style and needs. With DAR, you’re not limited to templates.
+              {t('landingPage.whyChoose.designWayDesc')}
             </p>
           </div>
 
           <div className="card">
             <div className="icon">🚚</div>
-            <h3>Trusted Delivery</h3>
+            <h3>{t('landingPage.whyChoose.trustedTitle')}</h3>
             <p>
-              From production to installation, DAR ensures your furniture is
-              delivered and set up with precision, giving you peace of mind.
+              {t('landingPage.whyChoose.trustedDesc')}
             </p>
           </div>
           <div className="card">
             <div className="icon">🚚</div>
-            <h3>Trusted Delivery</h3>
+            <h3>{t('landingPage.whyChoose.trustedTitle')}</h3>
             <p>
-              From production to installation, DAR ensures your furniture is
-              delivered and set up with precision, giving you peace of mind.
+              {t('landingPage.whyChoose.trustedDesc')}
             </p>
           </div>
 
@@ -353,8 +307,8 @@ export default function Landingpage() {
 ============================== */}
       <section className="catalogue-section">
         <div className="catalogue-header">
-          <p className="catalogue-eyebrow">WHAT WE PROUD OF</p>
-          <h2 className="catalogue-title">DAR Catalogue</h2>
+          <p className="catalogue-eyebrow">{t('journey.subtitle')}</p>
+          <h2 className="catalogue-title">{t('common.catalogue')}</h2>
 
           <div className="catalogue-nav-arrows">
             <button className="arrow-btn left-arrow">←</button>
@@ -370,8 +324,8 @@ export default function Landingpage() {
               alt="Sweden Melody interior"
             />
             <div className="card-content">
-              <h3 className="card-title">Sweden melody</h3>
-              <p className="card-location">Paris, France</p>
+              <h3 className="card-title">{t('projectPage.projects.sweden.title')}</h3>
+              <p className="card-location">{t('projectPage.projects.sweden.location')}</p>
               <p className="card-year">2019</p>
             </div>
           </div>
@@ -383,8 +337,8 @@ export default function Landingpage() {
               alt="Modern Mix interior"
             />
             <div className="card-content">
-              <h3 className="card-title">Modern mix</h3>
-              <p className="card-location">Madrid, Spain</p>
+              <h3 className="card-title">{t('projectPage.projects.modern.title')}</h3>
+              <p className="card-location">{t('projectPage.projects.modern.location')}</p>
               <p className="card-year">2021</p>
             </div>
           </div>
@@ -396,16 +350,16 @@ export default function Landingpage() {
               alt="Airy Cave interior"
             />
             <div className="card-content">
-              <h3 className="card-title">Airy cave</h3>
-              <p className="card-location">Amsterdam, Netherlands</p>
+              <h3 className="card-title">{t('projectPage.projects.airy.title')}</h3>
+              <p className="card-location">{t('projectPage.projects.airy.location')}</p>
               <p className="card-year">2023</p>
             </div>
           </div>
         </div>
 
         <div className="catalogue-cta">
-          <button className="btn-catalogue">
-            View DAR Catalogue →
+          <button className="btn-catalogue" onClick={() => navigate("/catalogue")}>
+            {t('cataloguePage.viewCatalogue')} →
           </button>
         </div>
       </section>
@@ -413,35 +367,30 @@ export default function Landingpage() {
 
 
       <section className="tech-section">
-        <p className="tech-eyebrow">POWERED BY TECHNOLOGY</p>
+        <p className="tech-eyebrow">{t('landingPage.tech.eyebrow')}</p>
 
         <h1 className="tech-heading">
-          Kuwait’s first 3D furniture design<br />
-          technology that brings your furniture<br />
-          from design to life.
+          {t('landingPage.tech.heading')}
         </h1>
 
         <div className="tech-wrapper">
           {/* LEFT CONTENT */}
           <div className="tech-left">
             <h2 className="tech-title">
-              3D FURNITURE DESIGN
-              <span>INSTANT UPDATES</span>
-              <span>SEAMLESS PROCESS</span>
+              {t('landingPage.tech.title')}
+              <span>{t('landingPage.tech.updates')}</span>
+              <span>{t('landingPage.tech.process')}</span>
             </h2>
 
             <p className="tech-desc">
-              Easily visualize your ideas in an interactive 3D environment.
-              Change dimensions, finishes, and layouts with a few clicks,
-              no technical skills required.
+              {t('landingPage.tech.desc')}
             </p>
 
             <p className="tech-highlight">
-              With DAR, technology transforms the traditional furniture journey
-              into a smart, interactive, and stress-free process.
+              {t('landingPage.tech.highlight')}
             </p>
 
-            <div className="tech-bg-text">3D FURNITURE</div>
+            <div className="tech-bg-text">{t('landingPage.tech.bgText')}</div>
           </div>
 
           {/* RIGHT IMAGE */}
@@ -463,9 +412,9 @@ export default function Landingpage() {
 
       <section className="how-it-works">
         <div className="containers ">
-          <p className="section-subtitle">HOW IT WORKS</p>
+          <p className="section-subtitle">{t('aboutPage.journeyTag')}</p>
           <h2 className="section-title">
-            From idea to installation, DAR makes the journey <br /> effortless and transparent.
+            {t('aboutPage.impactText')}
           </h2>
 
           <div className="steps-grid">
@@ -485,20 +434,18 @@ export default function Landingpage() {
 
       <section className="meet-team-section">
         <div className="meet-team-header">
-          <p className="meet-team-eyebrow">MEET OUR TEAM</p>
+          <p className="meet-team-eyebrow">{t('aboutPage.teamEyebrow')}</p>
           <h2 className="meet-team-title">
-            We are a passionate team of designers <br />
-            dedicated to transforming your vision <br />
-            into beautifully crafted spaces.
+            {t('aboutPage.teamTitle')}
           </h2>
         </div>
 
         <div className="department-tabs">
-          <button className="department-tab active">Management</button>
-          <button className="department-tab">IT Department</button>
-          <button className="department-tab">HR Department</button>
-          <button className="department-tab">Marketing</button>
-          <button className="department-tab">Legal Department</button>
+          <button className="department-tab active">{t('aboutPage.departments.management')}</button>
+          <button className="department-tab">{t('aboutPage.departments.it')}</button>
+          <button className="department-tab">{t('aboutPage.departments.hr')}</button>
+          <button className="department-tab">{t('aboutPage.departments.marketing')}</button>
+          <button className="department-tab">{t('aboutPage.departments.legal')}</button>
         </div>
 
       </section>
@@ -512,7 +459,7 @@ export default function Landingpage() {
           <div className="team-card">
             <img src={head} alt="Head" />
             <div className="team-overlay">
-              <h3 className="team-name">Head Management</h3>
+              <h3 className="team-name">{t('aboutPage.teamRoles.head')}</h3>
               <p className="team-role"></p>
             </div>
           </div>
@@ -520,7 +467,7 @@ export default function Landingpage() {
           <div className="team-card">
             <img src={Accountant} alt="James" />
             <div className="team-overlay">
-              <h3 className="team-name">Accountant</h3>
+              <h3 className="team-name">{t('aboutPage.teamRoles.accountant')}</h3>
               <p className="team-role"></p>
             </div>
           </div>
@@ -528,7 +475,7 @@ export default function Landingpage() {
           <div className="team-card">
             <img src={design} alt="Emily" />
             <div className="team-overlay">
-              <h3 className="team-name">Head designer</h3>
+              <h3 className="team-name">{t('aboutPage.teamRoles.designer')}</h3>
               <p className="team-role"></p>
             </div>
           </div>
@@ -536,7 +483,7 @@ export default function Landingpage() {
           <div className="team-card">
             <img src={marketing} alt="Michael" />
             <div className="team-overlay">
-              <h3 className="team-name">PR/MARKETING</h3>
+              <h3 className="team-name">{t('aboutPage.teamRoles.pr')}</h3>
               <p className="team-role"></p>
             </div>
           </div>
@@ -548,8 +495,7 @@ export default function Landingpage() {
           <div className="highlight-card">
             <div className="highlight-icon"><FaUsers /></div>
             <p className="highlight-text">
-              DAR is powered by a team of <strong>50+</strong> professionals across design, operations,
-              customer service, marketing, HR, finance, and production.
+              {t('aboutPage.teamHighlight')}
             </p>
           </div>
 
@@ -562,15 +508,15 @@ export default function Landingpage() {
       <section className="testimonial-section">
         <div className="testimonial-container">
           <div className="testimonial-left">
-            <p className="testimonial-header">OUR CLIENTS SAY</p>
+            <p className="testimonial-header">{t('aboutPage.testimonials.header')}</p>
             <p className="testimonial-description">
-              The warm words of our clients let us achieve more
+              {t('aboutPage.testimonials.description')}
             </p>
             <div className="client-info">
               <img src={p14} alt="Client" className="client-image" />
               <div className="client-details">
-                <p className="client-name">Morgan Dufresne</p>
-                <p className="client-title">Company Owner</p>
+                <p className="client-name">{t('aboutPage.testimonials.clientName')}</p>
+                <p className="client-title">{t('aboutPage.testimonials.clientRole')}</p>
               </div>
             </div>
           </div>
@@ -578,14 +524,11 @@ export default function Landingpage() {
             <div className="testimonial-quote">
               <span className="quote-mark">"</span>
               <p className="testimonial-text">
-                From concept to reality, DAR turned my vision into a stunning, livable
-                space. I couldn’t be happier with this!
+                {t('aboutPage.testimonials.quote')}
               </p>
             </div>
             <p className="testimonial-feedback">
-              Morgan wanted a modern, functional office. We delivered a bright, stylish
-              space with smart design solutions, perfectly tailored to his company
-              style.
+              {t('aboutPage.testimonials.feedback')}
             </p>
             <div className="testimonial-arrows">
               <button className="arrow-left">←</button>
@@ -599,12 +542,12 @@ export default function Landingpage() {
 
       <section className="hero-section">
         <div className="hero-content">
-          <p className="hero-subheading">Crafting Environments</p>
+          <p className="hero-subheading">{t('hero.crafting')}</p>
           <p className="hero-main-text">
-            It is so <span className="highlight">Easy</span> to <span className="highlight">Change</span> the <span className="highlight">mood</span>
+            {t('hero.easyChange')}
           </p>
           <button className="btn-book-measurements" onClick={handleBook}>
-            Book Measurements <span className="arrow">→</span>
+            {t('hero.bookMeasurements')} <span className="arrow">→</span>
           </button>
         </div>
       </section>
@@ -613,11 +556,10 @@ export default function Landingpage() {
 
       <section className="careers-section">
         <div className="careers-left">
-          <span className="subtitle">OUR CAREERS</span>
-          <h2>Ready to Join Our Journey</h2>
+          <span className="subtitle">{t('aboutPage.careersSub')}</span>
+          <h2>{t('aboutPage.careersTitle')}</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur. Tortor quis elementum cum nunc
-            libero. Elit purus ipsum mauris ullamcorper. Lacus.
+            {t('aboutPage.careersDesc')}
           </p>
           <div className="arrow-buttons">
             <button onClick={() => scroll("left")}>←</button>
@@ -628,9 +570,9 @@ export default function Landingpage() {
         <div className="careers-right" ref={scrollRef}>
           {careerCards.map((card, idx) => (
             <div className="career-card" key={idx}>
-              <h3>{card.title}</h3>
-              <p>{card.description}</p>
-              <button className="apply-btn">Apply Now →</button>
+              <h3>{t('aboutPage.careersTitle')}</h3>
+              <p>{t('aboutPage.careersDesc')}</p>
+              <button className="apply-btn">{t('aboutPage.applyNow')} →</button>
             </div>
           ))}
         </div>

@@ -47,60 +47,26 @@ const photoArray = [
   p1, p2, p3, p4, p5, p6, p8, p9, p10, p11, p12, p13
 ];
 
-const steps = [
-  { number: 1, title: "Booking Phase", description: "Schedule a visit or start designing online to begin your furniture journey of your own design and style." },
-  { number: 2, title: "Measurement Phase", description: "Our team measures your space to ensure your desired furniture is a perfect fit." },
-  { number: 3, title: "Design Phase", description: "Use the DAR platform to design in 3D, customize materials, and see live pricing." },
-  { number: 4, title: "Approval Phase", description: "Review the design, confirm details, and get instant cost transparency. No hidden fees or costs." },
-  { number: 5, title: "Production Phase", description: "Your design is crafted with high-quality materials and are crafted by expert workmanship." },
-  { number: 6, title: "Delivery & Installation", description: "DAR delivers and installs your furniture, for you at your doorstep, ready to use hassle free." },
-];
-
-const careerCards = [
-  {
-    title: "Design And Interactions",
-    description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
-  },
-  {
-    title: "Design And Interactions",
-    description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
-  },
-
-  {
-    title: "Design And Interactions",
-    description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
-  },
-  {
-    title: "Design And Interactions",
-    description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
-  },
-  {
-    title: "Design And Interactions",
-    description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
-  },
-  {
-    title: "Design And Interactions",
-    description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
-  },
-  {
-    title: "Design And Interactions",
-    description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
-  },
-  {
-    title: "Design And Interactions",
-    description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
-  },
-  {
-    title: "Design And Interactions",
-    description: "Lorem ipsum dolor sit amet consectetur. Sociis mattis sed sagittis tincidunt nibh vitae nibh amet nullam. Est eleifend molestie tortor sapien."
-  },
-];
-
 export default function Aboutpage() {
   const message = "Hello, I want to get more information.";
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
+
+  const steps = [
+    { number: 1, title: t('aboutPage.bookingSteps.step1.title'), description: t('aboutPage.bookingSteps.step1.desc') },
+    { number: 2, title: t('aboutPage.bookingSteps.step2.title'), description: t('aboutPage.bookingSteps.step2.desc') },
+    { number: 3, title: t('aboutPage.bookingSteps.step3.title'), description: t('aboutPage.bookingSteps.step3.desc') },
+    { number: 4, title: t('aboutPage.bookingSteps.step4.title'), description: t('aboutPage.bookingSteps.step4.desc') },
+    { number: 5, title: t('aboutPage.bookingSteps.step5.title'), description: t('aboutPage.bookingSteps.step5.desc') },
+    { number: 6, title: t('aboutPage.bookingSteps.step6.title'), description: t('aboutPage.bookingSteps.step6.desc') },
+  ];
+
+  const careerCards = Array(9).fill({
+    title: t('aboutPage.careersTitle'),
+    description: t('aboutPage.careersDesc')
+  });
+
 
   const handleBook = () => {
     navigate("/appointment#measurement-section");
@@ -196,8 +162,7 @@ export default function Aboutpage() {
         <div className="fh-card fh-stats">
           <div className="fh-statsTop">
             <p className="fh-small">
-              DAR was created to make furniture personal. We believe every home
-              deserves pieces made just for it.
+              {t('aboutPage.mission1')}
             </p>
 
             <div className="fh-big">94%</div>
@@ -205,8 +170,7 @@ export default function Aboutpage() {
 
           <div className="fh-statsBottom">
             <p className="fh-small fh-small--light">
-              As Kuwait’s first smart furniture design experience, we help you
-              design what truly fits your space and style.
+              {t('aboutPage.mission2')}
             </p>
 
             <div className="fh-big fh-big--light">200+</div>
@@ -231,14 +195,11 @@ export default function Aboutpage() {
             <div class="dar-brand">DAR</div>
 
             <h1 class="dar-title">
-              Smart furniture design in Kuwait,<br />
-              shaped by you.
+              {t('aboutPage.journeyTitle')}
             </h1>
 
             <p class="dar-desc">
-              DAR is Kuwait’s first smart furniture design experience, created to redefine how people bring their ideas to life.
-              We empower you to shape every detail, size, style, and finish. So each piece is not just furniture, but a reflection
-              of your taste and a perfect fit for your space.
+              {t('aboutPage.impactText')}
             </p>
           </div>
         </div>
@@ -251,13 +212,12 @@ export default function Aboutpage() {
 
           <div class="ourstory__left">
             <div class="ourstory__top">
-              <div class="ourstory__kicker">OUR STORY</div>
+              <div class="ourstory__kicker">{t('aboutPage.storyKicker')}</div>
 
-              <h2 class="ourstory__title">The idea behind DAR</h2>
+              <h2 class="ourstory__title">{t('aboutPage.storyTitle')}</h2>
 
               <p class="ourstory__desc">
-                DAR was founded with a vision to bridge design and technology. We saw the challenges people face when shopping for furniture—limited
-                choices, unclear sizing, mismatched finishes, and decided to build a smarter way.
+                {t('aboutPage.storyDesc')}
               </p>
             </div>
 
@@ -267,17 +227,17 @@ export default function Aboutpage() {
               <div class="ourstory__stats">
                 <div class="ourstory__stat">
                   <div class="ourstory__num">240+</div>
-                  <div class="ourstory__label">Designs</div>
+                  <div class="ourstory__label">{t('aboutPage.storyStats.designs')}</div>
                 </div>
 
                 <div class="ourstory__stat">
                   <div class="ourstory__num">100%</div>
-                  <div class="ourstory__label">Precision</div>
+                  <div class="ourstory__label">{t('aboutPage.storyStats.precision')}</div>
                 </div>
 
                 <div class="ourstory__stat">
                   <div class="ourstory__num">2020</div>
-                  <div class="ourstory__label">Since</div>
+                  <div class="ourstory__label">{t('aboutPage.storyStats.since')}</div>
                 </div>
               </div>
             </div>
@@ -303,10 +263,9 @@ export default function Aboutpage() {
       {/* JOURNEY */}
       <section className="journey">
         <div className="journey-header">
-          <span className="journey-tag">OUR JOURNEY</span>
+          <span className="journey-tag">{t('aboutPage.journeyTag')}</span>
           <h2>
-            Whether it’s your home, office, or commercial project,
-            we bring your vision to life.
+            {t('aboutPage.journeyTitle')}
           </h2>
         </div>
 
@@ -315,20 +274,20 @@ export default function Aboutpage() {
 
             <div className="timeline-item">
               <div className="dot"></div>
-              <h3>2020 - Innovation Born</h3>
-              <p>Remote interior solutions during COVID.</p>
+              <h3>{t('aboutPage.journeyItems.2020.title')}</h3>
+              <p>{t('aboutPage.journeyItems.2020.desc')}</p>
             </div>
 
             <div className="timeline-item">
               <div className="dot"></div>
-              <h3>2021 - Team Growth</h3>
-              <p>Expanded designers & engineers.</p>
+              <h3>{t('aboutPage.journeyItems.2021.title')}</h3>
+              <p>{t('aboutPage.journeyItems.2021.desc')}</p>
             </div>
 
             <div className="timeline-item">
               <div className="dot"></div>
-              <h3>2022 - Omaksan Partnership</h3>
-              <p>Enhanced technology & delivery.</p>
+              <h3>{t('aboutPage.journeyItems.2022.title')}</h3>
+              <p>{t('aboutPage.journeyItems.2022.desc')}</p>
             </div>
 
           </div>
@@ -353,37 +312,34 @@ export default function Aboutpage() {
         <div className="impact-bottom">
           <div className="impact-inner">
             <div className="impact-left">
-              <p className="impact-kicker">OUR IMPACT</p>
+              <p className="impact-kicker">{t('aboutPage.impactKicker')}</p>
             </div>
 
             <div className="impact-right">
               <p className="impact-text">
-                Since our launch, DAR has redefined how people bring furniture into their homes by turning imagination into
-                reality. We’ve guided designs from vision to creation, crafted pieces that reflect individuality, and earned
-                the trust of those who value precision and style. These milestones are more than numbers; they represent
-                homes transformed, ideas realized, and the confidence our community places in us.
+                {t('aboutPage.impactText')}
               </p>
 
               <div className="impact-bracket"></div>
 
               <div className="impact-stats">
                 <div className="impact-stat">
-                  <h3 className="impact-num">1st</h3>
-                  <p className="impact-label">In Kuwait</p>
+                  <h3 className="impact-num">{t('aboutPage.impactStats.first')}</h3>
+                  <p className="impact-label">{t('aboutPage.impactStats.inKuwait')}</p>
                 </div>
 
                 <div className="impact-divider"></div>
 
                 <div className="impact-stat">
                   <h3 className="impact-num">250+</h3>
-                  <p className="impact-label">Projects Completed</p>
+                  <p className="impact-label">{t('aboutPage.impactStats.projectsCompleted')}</p>
                 </div>
 
                 <div className="impact-divider"></div>
 
                 <div className="impact-stat">
                   <h3 className="impact-num">40+</h3>
-                  <p className="impact-label">Team Members</p>
+                  <p className="impact-label">{t('aboutPage.impactStats.teamMembers')}</p>
                 </div>
               </div>
             </div>
@@ -404,20 +360,18 @@ export default function Aboutpage() {
           <div className="sf-col">
             <div className="sf-box">
               <div className="sf-icon"><img src={pin} /></div>
-              <h3 className="sf-title">Personal by Design</h3>
+              <h3 className="sf-title">{t('aboutPage.features.personalTitle')}</h3>
               <p className="sf-text">
-                Every piece begins with you. Your taste, your space, your lifestyle.
-                DAR gives you the freedom to create furniture that feels truly yours.
+                {t('aboutPage.features.personalDesc')}
               </p>
             </div>
 
 
             <div className="sf-box">
               <div className="sf-icon"><img src={star} /></div>
-              <h3 className="sf-title">Crafted with Care</h3>
+              <h3 className="sf-title">{t('aboutPage.features.craftedTitle')}</h3>
               <p className="sf-text">
-                Behind every design is skilled craftsmanship and attention to detail,
-                ensuring that your furniture is not only beautiful but built to last.
+                {t('aboutPage.features.craftedDesc')}
               </p>
             </div>
           </div>
@@ -432,20 +386,18 @@ export default function Aboutpage() {
           <div className="sf-col">
             <div className="sf-box">
               <div className="sf-icon"><img src={ball} /></div>
-              <h3 className="sf-title">Clarity Always</h3>
+              <h3 className="sf-title">{t('aboutPage.features.clarityTitle')}</h3>
               <p className="sf-text">
-                From design to delivery, we keep the process simple and transparent,
-                with clear choices, timelines, and expectations at every step.
+                {t('aboutPage.features.clarityDesc')}
               </p>
             </div>
 
 
             <div className="sf-box">
               <div className="sf-icon"><img src={couch} /></div>
-              <h3 className="sf-title">Built for Living</h3>
+              <h3 className="sf-title">{t('aboutPage.features.livingTitle')}</h3>
               <p className="sf-text">
-                We design with real life in mind—pieces that fit your space perfectly,
-                elevate your home, and stay with you for years to come.
+                {t('aboutPage.features.livingDesc')}
               </p>
             </div>
           </div>
@@ -457,20 +409,18 @@ export default function Aboutpage() {
 
       <section className="meet-team-section">
         <div className="meet-team-header">
-          <p className="meet-team-eyebrow">MEET OUR TEAM</p>
+          <p className="meet-team-eyebrow">{t('aboutPage.teamEyebrow')}</p>
           <h2 className="meet-team-title">
-            We are a passionate team of designers <br />
-            dedicated to transforming your vision <br />
-            into beautifully crafted spaces.
+            {t('aboutPage.teamTitle')}
           </h2>
         </div>
 
         <div className="department-tabs">
-          <button className="department-tab active">Management</button>
-          <button className="department-tab">IT Department</button>
-          <button className="department-tab">HR Department</button>
-          <button className="department-tab">Marketing</button>
-          <button className="department-tab">Legal Department</button>
+          <button className="department-tab active">{t('aboutPage.departments.management')}</button>
+          <button className="department-tab">{t('aboutPage.departments.it')}</button>
+          <button className="department-tab">{t('aboutPage.departments.hr')}</button>
+          <button className="department-tab">{t('aboutPage.departments.marketing')}</button>
+          <button className="department-tab">{t('aboutPage.departments.legal')}</button>
         </div>
 
       </section>
@@ -483,7 +433,7 @@ export default function Aboutpage() {
           <div className="team-card">
             <img src={head} alt="Head" />
             <div className="team-overlay">
-              <h3 className="team-name">Head Management</h3>
+              <h3 className="team-name">{t('aboutPage.teamRoles.head')}</h3>
               <p className="team-role"></p>
             </div>
           </div>
@@ -491,7 +441,7 @@ export default function Aboutpage() {
           <div className="team-card">
             <img src={Accountant} alt="James" />
             <div className="team-overlay">
-              <h3 className="team-name">Accountant</h3>
+              <h3 className="team-name">{t('aboutPage.teamRoles.accountant')}</h3>
               <p className="team-role"></p>
             </div>
           </div>
@@ -499,7 +449,7 @@ export default function Aboutpage() {
           <div className="team-card">
             <img src={design} alt="Emily" />
             <div className="team-overlay">
-              <h3 className="team-name">Head designer</h3>
+              <h3 className="team-name">{t('aboutPage.teamRoles.designer')}</h3>
               <p className="team-role"></p>
             </div>
           </div>
@@ -507,7 +457,7 @@ export default function Aboutpage() {
           <div className="team-card">
             <img src={marketing} alt="Michael" />
             <div className="team-overlay">
-              <h3 className="team-name">PR/MARKETING</h3>
+              <h3 className="team-name">{t('aboutPage.teamRoles.pr')}</h3>
               <p className="team-role"></p>
             </div>
           </div>
@@ -519,8 +469,7 @@ export default function Aboutpage() {
           <div className="highlight-card">
             <div className="highlight-icon"><FaUsers /></div>
             <p className="highlight-text">
-              DAR is powered by a team of <strong>50+</strong> professionals across design, operations,
-              customer service, marketing, HR, finance, and production.
+              {t('aboutPage.teamHighlight')}
             </p>
           </div>
 
@@ -533,15 +482,15 @@ export default function Aboutpage() {
       <section className="testimonial-section">
         <div className="testimonial-container">
           <div className="testimonial-left">
-            <p className="testimonial-header">OUR CLIENTS SAY</p>
+            <p className="testimonial-header">{t('aboutPage.testimonials.header')}</p>
             <p className="testimonial-description">
-              The warm words of our clients let us achieve more
+              {t('aboutPage.testimonials.description')}
             </p>
             <div className="client-info">
               <img src={p14} alt="Client" className="client-image" />
               <div className="client-details">
-                <p className="client-name">Morgan Dufresne</p>
-                <p className="client-title">Company Owner</p>
+                <p className="client-name">{t('aboutPage.testimonials.clientName')}</p>
+                <p className="client-title">{t('aboutPage.testimonials.clientRole')}</p>
               </div>
             </div>
           </div>
@@ -549,14 +498,11 @@ export default function Aboutpage() {
             <div className="testimonial-quote">
               <span className="quote-mark">"</span>
               <p className="testimonial-text">
-                From concept to reality, DAR turned my vision into a stunning, livable
-                space. I couldn’t be happier with this!
+                {t('aboutPage.testimonials.quote')}
               </p>
             </div>
             <p className="testimonial-feedback">
-              Morgan wanted a modern, functional office. We delivered a bright, stylish
-              space with smart design solutions, perfectly tailored to his company
-              style.
+              {t('aboutPage.testimonials.feedback')}
             </p>
             <div className="testimonial-arrows">
               <button className="arrow-left">←</button>
@@ -570,9 +516,9 @@ export default function Aboutpage() {
 
       <section className="hero-section">
         <div className="hero-content">
-          <p className="hero-subheading">Crafting Environments</p>
+          <p className="hero-subheading">{t('hero.crafting')}</p>
           <p className="hero-main-text">
-            It is so <span className="highlight">Easy</span> to <span className="highlight">Change</span> the <span className="highlight">mood</span>
+            {t('hero.easyChange')}
           </p>
           <button className="btn-book-measurements" onClick={handleBook}>
             {t('hero.bookMeasurements')} <span className="arrow">→</span>
@@ -584,11 +530,10 @@ export default function Aboutpage() {
 
       <section className="careers-section">
         <div className="careers-left">
-          <span className="subtitle">OUR CAREERS</span>
-          <h2>Ready to Join Our Journey</h2>
+          <span className="subtitle">{t('aboutPage.careersSub')}</span>
+          <h2>{t('aboutPage.careersTitle')}</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur. Tortor quis elementum cum nunc
-            libero. Elit purus ipsum mauris ullamcorper. Lacus.
+            {t('aboutPage.careersDesc')}
           </p>
           <div className="arrow-buttons">
             <button onClick={() => scroll("left")}>←</button>
@@ -599,9 +544,9 @@ export default function Aboutpage() {
         <div className="careers-right" ref={scrollRef}>
           {careerCards.map((card, idx) => (
             <div className="career-card" key={idx}>
-              <h3>{card.title}</h3>
-              <p>{card.description}</p>
-              <button className="apply-btn">Apply Now →</button>
+              <h3>{t('aboutPage.careersTitle')}</h3>
+              <p>{t('aboutPage.careersDesc')}</p>
+              <button className="apply-btn">{t('aboutPage.applyNow')} →</button>
             </div>
           ))}
         </div>

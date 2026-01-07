@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 import { FaWhatsapp } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 import Footer from "./Footer";
 import "./project.css";
 import './what.css'
@@ -36,24 +37,23 @@ const photoArray = [
   p1, p2, p3, p4, p5, p6, p8, p9, p10, p11, p12, p13
 ];
 
-const items = [
-  { img: p1, title: "Sweden melody", location: "Paris, France", year: "2019" },
-  { img: p2, title: "Modern mix", location: "Madrid, Spain", year: "2020" },
-  { img: p3, title: "Airy cave", location: "Amsterdam, Netherlands", year: "2021" },
-  { img: p4, title: "Echoes of the fjords", location: "Oslo, Norway", year: "2022" },
-  { img: p5, title: "Ambient beats", location: "Lisbon, Portugal", year: "2023" },
-  { img: p6, title: "Rhythmic tides", location: "Copenhagen, Denmark", year: "2024" },
-  { img: p3, title: "Ocean Vibes", loc: "Dubai, UAE", year: "2024" },
-  { img: p8, title: "Desert Harmony", loc: "Riyadh, Saudi Arabia", year: "2025" },
-  { img: p1, title: "Zen Garden Home", loc: "Tokyo, Japan", year: "2023" },
-];
-
-import { useTranslation } from "react-i18next";
-
 export default function Projectpage() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
+
+  const items = [
+    { img: p1, title: t('projectPage.projects.sweden.title'), location: t('projectPage.projects.sweden.location'), year: "2019" },
+    { img: p2, title: t('projectPage.projects.modern.title'), location: t('projectPage.projects.modern.location'), year: "2020" },
+    { img: p3, title: t('projectPage.projects.airy.title'), location: t('projectPage.projects.airy.location'), year: "2021" },
+    { img: p4, title: t('projectPage.projects.echoes.title'), location: t('projectPage.projects.echoes.location'), year: "2022" },
+    { img: p5, title: t('projectPage.projects.ambient.title'), location: t('projectPage.projects.ambient.location'), year: "2023" },
+    { img: p6, title: t('projectPage.projects.rhythmic.title'), location: t('projectPage.projects.rhythmic.location'), year: "2024" },
+    { img: p3, title: t('projectPage.projects.ocean.title'), location: t('projectPage.projects.ocean.location'), year: "2024" },
+    { img: p8, title: t('projectPage.projects.desert.title'), location: t('projectPage.projects.desert.location'), year: "2025" },
+    { img: p1, title: t('projectPage.projects.zen.title'), location: t('projectPage.projects.zen.location'), year: "2023" },
+  ];
+
 
   const handleBook = () => {
     navigate("/appointment#measurement-section");
@@ -179,8 +179,8 @@ export default function Projectpage() {
       </section>
 
       <section className="showcase">
-        <p className="small-title">WHAT WE PROUD OF</p>
-        <h2 className="big-title">DAR Projects Showcase<span className="line"></span></h2>
+        <p className="small-title">{t('projectPage.proudOf')}</p>
+        <h2 className="big-title">{t('projectPage.showcaseTitle')}<span className="line"></span></h2>
 
         <div className="grid">
           {items.map((p, i) => (
@@ -206,8 +206,8 @@ export default function Projectpage() {
           <button>&gt;</button>
         </div>
 
-        <button className="book-btn">
-          Book DAR Crew ↗
+        <button className="book-btn" onClick={handleBook}>
+          {t('projectPage.bookCrew')} ↗
         </button>
       </div>
 
@@ -215,15 +215,15 @@ export default function Projectpage() {
       <section className="testimonial-section">
         <div className="testimonial-container">
           <div className="testimonial-left">
-            <p className="testimonial-header">OUR CLIENTS SAY</p>
+            <p className="testimonial-header">{t('aboutPage.testimonials.header')}</p>
             <p className="testimonial-description">
-              The warm words of our clients let us achieve more
+              {t('aboutPage.testimonials.description')}
             </p>
             <div className="client-info">
               <img src={p14} alt="Client" className="client-image" />
               <div className="client-details">
-                <p className="client-name">Morgan Dufresne</p>
-                <p className="client-title">Company Owner</p>
+                <p className="client-name">{t('aboutPage.testimonials.clientName')}</p>
+                <p className="client-title">{t('aboutPage.testimonials.clientRole')}</p>
               </div>
             </div>
           </div>
@@ -231,14 +231,11 @@ export default function Projectpage() {
             <div className="testimonial-quote">
               <span className="quote-mark">"</span>
               <p className="testimonial-text">
-                From concept to reality, DAR turned my vision into a stunning, livable
-                space. I couldn’t be happier with this!
+                {t('aboutPage.testimonials.quote')}
               </p>
             </div>
             <p className="testimonial-feedback">
-              Morgan wanted a modern, functional office. We delivered a bright, stylish
-              space with smart design solutions, perfectly tailored to his company
-              style.
+              {t('aboutPage.testimonials.feedback')}
             </p>
             <div className="testimonial-arrows">
               <button className="arrow-left">←</button>
@@ -254,12 +251,12 @@ export default function Projectpage() {
       <section className="hero-section">
         <img src={p5} alt="" className="hero-img" />
         <div className="hero-content">
-          <p className="hero-subheading">Crafting Environments</p>
+          <p className="hero-subheading">{t('hero.crafting')}</p>
           <p className="hero-main-text">
-            It is so <span className="highlight">Easy</span> to <span className="highlight">Change</span> the <span className="highlight">mood</span>
+            {t('hero.easyChange')}
           </p>
-          <button className="btn-book-measurements">
-            Book Measurements <span className="arrow">→</span>
+          <button className="btn-book-measurements" onClick={handleBook}>
+            {t('hero.bookMeasurements')} <span className="arrow">→</span>
           </button>
         </div>
       </section>

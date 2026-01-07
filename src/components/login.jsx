@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { registerUser, loginUser } from '../redux/userSlice';
+import { useTranslation } from 'react-i18next';
 import './login.css';
 import './what.css'
 import { FaEye, FaEyeSlash, FaWhatsapp } from "react-icons/fa";
@@ -15,6 +16,7 @@ export default function Login() {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
 
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { loading, error } = useSelector((state) => state.user);
@@ -27,27 +29,27 @@ export default function Login() {
         // Login
         const result = await dispatch(loginUser({ email, password }));
         if (loginUser.fulfilled.match(result)) {
-          alert('Logged in successfully!');
+          alert(t('auth.alerts.loginSuccess'));
           navigate('/dashboard');
         } else {
-          alert(result.payload?.message || 'Login failed. Check your credentials.');
+          alert(result.payload?.message || t('auth.alerts.loginFailed'));
         }
       } else {
         // Register
         const result = await dispatch(registerUser({ userName, email, phone, password }));
         if (registerUser.fulfilled.match(result)) {
-          alert('User registered successfully!');
+          alert(t('auth.alerts.registerSuccess'));
           setUserName('');
           setEmail('');
           setPhone('');
           setPassword('');
         } else {
-          alert(result.payload?.message || 'Registration failed. User may already exist.');
+          alert(result.payload?.message || t('auth.alerts.registerFailed'));
         }
       }
     } catch (err) {
       console.error(err);
-      alert('Something went wrong. Please try again.');
+      alert(t('auth.alerts.somethingWrong'));
     }
   };
 
@@ -70,18 +72,18 @@ export default function Login() {
           DARJI <span className="diamond">✦</span>
         </div>
 
-        <h1 className="title">{isLogin ? 'Welcome Back' : 'Join DARJI'}</h1>
+        <h1 className="title">{isLogin ? t('auth.welcomeBack') : t('auth.joinDarji')}</h1>
         <p className="subtitle">
           {isLogin
-            ? 'Log in to continue designing your space with full control.'
-            : 'Sign up to experience Kuwait’s first interactive 3D configurator.'}
+            ? t('auth.loginSubtitle')
+            : t('auth.signupSubtitle')}
         </p>
 
         <form className="form" onSubmit={handleSubmit}>
           {!isLogin && (
             <input
               type="text"
-              placeholder="Full Name"
+              placeholder={t('auth.fullName')}
               className="input"
               required
               value={userName}
@@ -92,7 +94,7 @@ export default function Login() {
           {!isLogin && (
             <input
               type="tel"
-              placeholder="Phone Number"
+              placeholder={t('auth.phone')}
               className="input"
               required
               value={phone}
@@ -102,7 +104,7 @@ export default function Login() {
 
           <input
             type="email"
-            placeholder="Email Address"
+            placeholder={t('auth.email')}
             className="input"
             required
             value={email}
@@ -112,7 +114,7 @@ export default function Login() {
           <div className="password-wrapper">
             <input
               type={showPassword ? "text" : "password"}
-              placeholder="Password"
+              placeholder={t('auth.password')}
               className="input"
               required
               value={password}
@@ -131,36 +133,36 @@ export default function Login() {
             <div className="options">
               <label className="remember">
                 <input type="checkbox" />
-                <span>Remember me</span>
+                <span>{t('auth.rememberMe')}</span>
               </label>
-              <a href="#" className="forgot">Forgot password?</a>
+              <a href="#" className="forgot">{t('auth.forgotPassword')}</a>
             </div>
           )}
 
           {error && <p className="error-message">{error?.message || error}</p>}
 
           <button type="submit" className="submit-btn" disabled={loading}>
-            {loading ? 'Processing...' : isLogin ? 'Login' : 'Create Account'}
+            {loading ? t('auth.processing') : isLogin ? t('auth.login') : t('auth.createAccount')}
           </button>
         </form>
 
         <div className="divider">
-          <span>or</span>
+          <span>{t('auth.or')}</span>
         </div>
 
         <p className="switch">
-          {isLogin ? "Don't have an account? " : 'Already have an account? '}
+          {isLogin ? t('auth.noAccount') : t('auth.haveAccount')}
           <button
             type="button"
             onClick={() => setIsLogin(!isLogin)}
             className="switch-link"
           >
-            {isLogin ? 'Sign Up' : 'Log In'}
+            {isLogin ? t('auth.signUpLink') : t('auth.loginLink')}
           </button>
         </p>
 
         <div className="badge">
-          <span className="star">★</span> 1200+ trusted customers
+          <span className="star">★</span> {t('auth.trustedCustomers')}
         </div>
       </div>
     </div>
