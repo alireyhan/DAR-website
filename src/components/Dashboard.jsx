@@ -65,7 +65,7 @@ export default function Dashboard() {
     return (
         <div className="dashboard-container">
             <a
-                href={`https://wa.me/96555559585?text=${encodeURIComponent(message)}`}
+                href={`https://wa.me/96565964302?text=${encodeURIComponent(message)}`}
 
                 target="_blank"
                 rel="noopener noreferrer"

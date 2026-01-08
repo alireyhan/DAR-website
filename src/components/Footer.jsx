@@ -82,7 +82,7 @@ const Footer = () => {
                     <a href="https://www.tiktok.com/@darinteriors.kw?_r=1&_t=ZS-92kJZ8amJNs" target="_blank" rel="noopener noreferrer">
                         <FaTiktok />
                     </a>
-                    <a href="https://wa.me/96555559585?text=Hello%2C%20I%20want%20to%20get%20more%20information." target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/96565964302?text=Hello%2C%20I%20want%20to%20get%20more%20information." target="_blank" rel="noopener noreferrer">
                         <FaWhatsapp />
                     </a>
                 </div>

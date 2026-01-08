@@ -132,7 +132,7 @@ export default function Appointmentpage() {
   return (
     <>
       <a
-        href={`https://wa.me/96555559585?text=${encodeURIComponent(message1)}`}
+        href={`https://wa.me/96565964302?text=${encodeURIComponent(message1)}`}
 
         target="_blank"
         rel="noopener noreferrer"
