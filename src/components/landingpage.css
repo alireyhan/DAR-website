@@ -1203,22 +1203,27 @@ p {
 
 /* ====== TEAM MEMBERS CONTAINER ====== */
 .team-members-container {
-  padding: 60px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
-/* ====== GRID ROWS ====== */
-.team-grid {
-  display: grid;
+.team-scroll-wrapper {
+  display: flex;
   gap: 24px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-bottom: 20px;
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.top-row {
-  grid-template-columns: repeat(4, 1fr);
-  margin-bottom: 24px;
-}
-
-.bottom-row {
-  grid-template-columns: 1fr 2fr 1fr;
+/* Hide scrollbar for WebKit browsers */
+.team-scroll-wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 /* ====== TEAM CARD ====== */
@@ -1227,6 +1232,8 @@ p {
   border-radius: 20px;
   overflow: hidden;
   height: 380px;
+  min-width: 300px;
+  flex-shrink: 0;
 }
 
 .team-card img {
@@ -1265,10 +1272,12 @@ p {
   background: #065f46;
   color: #d1fae5;
   border-radius: 20px;
-  padding: 40px;
+  padding: 43px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 1236px;
+  text-align: center;
 }
 
 .highlight-icon {
@@ -1284,30 +1293,26 @@ p {
 }
 
 /* ====== RESPONSIVE ====== */
-@media (max-width: 1024px) {
-  .top-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .bottom-row {
-    grid-template-columns: 1fr;
-  }
-
-  .team-card {
-    height: 320px;
-  }
-}
-
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .meet-team-title {
-    font-size: 26px;
+    font-size: 24px;
+    padding: 0 10px;
   }
 
   .team-members-container {
-    padding: 30px;
+    padding: 20px;
+  }
+
+  .team-card {
+    height: 350px;
+    min-width: 280px;
+  }
+
+  .highlight-card {
+    padding: 30px 20px;
+    order: -1;
   }
 }
-
 
 
 .testimonial-section {

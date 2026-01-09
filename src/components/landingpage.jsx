@@ -35,6 +35,10 @@ import head from "./images/head.jpeg";
 import Accountant from "./images/Account.jpeg";
 import design from "./images/headesigner.jpeg";
 import marketing from "./images/market.jpeg";
+import cfo from "../assets/cfo.jpeg";
+import construction from "../assets/construction.jpeg";
+import itHead from "../assets/it.jpeg";
+import legalHead from "../assets/legal.jpeg";
 // Video
 import video from "../assets/video.mp4";
 
@@ -473,6 +477,8 @@ export default function Landingpage() {
           <button className="department-tab">{t('aboutPage.departments.hr')}</button>
           <button className="department-tab">{t('aboutPage.departments.marketing')}</button>
           <button className="department-tab">{t('aboutPage.departments.legal')}</button>
+          <button className="department-tab">{t('aboutPage.departments.cfo')}</button>
+          <button className="department-tab">{t('aboutPage.departments.construction')}</button>
         </div>
 
       </section>
@@ -481,8 +487,7 @@ export default function Landingpage() {
 
 
       <div className="team-members-container">
-        {/* Top Row: 4 Members */}
-        <div className="team-grid top-row">
+        <div className="team-scroll-wrapper">
           <div className="team-card">
             <img src={head} alt="Head" />
             <div className="team-overlay">
@@ -492,7 +497,7 @@ export default function Landingpage() {
           </div>
 
           <div className="team-card">
-            <img src={Accountant} alt="James" />
+            <img src={Accountant} alt="Accountant" />
             <div className="team-overlay">
               <h3 className="team-name">{t('aboutPage.teamRoles.accountant')}</h3>
               <p className="team-role"></p>
@@ -500,7 +505,7 @@ export default function Landingpage() {
           </div>
 
           <div className="team-card">
-            <img src={design} alt="Emily" />
+            <img src={design} alt="Designer" />
             <div className="team-overlay">
               <h3 className="team-name">{t('aboutPage.teamRoles.designer')}</h3>
               <p className="team-role"></p>
@@ -508,25 +513,44 @@ export default function Landingpage() {
           </div>
 
           <div className="team-card">
-            <img src={marketing} alt="Michael" />
+            <img src={marketing} alt="Marketing" />
             <div className="team-overlay">
               <h3 className="team-name">{t('aboutPage.teamRoles.pr')}</h3>
               <p className="team-role"></p>
             </div>
           </div>
-        </div>
 
-        {/* Bottom Mixed Row: Member + Highlight + Member */}
-        <div className="team-grid bottom-row">
-
-          <div className="highlight-card">
-            <div className="highlight-icon"><FaUsers /></div>
-            <p className="highlight-text">
-              {t('aboutPage.teamHighlight')}
-            </p>
+          <div className="team-card">
+            <img src={cfo} alt="CFO" />
+            <div className="team-overlay">
+              <h3 className="team-name">{t('aboutPage.teamRoles.cfo')}</h3>
+              <p className="team-role"></p>
+            </div>
           </div>
 
+          <div className="team-card">
+            <img src={construction} alt="Construction" />
+            <div className="team-overlay">
+              <h3 className="team-name">{t('aboutPage.teamRoles.construction')}</h3>
+              <p className="team-role"></p>
+            </div>
+          </div>
 
+          <div className="team-card">
+            <img src={itHead} alt="IT" />
+            <div className="team-overlay">
+              <h3 className="team-name">{t('aboutPage.teamRoles.it')}</h3>
+              <p className="team-role"></p>
+            </div>
+          </div>
+
+          <div className="team-card">
+            <img src={legalHead} alt="Legal" />
+            <div className="team-overlay">
+              <h3 className="team-name">{t('aboutPage.teamRoles.legal')}</h3>
+              <p className="team-role"></p>
+            </div>
+          </div>
         </div>
       </div>
 
