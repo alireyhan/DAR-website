@@ -125,13 +125,19 @@ export const resources = {
                     "it": "IT Department",
                     "hr": "HR Department",
                     "marketing": "Marketing",
-                    "legal": "Legal Department"
+                    "legal": "Legal Department",
+                    "cfo": "CFO",
+                    "construction": "Construction Head"
                 },
                 "teamRoles": {
                     "head": "Head Management",
                     "accountant": "Accountant",
                     "designer": "Head designer",
-                    "pr": "PR/MARKETING"
+                    "pr": "PR/MARKETING",
+                    "cfo": "CFO",
+                    "construction": "Construction Head",
+                    "it": "IT Head",
+                    "legal": "Legal Head"
                 },
                 "teamHighlight": "DAR is powered by a team of 50+ professionals across design, operations, customer service, marketing, HR, finance, and production.",
                 "testimonials": {
@@ -445,13 +451,19 @@ export const resources = {
                     "it": "قسم تكنولوجيا المعلومات",
                     "hr": "قسم الموارد البشرية",
                     "marketing": "التسويق",
-                    "legal": "الدائرة القانونية"
+                    "legal": "الدائرة القانونية",
+                    "cfo": "المدير المالي",
+                    "construction": "رئيس البناء"
                 },
                 "teamRoles": {
                     "head": "الإدارة العليا",
                     "accountant": "محاسب",
                     "designer": "رئيس المصممين",
-                    "pr": "العلاقات العامة والتسويق"
+                    "pr": "العلاقات العامة والتسويق",
+                    "cfo": "المدير المالي",
+                    "construction": "رئيس البناء",
+                    "it": "رئيس تكنولوجيا المعلومات",
+                    "legal": "رئيس الشؤون القانونية"
                 },
                 "teamHighlight": "تتم إدارة دار من قبل فريق يضم أكثر من 50 محترفًا في مجالات التصميم والعمليات وخدمة العملاء والتسويق والموارد البشرية والتمويل والإنتاج.",
                 "testimonials": {
