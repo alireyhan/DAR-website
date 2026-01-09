@@ -28,7 +28,7 @@ import p13 from "./images/p13.png";
 import p14 from "./images/p14.jpg";
 import p15 from "./images/p15.jpg";
 import p16 from "./images/p16.jpg";
-import IMG from "./images/IMG.png"
+import IMG from "../assets/twoman.jpeg"
 import p18 from "./images/p18.jpg";
 import footer from "./images/footer.png";
 import navlogo from "./images/navlogo.png";

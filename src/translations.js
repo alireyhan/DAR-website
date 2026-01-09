@@ -50,7 +50,7 @@ export const resources = {
                 "subscribe": "Subscribe to Our Newsletter",
                 "rights": "Copyright © 2025 Dar. All rights reserved.",
                 "supportEmail": "support@dar.com",
-                "laborServices": "Labor Services",
+                "laborServices": "Customer Services",
                 "customerCare": "Customer Care",
                 "mobileValue": "58881032",
                 "pages": "Pages",
@@ -224,6 +224,8 @@ export const resources = {
                 "fail": "Failed to request appointment.",
                 "loginRequired": "Please login to book an appointment.",
                 "missingFieldsWarning": "Please fill in all required fields.",
+                "selectTime": "Select Time Slot",
+                "unavailable": "Already Booked",
                 "roles": {
                     "ops": "Operations Manager",
                     "marketing": "Head of Marketing",
@@ -551,6 +553,8 @@ export const resources = {
                 "fail": "فشل طلب الموعد.",
                 "loginRequired": "يرجى تسجيل الدخول لحجز موعد.",
                 "missingFieldsWarning": "يرجى تعبئة جميع الحقول المطلوبة.",
+                "selectTime": "اختر فترة زمنية",
+                "unavailable": "محجوز بالفعل",
                 "roles": {
                     "ops": "مدير العمليات",
                     "marketing": "رئيس قسم التسويق",

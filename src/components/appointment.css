@@ -441,6 +441,61 @@ nav ul li a:hover {
   align-self: center;
 }
 
+/* Time Slots */
+.time-slots-container {
+  margin-bottom: 0;
+}
+
+/* Add style for the icon inside the time slot container if needed, matches input-icon */
+.time-slots-container .input-icon {
+  position: relative;
+  width: 100%;
+}
+
+/* Icon is handled by .input-icon flex layout, but we can target specific time-icon if needed. 
+   Currently .input-icon aligns items with gap: 8px. */
+
+.time-slot-select {
+  width: 100%;
+  padding: 10px 0;
+  /* Match .input-icon input padding */
+  border: none;
+  /* Remove border as wrapper has it */
+  font-size: 14px;
+  /* Match input font size */
+  color: #333;
+  background-color: transparent;
+  /* Transparent to blend with wrapper */
+  cursor: pointer;
+  transition: all 0.3s;
+  outline: none;
+}
+
+.time-slot-select:focus {
+  /* Focus handled by wrapper usually, or remove ring */
+  outline: none;
+  box-shadow: none;
+}
+
+.time-slot-select option:disabled {
+  color: #999;
+}
+
+/* Make grid inputs span full width for better alignment with slots */
+.grid-2 .input-icon {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .time-slots-container {
+    grid-column: span 1;
+  }
+
+  .slots-grid {
+    justify-content: center;
+  }
+}
+
 
 .dar-catalogue {
   padding: 80px 60px;

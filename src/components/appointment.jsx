@@ -81,6 +81,58 @@ export default function Appointmentpage() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  // Fetch existing bookings
+  const [existingBookings, setExistingBookings] = useState([]);
+
+  React.useEffect(() => {
+    const fetchBookings = async () => {
+      try {
+        const response = await axios.get(`${API_BASE_URL}/measurements`);
+        if (response.data) {
+          setExistingBookings(response.data);
+        }
+      } catch (error) {
+        console.error("Error fetching bookings:", error);
+      }
+    };
+    fetchBookings();
+  }, []);
+
+  // Time Slots
+  const TIME_SLOTS = [
+    "09:00 - 11:00",
+    "11:00 - 13:00",
+    "13:00 - 15:00",
+    "15:00 - 17:00"
+  ];
+
+  // Check if a slot is unavailable
+  const isSlotUnavailable = (slot) => {
+    if (!formData.date) return false;
+
+    // Convert slot start time (e.g., "09:00") and selected date to a date string for comparison
+    const slotStartTime = slot.split(" - ")[0];
+    const checkDate = new Date(`${formData.date}T${slotStartTime}`);
+
+    return existingBookings.some(booking => {
+      const bookingDate = new Date(booking.measurementDate);
+      // Compare year, month, day, hours, minutes
+      return (
+        bookingDate.getFullYear() === checkDate.getFullYear() &&
+        bookingDate.getMonth() === checkDate.getMonth() &&
+        bookingDate.getDate() === checkDate.getDate() &&
+        bookingDate.getHours() === checkDate.getHours() &&
+        bookingDate.getMinutes() === checkDate.getMinutes()
+      );
+    });
+  };
+
+  const handleSlotSelect = (slot) => {
+    if (isSlotUnavailable(slot)) return;
+    const startTime = slot.split(" - ")[0];
+    setFormData(prev => ({ ...prev, time: startTime }));
+  };
+
   const handleSubmit = async () => {
     // 1. Check Login
     if (!user?._id) {
@@ -118,6 +170,9 @@ export default function Appointmentpage() {
         setFormData({
           firstName: "", lastName: "", phone: "", email: "", date: "", time: "", address: "", zipCode: "", details: "",
         });
+        // Refresh bookings after successful booking
+        const refreshResponse = await axios.get(`${API_BASE_URL}/measurements`);
+        if (refreshResponse.data) setExistingBookings(refreshResponse.data);
       }
     } catch (error) {
       console.error("Error booking:", error);
@@ -218,10 +273,32 @@ export default function Appointmentpage() {
 
           <div className="grid-2">
             <div className="input-icon">
-              <FaCalendar /> <input type="date" name="date" value={formData.date} onChange={handleInputChange} />
+              <FaCalendar /> <input type="date" name="date" value={formData.date} onChange={handleInputChange} min={new Date().toISOString().split("T")[0]} />
             </div>
-            <div className="input-icon">
-              <FaClock /> <input type="time" name="time" value={formData.time} onChange={handleInputChange} />
+
+            <div className="time-slots-container">
+              <div className="input-icon">
+                <FaClock className="time-icon" />
+                <select
+                  className="time-slot-select"
+                  value={formData.time ? TIME_SLOTS.find(slot => slot.startsWith(formData.time)) || "" : ""}
+                  onChange={(e) => handleSlotSelect(e.target.value)}
+                >
+                  <option value="" disabled>{t('appointmentPage.selectTime') || "Select Time"}</option>
+                  {TIME_SLOTS.map((slot, index) => {
+                    const isUnavailable = isSlotUnavailable(slot);
+                    return (
+                      <option
+                        key={index}
+                        value={slot}
+                        disabled={isUnavailable}
+                      >
+                        {slot} {isUnavailable ? `(${t('appointmentPage.unavailable') || "Unavailable"})` : ""}
+                      </option>
+                    );
+                  })}
+                </select>
+              </div>
             </div>
 
             <div className="input-icon">
