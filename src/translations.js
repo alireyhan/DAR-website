@@ -137,10 +137,12 @@ export const resources = {
                 "testimonials": {
                     "header": "OUR CLIENTS SAY",
                     "description": "The warm words of our clients let us achieve more",
-                    "clientName": "Morgan Dufresne",
-                    "clientRole": "Company Owner",
-                    "quote": "From concept to reality, DAR turned my vision into a stunning, livable space. I couldn’t be happier with this!",
-                    "feedback": "Morgan wanted a modern, functional office. We delivered a bright, stylish space with smart design solutions, perfectly tailored to his company style."
+                    "list": [
+                        { "name": "Abdullah", "quote": "Everything was clear from the first step." },
+                        { "name": "Fahad", "quote": "Time management and follow-up made the difference." },
+                        { "name": "Yousuf", "quote": "Pricing and design were clear before execution." },
+                        { "name": "Nasser", "quote": "The process was smooth and well organized." }
+                    ]
                 },
                 "careersSub": "OUR CAREERS",
                 "careersTitle": "Ready to Join Our Journey",
@@ -455,10 +457,12 @@ export const resources = {
                 "testimonials": {
                     "header": "ماذا يقول عملاؤنا",
                     "description": "كلمات عملائنا الدافئة تجعلنا نحقق المزيد",
-                    "clientName": "مورغان دوفرين",
-                    "clientRole": "صاحب شركة",
-                    "quote": "من المفهوم إلى الواقع، حولت دار رؤيتي إلى مساحة مذهلة صالحة للعيش. لا يمكنني أن أكون أكثر سعادة من هذا!",
-                    "feedback": "أراد مورغان مكتبًا حديثًا وعمليًا. لقد قدمنا مساحة مشرقة وأنيقة مع حلول تصميم ذكية، مصممة خصيصًا لأسلوب شركته."
+                    "list": [
+                        { "name": "عبدالله", "quote": "التجربة كانت مرتبة وواضحة من البداية." },
+                        { "name": "فهد", "quote": "أكثر شي فرق معاي هو المتابعة وتنظيم الوقت." },
+                        { "name": "يوسف", "quote": "شفت السعر والتصميم قبل التنفيذ بدون مفاجآت." },
+                        { "name": "ناصر", "quote": "النظام سهل والتواصل كان سريع." }
+                    ]
                 },
                 "careersSub": "وظائفنا",
                 "careersTitle": "جاهز للانضمام إلى رحلتنا",

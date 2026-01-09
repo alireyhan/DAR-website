@@ -82,11 +82,6 @@ export default function Appointmentpage() {
   };
 
   const handleSubmit = async () => {
-    if (!user?._id) {
-      alert(t('appointmentPage.loginRequired'));
-      return;
-    }
-
     setLoading(true);
     setMessage("");
 
@@ -98,8 +93,12 @@ export default function Appointmentpage() {
         comments: `${formData.details} \n Address: ${formData.address}, ZIP: ${formData.zipCode} \n Phone: ${formData.phone} \n Email: ${formData.email}`,
         type: "Measurement",
         lineItems: [],
-        customerId: user._id,
       };
+
+      // Only add customerId if user is logged in
+      if (user?._id) {
+        payload.customerId = user._id;
+      }
 
       const response = await axios.post(`${API_BASE_URL}/measurements`, payload);
 

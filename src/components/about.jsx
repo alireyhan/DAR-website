@@ -51,6 +51,7 @@ export default function Aboutpage() {
   const message = "Hello, I want to get more information.";
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
+  const testimonials = t('aboutPage.testimonials.list', { returnObjects: true }) || [];
   const navigate = useNavigate();
 
   const steps = [
@@ -502,36 +503,25 @@ export default function Aboutpage() {
       </div>
 
 
-
       <section className="testimonial-section">
-        <div className="testimonial-container">
-          <div className="testimonial-left">
-            <p className="testimonial-header">{t('aboutPage.testimonials.header')}</p>
-            <p className="testimonial-description">
-              {t('aboutPage.testimonials.description')}
-            </p>
-            <div className="client-info">
-              <img src={p14} alt="Client" className="client-image" />
-              <div className="client-details">
-                <p className="client-name">{t('aboutPage.testimonials.clientName')}</p>
-                <p className="client-title">{t('aboutPage.testimonials.clientRole')}</p>
+        <div className="testimonial-header-wrapper">
+          <p className="testimonial-header">{t('aboutPage.testimonials.header')}</p>
+          <p className="testimonial-description">
+            {t('aboutPage.testimonials.description')}
+          </p>
+        </div>
+
+        <div className="testimonials-timeline">
+          <div className="testimonials-wrapper">
+            {testimonials.map((testimonial, index) => (
+              <div className="testimonial-item" key={index}>
+                <div className="testimonial-dot"></div>
+                <div className="testimonial-content">
+                  <p className="testimonial-quote">"{testimonial.quote}"</p>
+                  <p className="testimonial-author">— {testimonial.name}</p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="testimonial-right">
-            <div className="testimonial-quote">
-              <span className="quote-mark">"</span>
-              <p className="testimonial-text">
-                {t('aboutPage.testimonials.quote')}
-              </p>
-            </div>
-            <p className="testimonial-feedback">
-              {t('aboutPage.testimonials.feedback')}
-            </p>
-            <div className="testimonial-arrows">
-              <button className="arrow-left">←</button>
-              <button className="arrow-right">→</button>
-            </div>
+            ))}
           </div>
         </div>
       </section>
