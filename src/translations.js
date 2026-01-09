@@ -93,9 +93,12 @@ export const resources = {
                 "journeyTag": "OUR JOURNEY",
                 "journeyTitle": "Whether it’s your home, office, or commercial project, we bring your vision to life.",
                 "journeyItems": {
-                    "2020": { "title": "2020 - Innovation Born", "desc": "Remote interior solutions during COVID." },
-                    "2021": { "title": "2021 - Team Growth", "desc": "Expanded designers & engineers." },
-                    "2022": { "title": "2022 - Omaksan Partnership", "desc": "Enhanced technology & delivery." }
+                    "2020": { "subtitle": "The Beginning", "title": "2020 - Innovation Born in Crisis", "desc": "During COVID, we built DAR’s first digital system to solve interior design challenges remotely." },
+                    "2021": { "subtitle": "Crew Integration", "title": "2021 - Building Our Core Team", "desc": "As demand grew, we expanded our crew of designers, engineers, and project managers. To deliver faster, more reliable results and bring every skill in-house." },
+                    "2022": { "subtitle": "Omaksan Partnership", "title": "2022 - From Design to Reality", "desc": "We partnered with Omaksan to integrate advanced manufacturing and furniture solutions. To bridge the gap between design concepts and production with precision." },
+                    "2023": { "subtitle": "New HQ Office", "title": "2023 - A Home for Innovation", "desc": "We opened our headquarters, creating a collaborative hub for our growing team and partners." },
+                    "2024": { "subtitle": "Scaling The Platform", "title": "2024 - Growth & Refinement", "desc": "We improved our system, integrated feedback, and prepared for the next big step. To ensure a stable, scalable platform that meets real client needs." },
+                    "2025": { "subtitle": "DAR Platform Launch", "title": "2025 - Future of Interior Design", "desc": "Official launch of the DAR Platform — uniting design, technology, and operations in one place. To transform the way users experience design with innovation at the core." }
                 },
                 "impactKicker": "OUR IMPACT",
                 "impactText": "Since our launch, DAR has redefined how people bring furniture into their homes by turning imagination into reality. We’ve guided designs from vision to creation, crafted pieces that reflect individuality, and earned the trust of those who value precision and style. These milestones are more than numbers; they represent homes transformed, ideas realized, and the confidence our community places in us.",
@@ -226,15 +229,15 @@ export const resources = {
                 "showcaseTitle": "DAR Projects Showcase",
                 "bookCrew": "Book DAR Crew",
                 "projects": {
-                    "sweden": { "title": "Sweden melody", "location": "Paris, France" },
-                    "modern": { "title": "Modern mix", "location": "Madrid, Spain" },
-                    "airy": { "title": "Airy cave", "location": "Amsterdam, Netherlands" },
-                    "echoes": { "title": "Echoes of the fjords", "location": "Oslo, Norway" },
-                    "ambient": { "title": "Ambient beats", "location": "Lisbon, Portugal" },
-                    "rhythmic": { "title": "Rhythmic tides", "location": "Copenhagen, Denmark" },
-                    "ocean": { "title": "Ocean Vibes", "location": "Dubai, UAE" },
-                    "desert": { "title": "Desert Harmony", "location": "Riyadh, Saudi Arabia" },
-                    "zen": { "title": "Zen Garden Home", "location": "Tokyo, Japan" }
+                    "sweden": { "title": "Sweden melody" },
+                    "modern": { "title": "Modern mix" },
+                    "airy": { "title": "Airy cave" },
+                    "echoes": { "title": "Echoes of the fjords" },
+                    "ambient": { "title": "Ambient beats" },
+                    "rhythmic": { "title": "Rhythmic tides" },
+                    "ocean": { "title": "Ocean Vibes" },
+                    "desert": { "title": "Desert Harmony" },
+                    "zen": { "title": "Zen Garden Home" }
                 }
             },
             "cataloguePage": {
@@ -408,9 +411,12 @@ export const resources = {
                 "journeyTag": "رحلتنا",
                 "journeyTitle": "سواء كان منزلك أو مكتبك أو مشروعك التجاري، فإننا نحول رؤيتك إلى واقع.",
                 "journeyItems": {
-                    "2020": { "title": "2020 - ولادة الابتكار", "desc": "حلول داخلية عن بعد خلال كوفيد." },
-                    "2021": { "title": "2021 - نمو الفريق", "desc": "توسيع فريق المصممين والمهندسين." },
-                    "2022": { "title": "2022 - شراكة أوماكسان", "desc": "تعزيز التكنولوجيا والتسليم." }
+                    "2020": { "subtitle": "البداية", "title": "٢٠٢٠ - ابتكار ولد في الأزمات", "desc": "خلال كوفيد، قمنا ببناء أول نظام رقمي لدار لحل تحديات التصميم الداخلي عن بعد." },
+                    "2021": { "subtitle": "دمج الفريق", "title": "٢٠٢١ - بناء فريقنا الأساسي", "desc": "مع نمو الطلب، قمنا بتوسيع فريقنا من المصممين والمهندسين ومديري المشاريع. لتقديم نتائج أسرع وأكثر موثوقية وجلب كل المهارات داخلياً." },
+                    "2022": { "subtitle": "شراكة أوماكسان", "title": "٢٠٢٢ - من التصميم إلى الواقع", "desc": "لقد عقدنا شراكة مع أوماكسان لدمج التصنيع المتقدم وحلول الأثاث. لسد الفجوة بين مفاهيم التصميم والإنتاج بدقة." },
+                    "2023": { "subtitle": "المقر الرئيسي الجديد", "title": "٢٠٢٣ - بيت للابتكار", "desc": "افتتحنا مقرنا الرئيسي، وقمنا بإنشاء مركز تعاوني لفريقنا المتنامي وشركائنا." },
+                    "2024": { "subtitle": "تطوير المنصة", "title": "٢٠٢٤ - النمو والتحسين", "desc": "لقد قمنا بتحسين نظامنا، ودمجنا الملاحظات، واستعددنا للخطوة الكبيرة التالية. لضمان منصة مستقرة وقابلة للتوسع تلبي احتياجات العملاء الحقيقية." },
+                    "2025": { "subtitle": "إطلاق منصة دار", "title": "٢٠٢٥ - مستقبل التصميم الداخلي", "desc": "الإطلاق الرسمي لمنصة دار - توحيد التصميم والتكنولوجيا والعمليات في مكان واحد. لتحويل الطريقة التي يختبر بها المستخدمون التصميم مع الابتكار في جوهره." }
                 },
                 "impactKicker": "تأثيرنا",
                 "impactText": "منذ انطلاقنا، أعادت دار تعريف كيفية جلب الناس للأثاث إلى منازلهم من خلال تحويل الخيال إلى حقيقة. لقد أرشدنا التصاميم من الرؤية إلى الإبداع، وصنعنا قطعًا تعكس الفردية، واكتسبنا ثقة أولئك الذين يقدرون الدقة والأسلوب. هذه المعالم هي أكثر من مجرد أرقام؛ إنها تمثل منازل تحولت، وأفكارًا تحققت، والثقة التي يضعها مجتمعنا فينا.",
@@ -541,15 +547,15 @@ export const resources = {
                 "showcaseTitle": "معرض مشاريع دار",
                 "bookCrew": "احجز طاقم دار",
                 "projects": {
-                    "sweden": { "title": "سيمفونية السويد", "location": "باريس، فرنسا" },
-                    "modern": { "title": "مزيج عصري", "location": "مدريد، إسبانيا" },
-                    "airy": { "title": "الكهف المهوى", "location": "أمستردام، هولندا" },
-                    "echoes": { "title": "أصداء المضائق", "location": "أوسلو، النرويج" },
-                    "ambient": { "title": "نبضات محيطة", "location": "لشبونة، البرتغال" },
-                    "rhythmic": { "title": "المد والجزر الإيقاعي", "location": "كوبنهاجن، الدنمارك" },
-                    "ocean": { "title": "أجواء المحيط", "location": "دبي، الإمارات العربية المتحدة" },
-                    "desert": { "title": "تناغم الصحراء", "location": "الرياض، المملكة العربية السعودية" },
-                    "zen": { "title": "منزل حديقة الزن", "location": "طوكيو، اليابان" }
+                    "sweden": { "title": "سيمفونية السويد" },
+                    "modern": { "title": "مزيج عصري" },
+                    "airy": { "title": "الكهف المهوى" },
+                    "echoes": { "title": "أصداء المضائق" },
+                    "ambient": { "title": "نبضات محيطة" },
+                    "rhythmic": { "title": "المد والجزر الإيقاعي" },
+                    "ocean": { "title": "أجواء المحيط" },
+                    "desert": { "title": "تناغم الصحراء" },
+                    "zen": { "title": "منزل حديقة الزن" }
                 }
             },
             "cataloguePage": {

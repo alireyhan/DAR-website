@@ -43,15 +43,15 @@ export default function Projectpage() {
   const navigate = useNavigate();
 
   const items = [
-    { img: p1, title: t('projectPage.projects.sweden.title'), location: t('projectPage.projects.sweden.location'), year: "2019" },
-    { img: p2, title: t('projectPage.projects.modern.title'), location: t('projectPage.projects.modern.location'), year: "2020" },
-    { img: p3, title: t('projectPage.projects.airy.title'), location: t('projectPage.projects.airy.location'), year: "2021" },
-    { img: p4, title: t('projectPage.projects.echoes.title'), location: t('projectPage.projects.echoes.location'), year: "2022" },
-    { img: p5, title: t('projectPage.projects.ambient.title'), location: t('projectPage.projects.ambient.location'), year: "2023" },
-    { img: p6, title: t('projectPage.projects.rhythmic.title'), location: t('projectPage.projects.rhythmic.location'), year: "2024" },
-    { img: p3, title: t('projectPage.projects.ocean.title'), location: t('projectPage.projects.ocean.location'), year: "2024" },
-    { img: p8, title: t('projectPage.projects.desert.title'), location: t('projectPage.projects.desert.location'), year: "2025" },
-    { img: p1, title: t('projectPage.projects.zen.title'), location: t('projectPage.projects.zen.location'), year: "2023" },
+    { img: p1, title: t('projectPage.projects.sweden.title') },
+    { img: p2, title: t('projectPage.projects.modern.title') },
+    { img: p3, title: t('projectPage.projects.airy.title') },
+    { img: p4, title: t('projectPage.projects.echoes.title') },
+    { img: p5, title: t('projectPage.projects.ambient.title') },
+    { img: p6, title: t('projectPage.projects.rhythmic.title') },
+    { img: p3, title: t('projectPage.projects.ocean.title') },
+    { img: p8, title: t('projectPage.projects.desert.title') },
+    { img: p1, title: t('projectPage.projects.zen.title') },
   ];
 
 
@@ -180,7 +180,7 @@ export default function Projectpage() {
 
       <section className="showcase">
         <p className="small-title">{t('projectPage.proudOf')}</p>
-        <h2 className="big-title">{t('projectPage.showcaseTitle')}<span className="line"></span></h2>
+        <h2 className="big-title">{t('projectPage.showcaseTitle')}</h2>
 
         <div className="grid">
           {items.map((p, i) => (
@@ -190,8 +190,6 @@ export default function Projectpage() {
             >
               <img src={p.img} alt={p.title} />
               <h3>{p.title}</h3>
-              <p className="loc">{p.location}</p>
-              <p className="year">{p.year}</p>
             </div>
           ))}
         </div>

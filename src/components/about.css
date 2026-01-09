@@ -1596,11 +1596,31 @@ nav ul li a:hover {
 
 .timeline {
     position: relative;
-    padding-left: 30px;
     flex: 1;
+    max-height: 400px;
+    /* Adjust height as needed */
+    overflow-y: scroll;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    /* Hide scrollbar for WebKit browsers */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
-.timeline::before {
+.timeline-wrapper {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline-wrapper::before {
     content: "";
     position: absolute;
     left: 6px;
@@ -1610,12 +1630,28 @@ nav ul li a:hover {
     background-color: #0b6b5b;
 }
 
+/* RTL Support for the line */
+[dir="rtl"] .timeline-wrapper {
+    padding-left: 0;
+    padding-right: 30px;
+}
+
+[dir="rtl"] .timeline-wrapper::before {
+    left: auto;
+    right: 6px;
+}
+
 .timeline-item {
     display: flex;
     flex-direction: column;
     position: relative;
     margin-bottom: 40px;
     padding-left: 20px;
+}
+
+[dir="rtl"] .timeline-item {
+    padding-left: 0;
+    padding-right: 20px;
 }
 
 .timeline-item:last-child {
@@ -1630,6 +1666,18 @@ nav ul li a:hover {
     height: 12px;
     background-color: #0b6b5b;
     border-radius: 50%;
+}
+
+[dir="rtl"] .dot {
+    left: auto;
+    right: -29px;
+}
+
+.timeline-subtitle {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 4px;
+    display: block;
 }
 
 .timeline-item h3 {

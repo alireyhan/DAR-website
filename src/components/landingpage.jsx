@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 import "./landingpage.css";
+import "./about.css";
 import { FaWhatsapp, FaUsers } from "react-icons/fa";
 import Footer from "./Footer";
 import './what.css'
@@ -181,25 +182,49 @@ export default function Landingpage() {
 
         <div className="journey-content">
           <div className="timeline">
+            <div className="timeline-wrapper">
+              <div className="timeline-item">
+                <div className="dot"></div>
+                <span className="timeline-subtitle">{t('aboutPage.journeyItems.2020.subtitle')}</span>
+                <h3>{t('aboutPage.journeyItems.2020.title')}</h3>
+                <p>{t('aboutPage.journeyItems.2020.desc')}</p>
+              </div>
 
-            <div className="timeline-item">
-              <div className="dot"></div>
-              <h3>{t('aboutPage.journeyItems.2020.title')}</h3>
-              <p>{t('aboutPage.journeyItems.2020.desc')}</p>
+              <div className="timeline-item">
+                <div className="dot"></div>
+                <span className="timeline-subtitle">{t('aboutPage.journeyItems.2021.subtitle')}</span>
+                <h3>{t('aboutPage.journeyItems.2021.title')}</h3>
+                <p>{t('aboutPage.journeyItems.2021.desc')}</p>
+              </div>
+
+              <div className="timeline-item">
+                <div className="dot"></div>
+                <span className="timeline-subtitle">{t('aboutPage.journeyItems.2022.subtitle')}</span>
+                <h3>{t('aboutPage.journeyItems.2022.title')}</h3>
+                <p>{t('aboutPage.journeyItems.2022.desc')}</p>
+              </div>
+
+              <div className="timeline-item">
+                <div className="dot"></div>
+                <span className="timeline-subtitle">{t('aboutPage.journeyItems.2023.subtitle')}</span>
+                <h3>{t('aboutPage.journeyItems.2023.title')}</h3>
+                <p>{t('aboutPage.journeyItems.2023.desc')}</p>
+              </div>
+
+              <div className="timeline-item">
+                <div className="dot"></div>
+                <span className="timeline-subtitle">{t('aboutPage.journeyItems.2024.subtitle')}</span>
+                <h3>{t('aboutPage.journeyItems.2024.title')}</h3>
+                <p>{t('aboutPage.journeyItems.2024.desc')}</p>
+              </div>
+
+              <div className="timeline-item">
+                <div className="dot"></div>
+                <span className="timeline-subtitle">{t('aboutPage.journeyItems.2025.subtitle')}</span>
+                <h3>{t('aboutPage.journeyItems.2025.title')}</h3>
+                <p>{t('aboutPage.journeyItems.2025.desc')}</p>
+              </div>
             </div>
-
-            <div className="timeline-item">
-              <div className="dot"></div>
-              <h3>{t('aboutPage.journeyItems.2021.title')}</h3>
-              <p>{t('aboutPage.journeyItems.2021.desc')}</p>
-            </div>
-
-            <div className="timeline-item">
-              <div className="dot"></div>
-              <h3>{t('aboutPage.journeyItems.2022.title')}</h3>
-              <p>{t('aboutPage.journeyItems.2022.desc')}</p>
-            </div>
-
           </div>
 
           <div className="journey-image">
@@ -332,8 +357,6 @@ export default function Landingpage() {
             />
             <div className="card-content">
               <h3 className="card-title">{t('projectPage.projects.sweden.title')}</h3>
-              <p className="card-location">{t('projectPage.projects.sweden.location')}</p>
-              <p className="card-year">2019</p>
             </div>
           </div>
 
@@ -345,8 +368,6 @@ export default function Landingpage() {
             />
             <div className="card-content">
               <h3 className="card-title">{t('projectPage.projects.modern.title')}</h3>
-              <p className="card-location">{t('projectPage.projects.modern.location')}</p>
-              <p className="card-year">2021</p>
             </div>
           </div>
 
@@ -358,8 +379,6 @@ export default function Landingpage() {
             />
             <div className="card-content">
               <h3 className="card-title">{t('projectPage.projects.airy.title')}</h3>
-              <p className="card-location">{t('projectPage.projects.airy.location')}</p>
-              <p className="card-year">2023</p>
             </div>
           </div>
         </div>

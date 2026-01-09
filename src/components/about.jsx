@@ -271,25 +271,49 @@ export default function Aboutpage() {
 
         <div className="journey-content">
           <div className="timeline">
+            <div className="timeline-wrapper">
+              <div className="timeline-item">
+                <div className="dot"></div>
+                <span className="timeline-subtitle">{t('aboutPage.journeyItems.2020.subtitle')}</span>
+                <h3>{t('aboutPage.journeyItems.2020.title')}</h3>
+                <p>{t('aboutPage.journeyItems.2020.desc')}</p>
+              </div>
 
-            <div className="timeline-item">
-              <div className="dot"></div>
-              <h3>{t('aboutPage.journeyItems.2020.title')}</h3>
-              <p>{t('aboutPage.journeyItems.2020.desc')}</p>
+              <div className="timeline-item">
+                <div className="dot"></div>
+                <span className="timeline-subtitle">{t('aboutPage.journeyItems.2021.subtitle')}</span>
+                <h3>{t('aboutPage.journeyItems.2021.title')}</h3>
+                <p>{t('aboutPage.journeyItems.2021.desc')}</p>
+              </div>
+
+              <div className="timeline-item">
+                <div className="dot"></div>
+                <span className="timeline-subtitle">{t('aboutPage.journeyItems.2022.subtitle')}</span>
+                <h3>{t('aboutPage.journeyItems.2022.title')}</h3>
+                <p>{t('aboutPage.journeyItems.2022.desc')}</p>
+              </div>
+
+              <div className="timeline-item">
+                <div className="dot"></div>
+                <span className="timeline-subtitle">{t('aboutPage.journeyItems.2023.subtitle')}</span>
+                <h3>{t('aboutPage.journeyItems.2023.title')}</h3>
+                <p>{t('aboutPage.journeyItems.2023.desc')}</p>
+              </div>
+
+              <div className="timeline-item">
+                <div className="dot"></div>
+                <span className="timeline-subtitle">{t('aboutPage.journeyItems.2024.subtitle')}</span>
+                <h3>{t('aboutPage.journeyItems.2024.title')}</h3>
+                <p>{t('aboutPage.journeyItems.2024.desc')}</p>
+              </div>
+
+              <div className="timeline-item">
+                <div className="dot"></div>
+                <span className="timeline-subtitle">{t('aboutPage.journeyItems.2025.subtitle')}</span>
+                <h3>{t('aboutPage.journeyItems.2025.title')}</h3>
+                <p>{t('aboutPage.journeyItems.2025.desc')}</p>
+              </div>
             </div>
-
-            <div className="timeline-item">
-              <div className="dot"></div>
-              <h3>{t('aboutPage.journeyItems.2021.title')}</h3>
-              <p>{t('aboutPage.journeyItems.2021.desc')}</p>
-            </div>
-
-            <div className="timeline-item">
-              <div className="dot"></div>
-              <h3>{t('aboutPage.journeyItems.2022.title')}</h3>
-              <p>{t('aboutPage.journeyItems.2022.desc')}</p>
-            </div>
-
           </div>
 
           <div className="journey-image">
