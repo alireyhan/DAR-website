@@ -35,7 +35,7 @@ import Accountant from "./images/Account.jpeg";
 import design from "./images/headesigner.jpeg";
 import marketing from "./images/market.jpeg";
 // Video
-import video from "./images/video1.mp4";
+import video from "../assets/video.mp4";
 
 const photoArray = [
   p1, p2, p3, p4, p5, p6, p8, p9, p10, p11, p12, p13
@@ -211,9 +211,16 @@ export default function Landingpage() {
       {/* DEMO */}
       <section className="demo-section">
         <h2>{t('landingPage.demoTitle')}</h2>
-        <video className="demo-video" controls>
+        <video
+          className="demo-video"
+          autoPlay
+          loop
+          playsInline
+          controls
+          preload="auto"
+        >
           <source src={video} type="video/mp4" />
-          {t('aboutPage.journeyItems.2022.desc')} {/* Just as a fallback since video might have "Your browser does not support..." */}
+          {t('aboutPage.journeyItems.2022.desc')}
         </video>
       </section>
 

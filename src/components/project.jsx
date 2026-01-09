@@ -31,7 +31,7 @@ import footer from "./images/footer.png";
 import navlogo from "./images/navlogo.png";
 import Navbar from "./Navbar";
 // Video
-import video from "./images/video1.mp4";
+import video from "../assets/video.mp4";
 
 const photoArray = [
   p1, p2, p3, p4, p5, p6, p8, p9, p10, p11, p12, p13

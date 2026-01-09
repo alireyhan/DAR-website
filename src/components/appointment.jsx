@@ -28,7 +28,7 @@ import p17 from "./images/p17.jpg"
 import p18 from "./images/p18.jpg";
 import footer from "./images/footer.png";
 import navlogo from "./images/navlogo.png";
-import video from "./images/video1.mp4";
+import video from "../assets/video.mp4";
 import head from "./images/head.jpeg";
 import Accountant from "./images/Account.jpeg";
 import design from "./images/headesigner.jpeg";

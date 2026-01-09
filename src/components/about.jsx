@@ -34,7 +34,7 @@ import footer from "./images/footer.png";
 import navlogo from "./images/navlogo.png";
 import logo2 from "./images/logo2.png";
 import Container from "./images/Container.png";
-import video from "./images/video1.mp4";
+import video from "../assets/video.mp4";
 import ball from "./images/ball.png";
 import pin from "./images/pin.png";
 import star from "./images/star.png";
@@ -250,10 +250,10 @@ export default function Aboutpage() {
                 className="ourstory__video"
                 src={video}
                 autoPlay
-                muted
                 loop
                 playsInline
                 preload="auto"
+                controls
               />
             </div>
           </div>
